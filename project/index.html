@@ -188,85 +188,15 @@
         </div>
       </div>
       <div class="hero-vis" aria-hidden="true" style="position:relative;">
-        <img src="assets/hero-anim.gif" alt="" width="380" height="373" style="width:100%;border-radius:20px;display:block;">
+        <img src="assets/futuristic_dashboard_animated.gif" alt="" width="900" height="675" style="width:100%;height:auto;border-radius:20px;display:block;">
       </div>
     </div>
   </section>
 
   <!-- CONVERGENCE — Your AI Agent -->
-  <section style="position:relative;border-top:1px solid rgba(126,196,240,0.1);background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(126,196,240,0.10),transparent 65%);overflow:hidden;">
-    <div class="cv-stage">
-      <svg class="cv-flow" viewBox="0 0 1600 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs>
-          <linearGradient id="cvCyan" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#4A9BD4" stop-opacity="0.12"></stop>
-            <stop offset="55%" stop-color="#7EC4F0" stop-opacity="0.7"></stop>
-            <stop offset="100%" stop-color="#B8DFF5" stop-opacity="0.95"></stop>
-          </linearGradient>
-          <radialGradient id="cvHeartFill">
-            <stop offset="0%" stop-color="#FFFFFF"></stop>
-            <stop offset="45%" stop-color="#B8DFF5"></stop>
-            <stop offset="100%" stop-color="#7EC4F0"></stop>
-          </radialGradient>
-        </defs>
-        <path id="cvp1" class="cv-path" stroke="url(#cvCyan)" d="M 300 140 Q 580 165, 700 300 T 820 360"></path>
-        <path id="cvp2" class="cv-path" stroke="url(#cvCyan)" d="M 300 230 Q 560 245, 700 320 T 820 360"></path>
-        <path id="cvp3" class="cv-path" stroke="url(#cvCyan)" d="M 300 320 Q 550 330, 700 345 T 820 360"></path>
-        <path id="cvp4" class="cv-path" stroke="url(#cvCyan)" d="M 300 410 Q 550 405, 700 375 T 820 360"></path>
-        <path id="cvp5" class="cv-path" stroke="url(#cvCyan)" d="M 300 500 Q 560 480, 700 400 T 820 360"></path>
-        <path id="cvp6" class="cv-path" stroke="url(#cvCyan)" d="M 300 590 Q 580 570, 700 420 T 820 360"></path>
-        <circle class="cv-dot" r="3"><animateMotion dur="3.8s" repeatCount="indefinite" begin="2.2s"><mpath href="#cvp1"></mpath></animateMotion></circle>
-        <circle class="cv-dot" r="3"><animateMotion dur="3.8s" repeatCount="indefinite" begin="2.5s"><mpath href="#cvp2"></mpath></animateMotion></circle>
-        <circle class="cv-dot" r="3"><animateMotion dur="3.8s" repeatCount="indefinite" begin="2.8s"><mpath href="#cvp3"></mpath></animateMotion></circle>
-        <circle class="cv-dot" r="3"><animateMotion dur="3.8s" repeatCount="indefinite" begin="3.1s"><mpath href="#cvp4"></mpath></animateMotion></circle>
-        <circle class="cv-dot" r="3"><animateMotion dur="3.8s" repeatCount="indefinite" begin="3.4s"><mpath href="#cvp5"></mpath></animateMotion></circle>
-        <circle class="cv-dot" r="3"><animateMotion dur="3.8s" repeatCount="indefinite" begin="3.7s"><mpath href="#cvp6"></mpath></animateMotion></circle>
-        <circle class="cv-dot" r="2.1" opacity="0.65"><animateMotion dur="3.8s" repeatCount="indefinite" begin="3.6s"><mpath href="#cvp2"></mpath></animateMotion></circle>
-        <circle class="cv-dot" r="2.1" opacity="0.65"><animateMotion dur="3.8s" repeatCount="indefinite" begin="3.9s"><mpath href="#cvp4"></mpath></animateMotion></circle>
-        <circle class="cv-dot" r="2.1" opacity="0.65"><animateMotion dur="3.8s" repeatCount="indefinite" begin="4.2s"><mpath href="#cvp6"></mpath></animateMotion></circle>
-        <circle class="cv-heart" cx="820" cy="360" r="11" fill="url(#cvHeartFill)"></circle>
-      </svg>
-      <div class="cv-grid" style="position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:88px 40px;min-height:460px;">
-        <div class="cv-labels" style="display:flex;flex-direction:column;gap:18px;">
-          <div class="cv-label">Margin slipping.</div>
-          <div class="cv-label">Time being lost.</div>
-          <div class="cv-label">Revenue sitting untouched.</div>
-          <div class="cv-label">Customers not coming back.</div>
-          <div class="cv-label">Numbers you can't see.</div>
-          <div class="cv-label">The founder still doing it all.</div>
-        </div>
-
-        <!-- Mobile convergence (horizontal, left → centre hub) -->
-        <svg class="cv-mobile-flow" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="cvCyanM" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#4A9BD4" stop-opacity="0.12"></stop>
-              <stop offset="55%" stop-color="#7EC4F0" stop-opacity="0.7"></stop>
-              <stop offset="100%" stop-color="#B8DFF5" stop-opacity="0.95"></stop>
-            </linearGradient>
-          </defs>
-          <path id="cvm1" class="cv-path" stroke="url(#cvCyanM)" vector-effect="non-scaling-stroke" stroke-width="1" d="M 7 16 Q 38 26, 53 54"></path>
-          <path id="cvm2" class="cv-path" stroke="url(#cvCyanM)" vector-effect="non-scaling-stroke" stroke-width="1" d="M 7 28 Q 38 36, 53 54"></path>
-          <path id="cvm3" class="cv-path" stroke="url(#cvCyanM)" vector-effect="non-scaling-stroke" stroke-width="1" d="M 7 40 Q 40 46, 53 54"></path>
-          <path id="cvm4" class="cv-path" stroke="url(#cvCyanM)" vector-effect="non-scaling-stroke" stroke-width="1" d="M 7 52 Q 40 53, 53 54"></path>
-          <path id="cvm5" class="cv-path" stroke="url(#cvCyanM)" vector-effect="non-scaling-stroke" stroke-width="1" d="M 7 64 Q 38 62, 53 54"></path>
-          <path id="cvm6" class="cv-path" stroke="url(#cvCyanM)" vector-effect="non-scaling-stroke" stroke-width="1" d="M 7 76 Q 38 70, 53 54"></path>
-          <circle class="cv-dot" r="1"><animateMotion dur="3.4s" repeatCount="indefinite" begin="2.0s"><mpath href="#cvm1"></mpath></animateMotion></circle>
-          <circle class="cv-dot" r="1"><animateMotion dur="3.4s" repeatCount="indefinite" begin="2.3s"><mpath href="#cvm2"></mpath></animateMotion></circle>
-          <circle class="cv-dot" r="1"><animateMotion dur="3.4s" repeatCount="indefinite" begin="2.6s"><mpath href="#cvm3"></mpath></animateMotion></circle>
-          <circle class="cv-dot" r="1"><animateMotion dur="3.4s" repeatCount="indefinite" begin="2.9s"><mpath href="#cvm4"></mpath></animateMotion></circle>
-          <circle class="cv-dot" r="1"><animateMotion dur="3.4s" repeatCount="indefinite" begin="3.2s"><mpath href="#cvm5"></mpath></animateMotion></circle>
-          <circle class="cv-dot" r="1"><animateMotion dur="3.4s" repeatCount="indefinite" begin="3.5s"><mpath href="#cvm6"></mpath></animateMotion></circle>
-        </svg>
-        <div class="cv-hub-mobile"></div>
-
-        <div class="cv-dest">
-          <div class="cv-eyebrow">Calon AI</div>
-          <h2 class="cv-title">Your AI Agent</h2>
-          <div class="cv-bar"></div>
-          <p class="cv-tag">All of it ends up in <strong>one place</strong>. So you run the business from <strong>one space</strong>.</p>
-        </div>
-      </div>
+  <section style="position:relative;border-top:1px solid rgba(126,196,240,0.1);background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(126,196,240,0.08),transparent 65%);overflow:hidden;">
+    <div data-reveal style="max-width:1100px;margin:0 auto;padding:72px 40px;">
+      <img src="assets/calon_hero_animated.gif" alt="Your operation, connected in one place" width="1075" height="716" style="width:100%;height:auto;border-radius:18px;display:block;">
     </div>
   </section>
 
