@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#0A1428;}
+  .lg-prose a{color:#7EC4F0;text-decoration:underline;text-underline-offset:2px;}
+  @media(max-width:860px){
+    .lg-shell{grid-template-columns:1fr !important;gap:0 !important;}
+    .lg-aside{position:static !important;border-right:none !important;border-bottom:1px solid rgba(126,196,240,0.12);padding-bottom:28px !important;margin-bottom:8px;}
+    .lg-tablinks{flex-direction:row !important;flex-wrap:wrap;gap:10px !important;}
+  }
+</style>
+</helmet>
+<div style="background:#0A1428;color:#FFFFFF;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;">
+  <dc-import name="CalonHeader" hint-size="100%,85px"></dc-import>
+
+  <!-- HERO -->
+  <section style="position:relative;border-bottom:1px solid rgba(126,196,240,0.1);background:radial-gradient(ellipse 60% 75% at 80% 10%,rgba(126,196,240,0.1),transparent 60%);">
+    <div style="max-width:1080px;margin:0 auto;padding:84px 40px 52px;">
+      <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Legal</p>
+      <h1 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(34px,4.6vw,58px);line-height:1.06;letter-spacing:-0.02em;margin:0;">{{ title }}</h1>
+      <p style="font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:rgba(226,236,247,0.74);margin:22px 0 0;max-width:62ch;font-weight:300;">{{ summary }}</p>
+      <p style="font-size:13.5px;color:rgba(226,236,247,0.5);margin:26px 0 0;">Effective {{ effective }} &middot; {{ company }} &middot; Company No. {{ number }}</p>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <div class="lg-shell" style="max-width:1080px;margin:0 auto;padding:56px 40px 110px;display:grid;grid-template-columns:228px 1fr;gap:56px;align-items:start;">
+
+    <!-- ASIDE: doc switcher -->
+    <aside class="lg-aside" style="position:sticky;top:108px;border-right:1px solid rgba(126,196,240,0.12);padding-right:28px;">
+      <p style="font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:rgba(226,236,247,0.45);margin:0 0 16px;">Documents</p>
+      <nav class="lg-tablinks" style="display:flex;flex-direction:column;gap:4px;">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+          <a href="{{ t.href }}" style="font-size:14.5px;font-weight:{{ t.weight }};color:{{ t.color }};text-decoration:none;padding:9px 14px;border-radius:9px;background:{{ t.bg }};border-left:2px solid {{ t.accent }};transition:background .18s,color .18s;" style-hover="color:#fff;">{{ t.label }}</a>
+        </sc-for>
+      </nav>
+    </aside>
+
+    <!-- MAIN: prose -->
+    <main class="lg-prose">
+      <sc-for list="{{ sections }}" as="s" hint-placeholder-count="6">
+        <section style="margin-bottom:40px;">
+          <h2 style="font-family:'Sora',sans-serif;font-weight:500;font-size:clamp(18px,1.9vw,22px);line-height:1.3;letter-spacing:-0.01em;color:#fff;margin:0 0 16px;">{{ s.h }}</h2>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <sc-for list="{{ s.paras }}" as="p" hint-placeholder-count="2">
+              <p style="font-size:16px;line-height:1.7;color:rgba(226,236,247,0.78);margin:0;">{{ p }}</p>
+            </sc-for>
+          </div>
+          <sc-if value="{{ s.hasList }}" hint-placeholder-val="{{ false }}">
+            <ul style="list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;">
+              <sc-for list="{{ s.items }}" as="li" hint-placeholder-count="3">
+                <li style="display:flex;gap:14px;align-items:flex-start;font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.78);">
+                  <span style="display:block;width:6px;height:6px;border-radius:50%;background:#7EC4F0;flex:none;margin-top:9px;"></span>
+                  <span>{{ li }}</span>
+                </li>
+              </sc-for>
+            </ul>
+          </sc-if>
+        </section>
+      </sc-for>
+
+      <!-- contact strip -->
+      <div style="border:1px solid rgba(126,196,240,0.2);border-radius:16px;padding:30px 32px;background:rgba(126,196,240,0.05);margin-top:48px;">
+        <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">Questions about this document?</h3>
+        <p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.72);margin:0 0 18px;">Email us and a real person will get back to you. Registered office: {{ address }}.</p>
+        <a href="Contact.dc.html" style="display:inline-block;background:#7EC4F0;color:#06101F;font-size:15px;font-weight:600;padding:13px 26px;border-radius:9px;text-decoration:none;">Contact us</a>
+      </div>
+    </main>
+  </div>
+
+  <dc-import name="CalonFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { loaded: false, doc: null, slug: 'privacy' };
+  async componentDidMount() {
+    try {
+      const m = await import('./legal-data.js');
+      this._m = m;
+      const slug = new URLSearchParams(location.search).get('doc') || 'privacy';
+      const doc = m.getDoc(slug);
+      try { document.title = doc.title + ' — Calon AI'; } catch (_) {}
+      this.setState({ loaded: true, doc, slug: doc.slug });
+    } catch (e) { console.error('legal load failed', e); }
+  }
+  renderVals() {
+    const m = this._m || {};
+    const d = this.state.doc || {};
+    const meta = m.META || {};
+    const order = m.ORDER || [];
+    const docs = m.DOCS || {};
+    const cur = this.state.slug;
+    return {
+      title: d.title || 'Legal',
+      summary: d.summary || '',
+      effective: meta.EFFECTIVE || '',
+      company: meta.COMPANY || '',
+      number: meta.NUMBER || '',
+      address: meta.ADDRESS || '',
+      tabs: order.map(s => {
+        const active = s === cur;
+        return {
+          label: (docs[s] || {}).label || s,
+          href: 'Legal.dc.html?doc=' + s,
+          weight: active ? '600' : '400',
+          color: active ? '#7EC4F0' : 'rgba(226,236,247,0.7)',
+          bg: active ? 'rgba(126,196,240,0.1)' : 'transparent',
+          accent: active ? '#7EC4F0' : 'transparent'
+        };
+      }),
+      sections: (d.sections || []).map(sec => ({
+        h: sec.h,
+        paras: sec.p || [],
+        hasList: !!(sec.list && sec.list.length),
+        items: sec.list || []
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

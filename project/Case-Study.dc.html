@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#0A1428;}
+</style>
+</helmet>
+<div style="background:#0A1428;color:#FFFFFF;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;">
+  <dc-import name="CalonHeader" hint-size="100%,85px"></dc-import>
+
+  <sc-if value="{{ notLoaded }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:760px;margin:0 auto;padding:120px 40px;text-align:center;color:rgba(226,236,247,0.5);font-size:16px;">Loading case study…</div>
+  </sc-if>
+
+  <sc-if value="{{ loaded }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <!-- HERO -->
+    <section style="position:relative;border-bottom:1px solid rgba(126,196,240,0.1);background:radial-gradient(ellipse 70% 80% at 78% 15%,rgba(126,196,240,0.12),transparent 60%);">
+      <div style="max-width:1080px;margin:0 auto;padding:96px 40px 72px;">
+        <a href="Proof.dc.html" style="font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:#7EC4F0;text-decoration:none;">&larr; All case studies</a>
+        <div style="display:flex;align-items:center;gap:14px;margin:28px 0 22px;">
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;background:rgba(126,196,240,0.1);border:1px solid rgba(126,196,240,0.22);padding:6px 14px;border-radius:100px;">{{ sector }}</span>
+          <span style="font-size:13.5px;color:rgba(226,236,247,0.55);">{{ service }}</span>
+        </div>
+        <h1 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(32px,4.4vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;max-width:20ch;">{{ title }}</h1>
+        <p style="font-size:clamp(18px,1.7vw,22px);line-height:1.55;color:rgba(226,236,247,0.78);margin:26px 0 0;max-width:60ch;font-weight:300;">{{ standfirst }}</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:48px;">
+          <sc-for list="{{ stats }}" as="st" hint-placeholder-count="3">
+            <div style="border:1px solid rgba(126,196,240,0.16);border-radius:14px;padding:26px 24px;background:rgba(12,24,48,0.45);">
+              <div style="font-family:'Sora',sans-serif;font-weight:200;font-size:clamp(28px,3vw,38px);line-height:1.05;color:#7EC4F0;letter-spacing:-0.02em;">{{ st.n }}</div>
+              <div style="font-size:14px;line-height:1.45;color:rgba(226,236,247,0.62);margin-top:10px;">{{ st.l }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- BODY -->
+    <div style="max-width:760px;margin:0 auto;padding:24px 40px 0;">
+
+      <section style="margin-top:72px;">
+        <h2 style="font-family:'Sora',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Client &amp; sector</h2>
+        <p style="font-size:18px;line-height:1.4;color:#fff;margin:0;font-weight:300;">{{ client }}</p>
+        <p style="font-size:15px;line-height:1.4;color:rgba(226,236,247,0.55);margin:8px 0 0;">{{ sector }} &middot; {{ service }}</p>
+      </section>
+
+      <section style="margin-top:56px;">
+        <h2 style="font-family:'Sora',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">The operational problem</h2>
+        <p style="font-size:17.5px;line-height:1.68;color:rgba(226,236,247,0.82);margin:0;">{{ overview }}</p>
+      </section>
+
+      <section style="margin-top:56px;">
+        <h2 style="font-family:'Sora',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Where time, margin or revenue was being lost</h2>
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <sc-for list="{{ challenge }}" as="para" hint-placeholder-count="2">
+            <p style="font-size:17.5px;line-height:1.68;color:rgba(226,236,247,0.82);margin:0;">{{ para }}</p>
+          </sc-for>
+        </div>
+      </section>
+
+      <section style="margin-top:56px;">
+        <h2 style="font-family:'Sora',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">What Calon built</h2>
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <sc-for list="{{ solution }}" as="para" hint-placeholder-count="2">
+            <p style="font-size:17.5px;line-height:1.68;color:rgba(226,236,247,0.82);margin:0;">{{ para }}</p>
+          </sc-for>
+        </div>
+      </section>
+
+      <section style="margin-top:56px;">
+        <h2 style="font-family:'Sora',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 22px;">Tangible impact</h2>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <sc-for list="{{ results }}" as="item" hint-placeholder-count="5">
+            <div style="display:flex;gap:16px;align-items:flex-start;border:1px solid rgba(126,196,240,0.14);border-radius:12px;padding:18px 20px;background:rgba(126,196,240,0.04);">
+              <span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(126,196,240,0.14);color:#7EC4F0;flex:none;margin-top:1px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+              </span>
+              <p style="font-size:16.5px;line-height:1.55;color:#fff;margin:0;font-weight:300;">{{ item }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section style="margin-top:64px;">
+        <blockquote style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(20px,2.2vw,28px);line-height:1.45;letter-spacing:-0.01em;margin:0;color:#fff;border-left:2px solid #7EC4F0;padding-left:28px;">{{ quote }}</blockquote>
+        <p style="font-size:15px;color:rgba(226,236,247,0.6);margin:20px 0 0;padding-left:30px;">&mdash; {{ qa }}</p>
+      </section>
+
+      <!-- CTA -->
+      <section style="margin-top:72px;">
+        <div style="border:1px solid rgba(126,196,240,0.22);border-radius:20px;padding:48px 44px;background:linear-gradient(160deg,rgba(126,196,240,0.10),rgba(12,24,48,0.5));text-align:center;">
+          <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(26px,3vw,38px);line-height:1.12;letter-spacing:-0.02em;margin:0;">Book your Operational Snapshot.</h2>
+          <p style="font-size:17px;line-height:1.55;color:rgba(226,236,247,0.72);margin:18px auto 32px;max-width:46ch;">Fifteen minutes on the phone. We find where your business is being held back, then build the highest-value fix first.</p>
+          <a href="Contact.dc.html" style="display:inline-block;background:#7EC4F0;color:#06101F;font-size:16px;font-weight:600;padding:16px 34px;border-radius:10px;text-decoration:none;box-shadow:0 10px 36px rgba(126,196,240,0.28);">Start the conversation</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- RELATED -->
+    <section style="max-width:1080px;margin:0 auto;padding:100px 40px 110px;">
+      <h2 style="font-family:'Sora',sans-serif;font-weight:400;font-size:clamp(22px,2.4vw,30px);letter-spacing:-0.01em;margin:0 0 32px;">Related case studies</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="3">
+          <a href="{{ r.href }}" style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:30px;background:rgba(12,24,48,0.45);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color .25s,transform .25s;" style-hover="border-color:#7EC4F0;transform:translateY(-3px);">
+            <span style="font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#7EC4F0;margin-bottom:16px;">{{ r.industry }}</span>
+            <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:18px;line-height:1.3;margin:0 0 12px;color:#fff;">{{ r.name }}</h3>
+            <p style="font-size:14.5px;line-height:1.55;color:rgba(226,236,247,0.6);margin:0 0 20px;flex:1;">{{ r.subtitle }}</p>
+            <span style="color:#7EC4F0;font-size:14px;font-weight:600;">Read case study &rarr;</span>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <dc-import name="CalonFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { loaded: false, study: null, related: [] };
+  async componentDidMount() {
+    try {
+      const m = await import('./case-studies-data.js');
+      const slug = new URLSearchParams(location.search).get('slug') || m.STUDIES[0].slug;
+      const study = m.getBySlug(slug);
+      const related = m.getRelated(study.slug, 3);
+      try { document.title = study.name.replace(/—.*/, '').trim() + ' — Calon AI'; } catch (_) {}
+      this.setState({ loaded: true, study, related });
+    } catch (e) { console.error('case study load failed', e); }
+  }
+  renderVals() {
+    const s = this.state.study || {};
+    return {
+      loaded: this.state.loaded,
+      notLoaded: !this.state.loaded,
+      title: s.name, standfirst: s.subtitle, sector: s.industry, client: s.client, service: s.service,
+      stats: s.stats || [], overview: s.overview,
+      challenge: s.challenge || [], solution: s.solution || [], results: s.results || [],
+      quote: s.quote, qa: s.qa,
+      related: (this.state.related || []).map(r => ({
+        slug: r.slug, name: r.name, subtitle: r.subtitle, industry: r.industry,
+        href: 'Case-Study.dc.html?slug=' + r.slug
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
