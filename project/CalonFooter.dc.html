@@ -9,9 +9,18 @@
 <x-dc>
 <helmet>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @media(max-width:860px){
+    .ftr-grid{grid-template-columns:1fr 1fr !important;gap:36px 28px !important;padding:56px 22px 40px !important;}
+    .ftr-bottom{flex-direction:column;align-items:flex-start !important;gap:18px !important;padding:24px 22px !important;}
+  }
+  @media(max-width:460px){
+    .ftr-grid{grid-template-columns:1fr !important;}
+  }
+</style>
 </helmet>
 <footer style="border-top:1px solid rgba(126,196,240,0.12);background:#08101F;font-family:'Sora',sans-serif;">
-  <div style="max-width:1240px;margin:0 auto;padding:72px 40px 56px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px 40px;">
+  <div class="ftr-grid" style="max-width:1240px;margin:0 auto;padding:72px 40px 56px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px 40px;">
     <div style="max-width:340px;">
       <img src="assets/calon-logo.png" alt="Calon AI Solutions" style="height:60px;width:auto;display:block;margin-bottom:20px;">
       <p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.6);margin:0 0 22px;">Calon. Welsh for heart. Built for the founders who still feel the weight of their own business.</p>
@@ -54,7 +63,7 @@
     </div>
   </div>
   <div style="border-top:1px solid rgba(126,196,240,0.1);">
-    <div style="max-width:1240px;margin:0 auto;padding:24px 40px;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;">
+    <div class="ftr-bottom" style="max-width:1240px;margin:0 auto;padding:24px 40px;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;">
       <p style="font-size:13.5px;line-height:1.5;color:rgba(226,236,247,0.5);margin:0;max-width:62ch;">CALON AI SOLUTIONS LIMITED &middot; Registered in Wales, Company No. 15984397 &middot; Registered office: Ty Merlin, Caerphilly Business Park, Van Road, Caerphilly, CF83 3GS &middot; &copy; CALON AI SOLUTIONS LIMITED</p>
       <nav style="display:flex;align-items:center;gap:26px;">
         <a href="Legal.dc.html?doc=privacy" style="font-size:13.5px;color:rgba(226,236,247,0.78);text-decoration:underline;text-underline-offset:3px;">Privacy Policy</a>
