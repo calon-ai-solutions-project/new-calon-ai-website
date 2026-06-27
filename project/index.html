@@ -209,6 +209,41 @@
     .cvn-title{margin-bottom:34px;}
   }
   @media(prefers-reduced-motion:reduce){.cvn-chev,.cvn-ring,.cvn-orb{animation:none !important;}}
+
+  /* Convergence — lens stack (business-model style) */
+  .bm-title{font-family:'Sora',sans-serif;font-weight:600;font-size:clamp(26px,4vw,46px);line-height:1.1;text-align:center;letter-spacing:-0.01em;margin:0 0 54px;color:#fff;}
+  .bm-grid{display:grid;grid-template-columns:1fr clamp(300px,40vw,560px) 1fr;align-items:center;gap:clamp(16px,3vw,40px);max-width:1240px;margin:0 auto;}
+  .bm-side{display:flex;flex-direction:column;gap:6px;}
+  .bm-side.left{text-align:right;align-items:flex-end;}
+  .bm-side.right{text-align:left;align-items:flex-start;}
+  .bm-eye{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;margin:0;font-weight:600;}
+  .bm-eye.bad{color:#E8657A;} .bm-eye.good{color:#5FD0B0;}
+  .bm-word{font-family:'Sora',sans-serif;font-weight:600;font-size:clamp(22px,2.4vw,32px);color:#fff;margin:6px 0 4px;letter-spacing:-0.01em;}
+  .bm-line{height:2px;width:130px;border-radius:2px;margin-bottom:14px;}
+  .bm-line.bad{background:linear-gradient(90deg,transparent,#E8657A);}
+  .bm-line.good{background:linear-gradient(90deg,#5FD0B0,transparent);}
+  .bm-tag{font-size:14px;line-height:1.9;color:rgba(226,236,247,0.6);}
+  /* stage */
+  .bm-stage{position:relative;height:clamp(280px,32vw,380px);display:flex;align-items:center;justify-content:center;}
+  .bm-lens{position:absolute;top:50%;left:50%;border-radius:50%;filter:blur(20px);mix-blend-mode:screen;will-change:transform;animation:bm-breathe 7s ease-in-out infinite;}
+  .bm-lens.l1{width:120px;height:74%;background:radial-gradient(ellipse at center,#2A46E6,transparent 70%);transform:translate(-50%,-50%) translateX(-130px);animation-delay:0s;}
+  .bm-lens.l2{width:160px;height:88%;background:radial-gradient(ellipse at center,#2E7BE6,transparent 70%);transform:translate(-50%,-50%) translateX(-48px);animation-delay:.9s;}
+  .bm-lens.l3{width:160px;height:88%;background:radial-gradient(ellipse at center,#33C6E6,transparent 70%);transform:translate(-50%,-50%) translateX(48px);animation-delay:1.8s;}
+  .bm-lens.l4{width:120px;height:74%;background:radial-gradient(ellipse at center,#3FD9A8,transparent 70%);transform:translate(-50%,-50%) translateX(130px);animation-delay:2.7s;}
+  @keyframes bm-breathe{0%,100%{filter:blur(20px);opacity:0.82;}50%{filter:blur(26px);opacity:1;}}
+  .bm-ring{position:absolute;top:50%;left:50%;width:clamp(240px,30vw,400px);height:clamp(240px,30vw,400px);transform:translate(-50%,-50%);animation:bm-spin 16s linear infinite;}
+  .bm-ring::before{content:'';position:absolute;inset:0;border:1px solid rgba(126,196,240,0.28);border-radius:50%;}
+  .bm-ring .bm-dot{position:absolute;top:50%;left:-4px;width:9px;height:9px;margin-top:-4px;border-radius:50%;background:#CDEBFB;box-shadow:0 0 16px #7EC4F0,0 0 30px rgba(126,196,240,0.5);}
+  .bm-ring2{position:absolute;top:50%;left:50%;width:clamp(170px,22vw,290px);height:clamp(170px,22vw,290px);transform:translate(-50%,-50%);border:1px solid rgba(126,196,240,0.14);border-radius:50%;animation:bm-spin 22s linear infinite reverse;}
+  @keyframes bm-spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+  @media(max-width:820px){
+    .bm-grid{grid-template-columns:1fr;gap:8px;}
+    .bm-side.left,.bm-side.right{text-align:center;align-items:center;}
+    .bm-stage{margin:4px 0;}
+    .bm-line.bad{background:linear-gradient(90deg,transparent,#E8657A,transparent);}
+    .bm-line.good{background:linear-gradient(90deg,transparent,#5FD0B0,transparent);}
+  }
+  @media(prefers-reduced-motion:reduce){.bm-lens,.bm-ring,.bm-ring2{animation:none !important;}}
 </style>
 </helmet>
 <div id="top" style="background:#0A1428;color:#FFFFFF;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;">
@@ -285,10 +320,29 @@
     </div>
   </section>
 
-  <!-- CONVERGENCE — Your operation, connected in one place -->
-  <section style="position:relative;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(126,196,240,0.08),transparent 65%);overflow:hidden;">
-    <div data-reveal style="max-width:1100px;margin:0 auto;padding:72px 40px;">
-      <img src="assets/calon_hero_animated.gif" alt="Your operation, connected in one place" width="860" height="573" style="width:100%;height:auto;display:block;mix-blend-mode:lighten;">
+  <!-- CONVERGENCE — lens stack -->
+  <section style="position:relative;overflow:hidden;">
+    <div data-reveal style="max-width:1240px;margin:0 auto;padding:96px 40px;">
+      <h2 class="bm-title">Your operation, connected in <span style="color:#7EC4F0;">one place</span>.</h2>
+      <div class="bm-grid">
+        <div class="bm-side left">
+          <p class="bm-eye bad">What's holding you back</p>
+          <p class="bm-word">Scattered.</p>
+          <span class="bm-line bad"></span>
+          <p class="bm-tag">Margin slipping<br>Time being lost<br>Revenue untouched<br>Founder doing it all</p>
+        </div>
+        <div class="bm-stage">
+          <span class="bm-ring2"></span>
+          <span class="bm-lens l1"></span><span class="bm-lens l2"></span><span class="bm-lens l3"></span><span class="bm-lens l4"></span>
+          <span class="bm-ring"><span class="bm-dot"></span></span>
+        </div>
+        <div class="bm-side right">
+          <p class="bm-eye good">What you get</p>
+          <p class="bm-word">Connected.</p>
+          <span class="bm-line good"></span>
+          <p class="bm-tag">See what's happening<br>Spot what's being missed<br>Automate the right work<br>Recover more revenue</p>
+        </div>
+      </div>
     </div>
   </section>
 
