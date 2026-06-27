@@ -233,31 +233,31 @@
   .bm-stage{
     position:relative;display:flex;align-items:center;justify-content:center;
     --bm-size:clamp(290px,36vw,460px);
-    --bm-c1:30,58,224;     /* deep blue   */
-    --bm-c2:45,111,230;    /* blue        */
-    --bm-c3:74,159,196;    /* blue-teal   */
-    --bm-c4:70,201,160;    /* teal-green  */
-    --bm-c5:79,221,134;    /* green       */
+    --bm-c1:22,42,140;     /* deep blue   */
+    --bm-c2:30,78,150;     /* blue        */
+    --bm-c3:48,108,135;    /* blue-teal   */
+    --bm-c4:42,140,110;    /* teal-green  */
+    --bm-c5:52,158,98;     /* green       */
     --bm-glow:#7EC4F0;
-    --bm-lens-blur:7px;
+    --bm-lens-blur:4px;
     --bm-spin:30s; --bm-pulse:8s;
     height:var(--bm-size);
   }
   /* faint dark core so the lenses read against it (like the reference) */
   .bm-ambient{position:absolute;width:108%;height:96%;border-radius:50%;
-    background:radial-gradient(ellipse at center,rgba(2,6,16,0.85),transparent 70%);}
+    background:radial-gradient(ellipse at center,rgba(1,4,12,0.92),transparent 72%);}
   /* translucent vertical lens discs — overlapping, each its own silhouette */
   .bm-lens{position:absolute;top:50%;left:50%;border-radius:50%;filter:blur(var(--bm-lens-blur));will-change:transform;animation:bm-breathe var(--bm-pulse) ease-in-out infinite;}
-  .bm-lens.l1{width:calc(var(--bm-size)*0.23);height:calc(var(--bm-size)*0.70);transform:translate(-50%,-50%) translateX(calc(var(--bm-size)*-0.33));
-    background:radial-gradient(ellipse at center,rgba(var(--bm-c1),0.95) 0%,rgba(var(--bm-c1),0.6) 40%,rgba(var(--bm-c1),0) 72%);animation-delay:0s;}
-  .bm-lens.l2{width:calc(var(--bm-size)*0.29);height:calc(var(--bm-size)*0.88);transform:translate(-50%,-50%) translateX(calc(var(--bm-size)*-0.17));
-    background:radial-gradient(ellipse at center,rgba(var(--bm-c2),0.72) 0%,rgba(var(--bm-c2),0.42) 42%,rgba(var(--bm-c2),0) 73%);animation-delay:.8s;}
-  .bm-lens.l3{width:calc(var(--bm-size)*0.31);height:calc(var(--bm-size)*0.98);transform:translate(-50%,-50%) translateX(0);
-    background:radial-gradient(ellipse at center,rgba(var(--bm-c3),0.6) 0%,rgba(var(--bm-c3),0.32) 44%,rgba(var(--bm-c3),0) 74%);animation-delay:1.6s;}
-  .bm-lens.l4{width:calc(var(--bm-size)*0.29);height:calc(var(--bm-size)*0.88);transform:translate(-50%,-50%) translateX(calc(var(--bm-size)*0.17));
-    background:radial-gradient(ellipse at center,rgba(var(--bm-c4),0.72) 0%,rgba(var(--bm-c4),0.42) 42%,rgba(var(--bm-c4),0) 73%);animation-delay:2.4s;}
-  .bm-lens.l5{width:calc(var(--bm-size)*0.23);height:calc(var(--bm-size)*0.70);transform:translate(-50%,-50%) translateX(calc(var(--bm-size)*0.33));
-    background:radial-gradient(ellipse at center,rgba(var(--bm-c5),0.92) 0%,rgba(var(--bm-c5),0.58) 40%,rgba(var(--bm-c5),0) 72%);animation-delay:3.2s;}
+  .bm-lens.l1{width:calc(var(--bm-size)*0.21);height:calc(var(--bm-size)*0.70);transform:translate(-50%,-50%) translateX(calc(var(--bm-size)*-0.37));
+    background:radial-gradient(ellipse at center,rgba(var(--bm-c1),0.98) 0%,rgba(var(--bm-c1),0.78) 46%,rgba(var(--bm-c1),0) 66%);animation-delay:0s;}
+  .bm-lens.l2{width:calc(var(--bm-size)*0.27);height:calc(var(--bm-size)*0.88);transform:translate(-50%,-50%) translateX(calc(var(--bm-size)*-0.185));
+    background:radial-gradient(ellipse at center,rgba(var(--bm-c2),0.82) 0%,rgba(var(--bm-c2),0.55) 48%,rgba(var(--bm-c2),0) 68%);animation-delay:.8s;}
+  .bm-lens.l3{width:calc(var(--bm-size)*0.29);height:calc(var(--bm-size)*0.98);transform:translate(-50%,-50%) translateX(0);
+    background:radial-gradient(ellipse at center,rgba(var(--bm-c3),0.78) 0%,rgba(var(--bm-c3),0.5) 48%,rgba(var(--bm-c3),0) 68%);animation-delay:1.6s;}
+  .bm-lens.l4{width:calc(var(--bm-size)*0.27);height:calc(var(--bm-size)*0.88);transform:translate(-50%,-50%) translateX(calc(var(--bm-size)*0.185));
+    background:radial-gradient(ellipse at center,rgba(var(--bm-c4),0.82) 0%,rgba(var(--bm-c4),0.55) 48%,rgba(var(--bm-c4),0) 68%);animation-delay:2.4s;}
+  .bm-lens.l5{width:calc(var(--bm-size)*0.21);height:calc(var(--bm-size)*0.70);transform:translate(-50%,-50%) translateX(calc(var(--bm-size)*0.37));
+    background:radial-gradient(ellipse at center,rgba(var(--bm-c5),0.96) 0%,rgba(var(--bm-c5),0.72) 46%,rgba(var(--bm-c5),0) 66%);animation-delay:3.2s;}
   @keyframes bm-breathe{0%,100%{filter:blur(var(--bm-lens-blur));}50%{filter:blur(calc(var(--bm-lens-blur) + 3px));}}
   /* bright glowing arc ring around the stack (the signature blue loop) */
   .bm-ring{position:absolute;top:50%;left:50%;width:calc(var(--bm-size)*0.52);height:calc(var(--bm-size)*1.02);
