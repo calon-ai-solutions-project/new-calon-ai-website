@@ -296,7 +296,10 @@
   .brain-live{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(226,236,247,0.55);}
   .brain-live i{width:7px;height:7px;border-radius:50%;background:#46E08A;box-shadow:0 0 8px #46E08A;animation:brain-pulse 1.8s ease-in-out infinite;}
   @keyframes brain-pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
-  .brain-msgs{display:flex;flex-direction:column;gap:14px;padding:18px 4px 6px;}
+  .brain-msgs{display:flex;flex-direction:column;gap:14px;padding:18px 4px 6px;min-height:212px;}
+  .brain-input .ph.is-typing{color:#eaf2fb;}
+  .brain-input .ph.is-typing::after{content:'';display:inline-block;width:1.5px;height:1em;background:#7EC4F0;margin-left:2px;vertical-align:-2px;animation:brain-blink 1s steps(1) infinite;}
+  @keyframes brain-blink{0%,50%{opacity:1;}50.01%,100%{opacity:0;}}
   .brain-q{align-self:flex-end;max-width:80%;background:linear-gradient(150deg,#8ECBF2,#7EC4F0);color:#06101F;font-size:14.5px;font-weight:500;line-height:1.45;padding:11px 15px;border-radius:14px 14px 4px 14px;}
   .brain-a{align-self:flex-start;max-width:88%;background:rgba(126,196,240,0.08);border:1px solid rgba(126,196,240,0.16);color:rgba(226,236,247,0.9);font-size:14.5px;line-height:1.5;padding:12px 15px;border-radius:14px 14px 14px 4px;animation:brain-in .6s ease both;}
   .brain-a b{color:#9FE0C2;font-weight:600;}
@@ -1049,6 +1052,72 @@ class Component extends DCLogic {
   }
   renderVals() { return {}; }
 }
+</script>
+<script>
+/* Live AI Brain chat animation — types question, shows typing, types answer, loops */
+(function(){
+  var PLACEHOLDER = 'Ask your business anything…';
+  var convo = [
+    { q: 'How is my marketing going?',
+      a: 'Google Ads leads are up 18% this month. But 2 quotes worth £14k have gone cold, want me to draft the follow-ups?',
+      html: 'Google Ads leads are up <b>18%</b> this month. But 2 quotes worth <b>£14k</b> have gone cold, want me to draft the follow-ups?' },
+    { q: 'Prepare a report for the CFO.',
+      a: "Done. I've pulled revenue, margin and pipeline into a one-page summary and exported it as a PDF. Want me to email it over?",
+      html: "Done. I've pulled <b>revenue, margin and pipeline</b> into a one-page summary and exported it as a PDF. Want me to email it over?" }
+  ];
+  function sleep(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  function typeText(el, text, speed){
+    return new Promise(function(res){
+      var k = 0;
+      (function tick(){
+        el.textContent = text.slice(0, k);
+        if (k++ <= text.length) setTimeout(tick, speed); else res();
+      })();
+    });
+  }
+  function start(){
+    var chat = document.querySelector('.brain-chat');
+    if (!chat) { setTimeout(start, 120); return; }
+    if (chat._chatRun) return; chat._chatRun = true;
+    var msgs = chat.querySelector('.brain-msgs');
+    var ph = chat.querySelector('.brain-input .ph');
+    if (!msgs || !ph) return;
+    // Respect reduced motion: leave the static conversation as-is.
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var i = 0;
+    async function cycle(){
+      var item = convo[i % convo.length]; i++;
+      msgs.innerHTML = '';
+      // 1) type the question into the input bar
+      ph.classList.add('is-typing');
+      await typeText(ph, item.q, 46);
+      await sleep(480);
+      // 2) "send" -> user bubble, reset input
+      ph.classList.remove('is-typing');
+      ph.textContent = PLACEHOLDER;
+      var q = document.createElement('div'); q.className = 'brain-q'; q.textContent = item.q;
+      msgs.appendChild(q);
+      await sleep(520);
+      // 3) Brain typing dots
+      var dots = document.createElement('div'); dots.className = 'brain-typing';
+      dots.innerHTML = '<span></span><span></span><span></span>';
+      msgs.appendChild(dots);
+      await sleep(1500);
+      dots.remove();
+      // 4) answer types out, then swap in the highlighted version
+      var a = document.createElement('div'); a.className = 'brain-a';
+      msgs.appendChild(a);
+      await typeText(a, item.a, 15);
+      a.innerHTML = item.html;
+      await sleep(2800);
+      cycle();
+    }
+    cycle();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+})();
 </script>
 </body>
 </html>
