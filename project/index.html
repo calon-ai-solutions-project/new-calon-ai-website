@@ -166,7 +166,7 @@
   .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.18fr);gap:40px;align-items:center;}
   .hero-vis{min-width:0;}
   /* hero visual — enlarged + bleeds slightly so it balances the headline */
-  .hero-gif{width:114%;max-width:none;margin-left:-7%;height:auto;display:block;mix-blend-mode:lighten;}
+  .hero-gif{width:114%;max-width:none;margin-left:-7%;height:auto;display:block;}
   @media(max-width:920px){
     .hero-grid{grid-template-columns:minmax(0,1fr);gap:8px;}
     /* full-bleed to the viewport edges on mobile (no overflow) */
@@ -1039,9 +1039,14 @@ class Component extends DCLogic {
         progress.style.height = pct + '%';
       };
       upd();
-      window.addEventListener('scroll', upd, { passive: true });
-      window.addEventListener('resize', upd);
-      this._calUpd = upd;
+      // rAF-throttle so we read layout at most once per frame (smooth scroll)
+      let ticking = false;
+      const onScroll = () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(() => { upd(); ticking = false; }); }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      this._calUpd = onScroll;
     }
   }
   componentWillUnmount() {

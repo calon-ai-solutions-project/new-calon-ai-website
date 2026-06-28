@@ -77,6 +77,15 @@
 
         <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
           <form onSubmit="{{ handleSubmit }}" style="display:flex;flex-direction:column;gap:22px;">
+            <!-- ===== FORM DELIVERY (Web3Forms) =====
+                 1. Go to https://web3forms.com, enter your inbox (e.g. contact@calonaisolutions.com)
+                 2. Copy the Access Key it gives you
+                 3. Paste it into the value below, replacing REPLACE_WITH_WEB3FORMS_ACCESS_KEY
+                 Submissions will then arrive in that inbox. No Cloudflare / backend needed. -->
+            <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+            <input type="hidden" name="subject" value="New enquiry from the Calon website">
+            <input type="hidden" name="from_name" value="Calon AI website">
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important;">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
               <div><label class="cf-label" for="cf-name">Your name</label><input class="cf-input" id="cf-name" name="name" type="text" placeholder="Jane Smith" required></div>
               <div><label class="cf-label" for="cf-biz">Business name</label><input class="cf-input" id="cf-biz" name="business" type="text" placeholder="Acme Heating Ltd"></div>
@@ -130,8 +139,16 @@ class Component extends DCLogic {
   state = { submitted: false, name: '' };
   handleSubmit = (e) => {
     e.preventDefault();
+    const form = e.target;
     let name = '';
-    try { name = (new FormData(e.target).get('name') || '').toString().trim(); } catch (_) {}
+    try { name = (new FormData(form).get('name') || '').toString().trim(); } catch (_) {}
+    // Send the submission to Web3Forms (emails it to your inbox). No backend needed.
+    try {
+      const data = new FormData(form);
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+        .then(function (r) { return r.json(); })
+        .catch(function () {});
+    } catch (_) {}
     this.setState({ submitted: true, name });
     try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (_) {}
   };
