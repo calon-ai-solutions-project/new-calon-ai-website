@@ -1,0 +1,4 @@
+# Cloudflare Pages headers
+# Keep the private case-study pages out of search indexes at the HTTP level.
+/case-studies/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
