@@ -77,12 +77,11 @@
 
         <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
           <form onSubmit="{{ handleSubmit }}" style="display:flex;flex-direction:column;gap:22px;">
-            <!-- ===== FORM DELIVERY (Web3Forms) =====
-                 1. Go to https://web3forms.com, enter your inbox (e.g. contact@calonaisolutions.com)
-                 2. Copy the Access Key it gives you
-                 3. Paste it into the value below, replacing REPLACE_WITH_WEB3FORMS_ACCESS_KEY
-                 Submissions will then arrive in that inbox. No Cloudflare / backend needed. -->
-            <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+            <!-- Form delivery via Web3Forms. Submissions go to the inbox set on this
+                 access key in the Web3Forms dashboard. To receive at contact@calonaisolutions.com,
+                 set that as the recipient email in the Web3Forms dashboard settings. -->
+            <input type="hidden" name="access_key" value="3a407688-c751-4928-a470-c8c2495202e6">
+            <input type="hidden" name="replyto" value="contact@calonaisolutions.com">
             <input type="hidden" name="subject" value="New enquiry from the Calon website">
             <input type="hidden" name="from_name" value="Calon AI website">
             <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important;">
