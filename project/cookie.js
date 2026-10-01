@@ -38,10 +38,7 @@
     requestAnimationFrame(function () { requestAnimationFrame(function () { bar.classList.add('is-in'); }); });
   }
 
-  function legalHref() {
-    var depth = (location.pathname.match(/\/case-studies\/[^/]+\/?/) ? '../../' : '');
-    return depth + 'Legal.dc.html?doc=privacy';
-  }
+  function legalHref() { return '/privacy'; }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(show, 900); });
   else setTimeout(show, 900);

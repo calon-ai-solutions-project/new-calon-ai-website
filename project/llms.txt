@@ -1,0 +1,40 @@
+# Calon AI
+
+> Calon AI (CALON AI SOLUTIONS LIMITED, Companies House 15984397) is a Welsh operational AI and automation consultancy for founder-led service businesses across the UK. We connect the tools a business already uses (CRM, Xero, job management, inboxes, spreadsheets), automate the admin around them and build AI agents and dashboards so founders can see margin, jobs and follow-ups in one place. Based in Caerphilly and Treforest (University of South Wales), Wales. Founder-led: clients work directly with the people who build the systems.
+
+Contact: contact@calonaisolutions.com · 03301 332 508 · https://calonaisolutions.com/contact
+
+## Who we help
+- [Fire & Security](https://calonaisolutions.com/fire-security)
+- [Heating & Plumbing](https://calonaisolutions.com/heating-plumbing)
+- [Facilities Management](https://calonaisolutions.com/facilities-management)
+- [Solar & Renewables](https://calonaisolutions.com/solar-renewables)
+- [Construction](https://calonaisolutions.com/construction)
+- [Training & Compliance](https://calonaisolutions.com/training-compliance)
+
+## Company
+- [About Calon AI](https://calonaisolutions.com/about): founders, credentials (ICO registered, BNI member, £1M professional indemnity, public and cyber liability cover)
+- [The AI Brain](https://calonaisolutions.com/ai-brain): one chat across CRM, Xero, ServiceM8, Google Ads, inbox and website
+- [Contact](https://calonaisolutions.com/contact): book a 15-minute operational review
+
+## Case studies
+- [Volt Secure: Operational Platform & CRM Replacement](https://calonaisolutions.com/work/volt-secure-operational-platform): A Welsh fire and security installer was running quotes, jobs and customers across five disconnected tools. We replaced the lot with one purpose-built operational platform.
+- [Volt Secure: Timesheet Verification & Payroll Workflow](https://calonaisolutions.com/work/volt-secure-timesheet-payroll): Engineer timesheets were costing a full Monday morning every week and triggering payroll disputes. We built a verification workflow that finalises the week automatically.
+- [HeatGlow: AI Lead Vetting & Qualification Flow](https://calonaisolutions.com/work/heatglow-lead-vetting): A Cardiff heating installer was treating every website enquiry the same way. Serious customers were waiting 48 hours while the team chased time-wasters. We built the AI filter that changed that.
+- [HeatGlow: AI Customer Reactivation Campaign Manager](https://calonaisolutions.com/work/heatglow-reactivation-campaign): Years of dormant customer data was sitting in the CRM untouched. We built the AI campaign manager that turned it into £18k of recovered revenue in 90 days.
+- [Construction Skills Wales: Fully Automated Learner Onboarding](https://calonaisolutions.com/work/construction-skills-wales-onboarding): Learner onboarding was a three-day manual process and one in four learners started with incomplete files. We automated the entire intake.
+- [Construction Skills Wales: AI Document Chasing & Compliance](https://calonaisolutions.com/work/construction-skills-wales-documents): The team was spending more time chasing paperwork than processing it. We built an automated chase workflow that protects the audit position and frees up the admin team.
+- [UK Fire & Security Installer: Engineer Job Management & Evidence Capture App](https://calonaisolutions.com/work/fire-security-engineer-app): Field engineers were finishing jobs without consistent evidence capture. Photos were on phones, signatures on paper, and the post-job admin was a guessing game. We built the mobile app that fixed it.
+- [UK Heating Business: Pipeline & Commercial Reporting Dashboard](https://calonaisolutions.com/work/heating-pipeline-dashboard): The director was running commercial decisions off a weekly spreadsheet and instinct. We built the live dashboard that put margin and pipeline in front of him every morning.
+- [UK Construction Training Provider: Centralised Admin & Operations Dashboard](https://calonaisolutions.com/work/training-provider-ops-dashboard): Cohort tracking and funding claims were spread across seven spreadsheets owned by different team members. We unified everything into a single MD-level view.
+- [UK Renewables Installer: Partner Network Platform](https://calonaisolutions.com/work/renewables-partner-platform): Leads were being distributed to regional partners by WhatsApp and forgotten about. We built the partner platform that put SLAs, visibility and revenue share on a single rail.
+- [UK Solar Installer: AI Quote & Sales Pipeline Workflow](https://calonaisolutions.com/work/renewables-quote-pipeline): A single estimator was bottlenecking the entire business. Quotes took five to seven days while competitors quoted same-day. We rebuilt the workflow around a configurable pricing engine.
+- [UK Renewables Sector: White-Label Platform Productisation](https://calonaisolutions.com/work/renewables-white-label-platform): An internal operational platform had crossed the threshold from "tool" to "potential product". We built the architecture that turned it into recurring revenue.
+- [UK Fire & Security Business: AI Enquiry Handling & Response Workflow](https://calonaisolutions.com/work/fire-security-enquiry-ai): One in five enquiries was getting no response within 48 hours. Competitors were responding within the hour. We built the AI workflow that closed the gap.
+- [UK Smart Security Firm: Enquiry-to-Job Workflow MVP](https://calonaisolutions.com/work/smart-security-mvp): The founders had a clear vision but no working system to back it. We built a 7-screen MVP in three weeks that unlocked their investor and franchisee conversations.
+- [UK Health & Safety Training Provider: Sales & Onboarding Automation](https://calonaisolutions.com/work/health-safety-training-automation): The whole business was capped by the owner’s calendar. We built the sales and onboarding automation that let the business run even when he was teaching.
+
+## Legal
+- [Privacy Policy](https://calonaisolutions.com/privacy)
+- [Terms of Service](https://calonaisolutions.com/terms)
+- [Acceptable Use Policy](https://calonaisolutions.com/acceptable-use)

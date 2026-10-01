@@ -1,0 +1,23 @@
+# Cloudflare Pages redirects: old page names -> clean URLs
+/About.dc /about 301
+/About.dc.html /about 301
+/Contact.dc /contact 301
+/Contact.dc.html /contact 301
+/Proof.dc /proof 301
+/Proof.dc.html /proof 301
+/AI-Brain.dc /ai-brain 301
+/AI-Brain.dc.html /ai-brain 301
+/Fire-Security.dc /fire-security 301
+/Fire-Security.dc.html /fire-security 301
+/Heating-Plumbing.dc /heating-plumbing 301
+/Heating-Plumbing.dc.html /heating-plumbing 301
+/Facilities-Management.dc /facilities-management 301
+/Facilities-Management.dc.html /facilities-management 301
+/Solar-Renewables.dc /solar-renewables 301
+/Solar-Renewables.dc.html /solar-renewables 301
+/Construction.dc /construction 301
+/Construction.dc.html /construction 301
+/Training-Compliance.dc /training-compliance 301
+/Training-Compliance.dc.html /training-compliance 301
+/Legal /privacy 301
+/Legal.html /privacy 301

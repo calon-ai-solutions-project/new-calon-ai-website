@@ -2,3 +2,9 @@
 # Keep the private case-study pages out of search indexes at the HTTP level.
 /case-studies/*
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+# Keep Cloudflare preview / pages.dev copies out of search (the real site is calonaisolutions.com)
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
