@@ -21,3 +21,6 @@
 /Training-Compliance.dc.html /training-compliance 301
 /Legal /privacy 301
 /Legal.html /privacy 301
+# Old WordPress sitemap addresses still known to Google -> current sitemap
+/sitemap_index.xml /sitemap.xml 301
+/wp-sitemap.xml /sitemap.xml 301
