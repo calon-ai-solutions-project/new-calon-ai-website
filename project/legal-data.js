@@ -6,7 +6,7 @@ const COMPANY = 'Calon AI Solutions Limited';
 const SHORT = 'Calon AI';
 const NUMBER = '15984397';
 const ADDRESS = 'Ty Merlin, Caerphilly Business Park, Van Road, Caerphilly, Wales, CF83 3GS';
-const EMAIL = 'hello@calon.ai';
+const EMAIL = 'contact@calonaisolutions.com';
 const EFFECTIVE = '18 June 2026';
 
 export const DOCS = {
