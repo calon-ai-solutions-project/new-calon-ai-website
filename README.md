@@ -23,3 +23,14 @@ The design medium is **HTML/CSS/JS** — these are prototypes, not production co
 - `README.md` — this file
 - `chats/` — conversation transcripts (read these!)
 - `project/` — the `Brand guidelines overview` project files (HTML prototypes, assets, components)
+
+## SEO build step (run after editing case studies or legal text)
+
+Case studies (`project/case-studies-data.js`) and legal documents (`project/legal-data.js`) are also published as plain static HTML so search engines and AI assistants can read them without JavaScript:
+
+```
+node tools/build-static.mjs   # regenerates project/work/*.html, privacy/terms/acceptable-use, the Proof page grid, sitemap.xml and llms.txt
+python3 tools/seo-pages.py    # re-applies page titles, descriptions, JSON-LD and FAQ blocks (idempotent)
+```
+
+Commit the generated files. Clean URLs (`/about`, `/fire-security`, `/work/<slug>`) are served by both Vercel (`vercel.json`) and Cloudflare Pages (`project/_redirects`, `project/_headers`).

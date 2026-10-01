@@ -6,8 +6,579 @@
     {
       "source": "/case-studies/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive, nosnippet" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        }
       ]
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<sub>.*)\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/About.dc",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/About.dc.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/Contact.dc",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/Contact.dc.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/Proof.dc",
+      "destination": "/proof",
+      "permanent": true
+    },
+    {
+      "source": "/Proof.dc.html",
+      "destination": "/proof",
+      "permanent": true
+    },
+    {
+      "source": "/AI-Brain.dc",
+      "destination": "/ai-brain",
+      "permanent": true
+    },
+    {
+      "source": "/AI-Brain.dc.html",
+      "destination": "/ai-brain",
+      "permanent": true
+    },
+    {
+      "source": "/Fire-Security.dc",
+      "destination": "/fire-security",
+      "permanent": true
+    },
+    {
+      "source": "/Fire-Security.dc.html",
+      "destination": "/fire-security",
+      "permanent": true
+    },
+    {
+      "source": "/Heating-Plumbing.dc",
+      "destination": "/heating-plumbing",
+      "permanent": true
+    },
+    {
+      "source": "/Heating-Plumbing.dc.html",
+      "destination": "/heating-plumbing",
+      "permanent": true
+    },
+    {
+      "source": "/Facilities-Management.dc",
+      "destination": "/facilities-management",
+      "permanent": true
+    },
+    {
+      "source": "/Facilities-Management.dc.html",
+      "destination": "/facilities-management",
+      "permanent": true
+    },
+    {
+      "source": "/Solar-Renewables.dc",
+      "destination": "/solar-renewables",
+      "permanent": true
+    },
+    {
+      "source": "/Solar-Renewables.dc.html",
+      "destination": "/solar-renewables",
+      "permanent": true
+    },
+    {
+      "source": "/Construction.dc",
+      "destination": "/construction",
+      "permanent": true
+    },
+    {
+      "source": "/Construction.dc.html",
+      "destination": "/construction",
+      "permanent": true
+    },
+    {
+      "source": "/Training-Compliance.dc",
+      "destination": "/training-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/Training-Compliance.dc.html",
+      "destination": "/training-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "volt-secure-operational-platform"
+        }
+      ],
+      "destination": "/work/volt-secure-operational-platform",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "volt-secure-operational-platform"
+        }
+      ],
+      "destination": "/work/volt-secure-operational-platform",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "volt-secure-timesheet-payroll"
+        }
+      ],
+      "destination": "/work/volt-secure-timesheet-payroll",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "volt-secure-timesheet-payroll"
+        }
+      ],
+      "destination": "/work/volt-secure-timesheet-payroll",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "heatglow-lead-vetting"
+        }
+      ],
+      "destination": "/work/heatglow-lead-vetting",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "heatglow-lead-vetting"
+        }
+      ],
+      "destination": "/work/heatglow-lead-vetting",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "heatglow-reactivation-campaign"
+        }
+      ],
+      "destination": "/work/heatglow-reactivation-campaign",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "heatglow-reactivation-campaign"
+        }
+      ],
+      "destination": "/work/heatglow-reactivation-campaign",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "construction-skills-wales-onboarding"
+        }
+      ],
+      "destination": "/work/construction-skills-wales-onboarding",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "construction-skills-wales-onboarding"
+        }
+      ],
+      "destination": "/work/construction-skills-wales-onboarding",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "construction-skills-wales-documents"
+        }
+      ],
+      "destination": "/work/construction-skills-wales-documents",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "construction-skills-wales-documents"
+        }
+      ],
+      "destination": "/work/construction-skills-wales-documents",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "fire-security-engineer-app"
+        }
+      ],
+      "destination": "/work/fire-security-engineer-app",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "fire-security-engineer-app"
+        }
+      ],
+      "destination": "/work/fire-security-engineer-app",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "heating-pipeline-dashboard"
+        }
+      ],
+      "destination": "/work/heating-pipeline-dashboard",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "heating-pipeline-dashboard"
+        }
+      ],
+      "destination": "/work/heating-pipeline-dashboard",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "training-provider-ops-dashboard"
+        }
+      ],
+      "destination": "/work/training-provider-ops-dashboard",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "training-provider-ops-dashboard"
+        }
+      ],
+      "destination": "/work/training-provider-ops-dashboard",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "renewables-partner-platform"
+        }
+      ],
+      "destination": "/work/renewables-partner-platform",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "renewables-partner-platform"
+        }
+      ],
+      "destination": "/work/renewables-partner-platform",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "renewables-quote-pipeline"
+        }
+      ],
+      "destination": "/work/renewables-quote-pipeline",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "renewables-quote-pipeline"
+        }
+      ],
+      "destination": "/work/renewables-quote-pipeline",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "renewables-white-label-platform"
+        }
+      ],
+      "destination": "/work/renewables-white-label-platform",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "renewables-white-label-platform"
+        }
+      ],
+      "destination": "/work/renewables-white-label-platform",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "fire-security-enquiry-ai"
+        }
+      ],
+      "destination": "/work/fire-security-enquiry-ai",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "fire-security-enquiry-ai"
+        }
+      ],
+      "destination": "/work/fire-security-enquiry-ai",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "smart-security-mvp"
+        }
+      ],
+      "destination": "/work/smart-security-mvp",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "smart-security-mvp"
+        }
+      ],
+      "destination": "/work/smart-security-mvp",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "health-safety-training-automation"
+        }
+      ],
+      "destination": "/work/health-safety-training-automation",
+      "permanent": true
+    },
+    {
+      "source": "/Case-Study.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "health-safety-training-automation"
+        }
+      ],
+      "destination": "/work/health-safety-training-automation",
+      "permanent": true
+    },
+    {
+      "source": "/Legal.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "doc",
+          "value": "privacy"
+        }
+      ],
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/Legal.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "doc",
+          "value": "privacy"
+        }
+      ],
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/Legal.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "doc",
+          "value": "terms"
+        }
+      ],
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/Legal.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "doc",
+          "value": "terms"
+        }
+      ],
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/Legal.dc",
+      "has": [
+        {
+          "type": "query",
+          "key": "doc",
+          "value": "acceptable-use"
+        }
+      ],
+      "destination": "/acceptable-use",
+      "permanent": true
+    },
+    {
+      "source": "/Legal.dc.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "doc",
+          "value": "acceptable-use"
+        }
+      ],
+      "destination": "/acceptable-use",
+      "permanent": true
+    },
+    {
+      "source": "/Legal",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/Legal.html",
+      "destination": "/privacy",
+      "permanent": true
     }
   ]
 }
