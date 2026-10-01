@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Legal | Calon AI Solutions</title>
+<title>Legal | Calon AI</title>
 <meta name="description" content="Privacy Policy, Terms of Service and Acceptable Use Policy for Calon AI Solutions Limited, Company No. 15984397.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Calon AI Solutions">
-<meta property="og:title" content="Legal | Calon AI Solutions">
+<meta property="og:site_name" content="Calon AI">
+<meta property="og:title" content="Legal | Calon AI">
 <meta property="og:description" content="Privacy Policy, Terms of Service and Acceptable Use Policy for Calon AI Solutions Limited, Company No. 15984397.">
 <meta property="og:image" content="https://calonaisolutions.com/assets/og-image.png">
 <meta property="og:locale" content="en_GB">
@@ -119,7 +119,7 @@ class Component extends DCLogic {
       this._m = m;
       const slug = new URLSearchParams(location.search).get('doc') || 'privacy';
       const doc = m.getDoc(slug);
-      try { document.title = doc.title + ' | Calon AI Solutions'; } catch (_) {}
+      try { document.title = doc.title + ' | Calon AI'; } catch (_) {}
       this.setState({ loaded: true, doc, slug: doc.slug });
     } catch (e) { console.error('legal load failed', e); }
   }
