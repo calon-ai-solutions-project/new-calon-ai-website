@@ -10,7 +10,21 @@
 <helmet>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* Giant wordmark + offices panel */
+  .ftr-mark{max-width:1240px;margin:0 auto;padding:24px 40px 0;}
+  .ftr-mark svg{display:block;width:100%;height:auto;}
+  .ftr-offices{position:relative;max-width:1240px;margin:-2.2vw auto 0;padding:0 40px 64px;}
+  .ftr-offices-in{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;background:#141F36;border:1px solid rgba(126,196,240,0.12);border-radius:24px;padding:40px 44px;box-shadow:0 -20px 50px rgba(0,0,0,0.35);}
+  .ftr-off svg{width:34px;height:34px;color:#7EC4F0;margin-bottom:16px;}
+  .ftr-off h4{font-size:24px;font-weight:600;letter-spacing:-0.02em;color:#fff;margin:0 0 4px;}
+  .ftr-off small{display:block;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#7EC4F0;margin:0 0 12px;}
+  .ftr-off address{font-style:normal;font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);}
+  .ftr-off a{display:block;font-size:17px;color:#fff;text-decoration:none;margin-top:6px;}
+  .ftr-off a:hover{color:#7EC4F0;}
   @media(max-width:860px){
+    .ftr-mark{padding:16px 22px 0;}
+    .ftr-offices{padding:0 14px 44px;margin-top:-3vw;}
+    .ftr-offices-in{grid-template-columns:1fr;gap:30px;padding:30px 24px;}
     .ftr-grid{grid-template-columns:1fr 1fr !important;gap:36px 28px !important;padding:56px 22px 40px !important;}
     .ftr-bottom{flex-direction:column;align-items:flex-start !important;gap:18px !important;padding:24px 22px !important;}
   }
@@ -63,7 +77,18 @@
       <a href="Contact.dc.html" style="font-size:15px;color:rgba(226,236,247,0.72);text-decoration:none;">Book a 15-min call</a>
       <a href="index.html#how-it-works" style="font-size:15px;color:rgba(226,236,247,0.72);text-decoration:none;">How it works</a>
       <a href="AI-Brain.dc.html" style="font-size:15px;color:rgba(226,236,247,0.72);text-decoration:none;">The AI Brain</a>
-      <p style="font-size:14px;color:rgba(226,236,247,0.5);margin:6px 0 0;line-height:1.5;">Caerphilly, Wales.<br>Working across the UK.</p>
+      <p style="font-size:14px;color:rgba(226,236,247,0.5);margin:6px 0 0;line-height:1.5;">Caerphilly &amp; Treforest, Wales.<br>Working across the UK.</p>
+    </div>
+  </div>
+  <!-- Giant wordmark + offices -->
+  <div class="ftr-mark" aria-hidden="true">
+    <svg viewBox="0 0 1000 200" preserveAspectRatio="xMidYMid meet"><text x="0" y="186" textLength="1000" lengthAdjust="spacingAndGlyphs" font-family="'Inter Tight','Inter',system-ui,sans-serif" font-size="232" font-weight="800" letter-spacing="-8" fill="#FFFFFF">CALON <tspan fill="#7EC4F0">AI</tspan></text></svg>
+  </div>
+  <div class="ftr-offices">
+    <div class="ftr-offices-in">
+      <div class="ftr-off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/><path d="M9 9h.01M12 9h.01M15 9h.01M9 12.5h.01M12 12.5h.01M15 12.5h.01"/></svg><h4>Caerphilly</h4><small>Registered office</small><address>Ty Merlin, Caerphilly Business Park,<br>Van Road, Caerphilly, Wales<br>CF83 3GS</address></div>
+      <div class="ftr-off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg><h4>Treforest</h4><small>University of South Wales</small><address>Lower Brecon Building (B Block, Room TRBL15)<br>University of South Wales, Llantwit Road<br>Treforest, Pontypridd CF37 1DL</address></div>
+      <div class="ftr-off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg><h4>Talk to us</h4><small>Working across the UK</small><a href="tel:+443301332508">03301 332 508</a><!--email_off--><a href="mailto:contact@calonaisolutions.com">contact@calonaisolutions.com</a><!--/email_off--></div>
     </div>
   </div>
   <div style="border-top:1px solid rgba(126,196,240,0.1);">
