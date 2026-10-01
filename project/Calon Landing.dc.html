@@ -1,8 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calon AI Solutions</title>
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0A1428">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -10,7 +18,7 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -45,14 +53,14 @@
   .cal-step{position:relative;display:grid;grid-template-columns:1fr 80px 1fr;align-items:center;margin-bottom:64px;opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);}
   .cal-step:last-of-type{margin-bottom:32px;}
   .cal-step.in-view{opacity:1;transform:none;}
-  .cal-node{grid-column:2;justify-self:center;width:66px;height:66px;border-radius:50%;background:#0A1428;border:1.5px solid rgba(126,196,240,0.25);display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:600;font-size:20px;color:rgba(226,236,247,0.55);z-index:4;transition:all .6s cubic-bezier(.22,.61,.36,1);}
+  .cal-node{grid-column:2;justify-self:center;width:66px;height:66px;border-radius:50%;background:#0A1428;border:1.5px solid rgba(126,196,240,0.25);display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:20px;color:rgba(226,236,247,0.55);z-index:4;transition:all .6s cubic-bezier(.22,.61,.36,1);}
   .cal-step.in-view .cal-node{border-color:#7EC4F0;color:#B8DFF5;box-shadow:0 0 0 6px rgba(126,196,240,0.07),0 0 22px rgba(126,196,240,0.3);}
   .cal-card{border:1px solid rgba(126,196,240,0.14);border-radius:16px;padding:26px 28px;background:rgba(12,24,48,0.4);transition:border-color .4s,transform .4s;}
   .cal-step.in-view .cal-card{border-color:rgba(126,196,240,0.25);}
   .cal-card:hover{border-color:rgba(126,196,240,0.45);transform:translateY(-2px);}
   .cal-step.right .cal-card{grid-column:3;margin-left:22px;}
   .cal-step.left .cal-card{grid-column:1;margin-right:22px;text-align:right;}
-  .cal-card h3{font-family:'Sora',sans-serif;font-weight:500;font-size:20px;margin:0 0 10px;color:#fff;}
+  .cal-card h3{font-family:'Inter Tight',sans-serif;font-weight:500;font-size:20px;margin:0 0 10px;color:#fff;}
   .cal-card p{font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;}
   .cal-heart-wrap{display:flex;justify-content:center;align-items:center;height:64px;}
   .cal-heart{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle,#fff,#B8DFF5 40%,#7EC4F0 65%,transparent 80%);box-shadow:0 0 22px #7EC4F0,0 0 44px rgba(126,196,240,0.4);animation:cal-heartbeat 1.2s ease-in-out infinite;}
@@ -92,7 +100,7 @@
   .cv-dest{opacity:0;animation:cv-fade 1s cubic-bezier(.22,.61,.36,1) 1.4s forwards;}
   @keyframes cv-fade{to{opacity:1;}}
   .cv-eyebrow{font-size:clamp(11px,0.85vw,13px);font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#7EC4F0;margin:0 0 16px;}
-  .cv-title{font-family:'Sora',sans-serif;font-size:clamp(40px,5.4vw,84px);font-weight:300;line-height:1.02;letter-spacing:-0.03em;color:#fff;margin:0 0 18px;}
+  .cv-title{font-family:'Inter Tight',sans-serif;font-size:clamp(40px,5.4vw,84px);font-weight:300;line-height:1.02;letter-spacing:-0.03em;color:#fff;margin:0 0 18px;}
   .cv-bar{width:clamp(160px,20vw,320px);height:2px;border-radius:2px;background:linear-gradient(90deg,#4A9BD4,#7EC4F0,#B8DFF5,#7EC4F0);background-size:200% 100%;animation:cv-shimmer 5s linear infinite;margin:0 0 22px;}
   @keyframes cv-shimmer{0%{background-position:0 0;}100%{background-position:200% 0;}}
   .cv-tag{font-size:clamp(15px,1.15vw,20px);font-weight:300;color:rgba(226,236,247,0.7);line-height:1.5;max-width:34ch;margin:0;}
@@ -163,7 +171,7 @@
   }
 </style>
 </helmet>
-<div id="top" style="background:#0A1428;color:#FFFFFF;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;">
+<div id="top" style="background:#0A1428;color:#FFFFFF;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip;">
 
   <!-- NAV -->
   <dc-import name="CalonHeader" hint-size="100%,85px"></dc-import>
@@ -175,12 +183,12 @@
         <span class="cal-type" style="font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:#7EC4F0;white-space:nowrap;"></span>
         <span class="cal-caret" style="display:inline-block;width:2px;height:14px;margin-left:4px;background:#7EC4F0;animation:cal-blink 1s steps(1) infinite;"></span>
       </div>
-      <h1 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(44px,6.4vw,82px);line-height:1.04;letter-spacing:-0.02em;margin:0;">You built this business.<br><span style="font-weight:600;">Let's get more from it.</span></h1>
+      <h1 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(44px,6.4vw,82px);line-height:1.04;letter-spacing:-0.035em;margin:0;">You built this business.<br><span style="font-weight:600;">Let's get more from it.</span></h1>
       <p style="font-size:clamp(19px,2vw,24px);line-height:1.5;color:rgba(226,236,247,0.82);margin:30px 0 0;max-width:640px;font-weight:300;">Find hidden margin. Recover lost revenue. Fix the gap with the highest ROI first.</p>
       <p style="font-size:17px;line-height:1.6;color:rgba(226,236,247,0.55);margin:18px 0 0;max-width:600px;">We help founder-led service businesses get more from the work they already do.</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:44px;">
-        <a href="#final-cta" style="background:#7EC4F0;color:#06101F;font-size:16px;font-weight:600;padding:16px 30px;border-radius:9px;text-decoration:none;box-shadow:0 8px 30px rgba(126,196,240,0.22);">Let's find the gap together</a>
-        <a href="#proof" style="background:transparent;color:#FFFFFF;font-size:16px;font-weight:500;padding:16px 30px;border-radius:9px;text-decoration:none;border:1px solid rgba(126,196,240,0.35);">See the work</a>
+        <a href="#final-cta" style="background:#7EC4F0;color:#06101F;font-size:16px;font-weight:600;padding:16px 30px;border-radius:999px;text-decoration:none;box-shadow:0 8px 30px rgba(126,196,240,0.22);">Let's find the gap together</a>
+        <a href="#proof" style="background:transparent;color:#FFFFFF;font-size:16px;font-weight:500;padding:16px 30px;border-radius:999px;text-decoration:none;border:1px solid rgba(126,196,240,0.35);">See the work</a>
       </div>
     </div>
   </section>
@@ -267,10 +275,10 @@
     <div data-reveal style="max-width:1240px;margin:0 auto;padding:38px 40px;display:flex;flex-direction:column;gap:26px;align-items:center;">
       <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(226,236,247,0.5);margin:0;text-align:center;">Trusted by founder-led service businesses across the UK</p>
       <div style="display:flex;flex-wrap:wrap;gap:54px;align-items:center;justify-content:center;filter:grayscale(1);opacity:0.62;">
-        <span style="font-family:'Sora',sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">HeatGlow</span>
-        <span style="font-family:'Sora',sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">Volt Secure</span>
-        <span style="font-family:'Sora',sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">Walkers &amp; Talkers</span>
-        <span style="font-family:'Sora',sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">Lextan</span>
+        <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">HeatGlow</span>
+        <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">Volt Secure</span>
+        <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">Walkers &amp; Talkers</span>
+        <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">Lextan</span>
       </div>
     </div>
   </section>
@@ -278,11 +286,11 @@
   <!-- SECTION 3 — THE TWO DOORS -->
   <section style="max-width:1240px;margin:0 auto;padding:120px 40px;">
     <div data-reveal style="">
-      <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.01em;margin:0 0 56px;max-width:760px;">There are two reasons founders end up on this page.</h2>
+      <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.035em;margin:0 0 56px;max-width:760px;">There are two reasons founders end up on this page.</h2>
       <div class="td-duo">
         <div class="td-card td-card-left">
-          <span style="display:inline-block;font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#7EC4F0;margin-bottom:20px;">One</span>
-          <p style="font-family:'Sora',sans-serif;font-size:clamp(20px,1.6vw,26px);font-weight:400;line-height:1.35;letter-spacing:-0.015em;margin:0;color:#fff;">The business is busy. The profit isn't following.</p>
+          <span style="display:inline-block;font-family:'Inter Tight',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#7EC4F0;margin-bottom:20px;">One</span>
+          <p style="font-family:'Inter Tight',sans-serif;font-size:clamp(20px,1.6vw,26px);font-weight:400;line-height:1.35;letter-spacing:-0.015em;margin:0;color:#fff;">The business is busy. The profit isn't following.</p>
         </div>
         <div class="td-spine">
           <div class="td-line top"></div>
@@ -290,8 +298,8 @@
           <div class="td-line bottom"></div>
         </div>
         <div class="td-card td-card-right">
-          <span style="display:inline-block;font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#7EC4F0;margin-bottom:20px;">Two</span>
-          <p style="font-family:'Sora',sans-serif;font-size:clamp(20px,1.6vw,26px);font-weight:400;line-height:1.35;letter-spacing:-0.015em;margin:0;color:#fff;">The business is doing well. They can already see more in it.</p>
+          <span style="display:inline-block;font-family:'Inter Tight',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#7EC4F0;margin-bottom:20px;">Two</span>
+          <p style="font-family:'Inter Tight',sans-serif;font-size:clamp(20px,1.6vw,26px);font-weight:400;line-height:1.35;letter-spacing:-0.015em;margin:0;color:#fff;">The business is doing well. They can already see more in it.</p>
         </div>
       </div>
       <p style="font-size:16px;color:rgba(226,236,247,0.62);margin:48px 0 0;text-align:center;">Both are right. Both are why we exist.</p>
@@ -302,7 +310,7 @@
   <section style="background:rgba(12,24,48,0.55);border-top:1px solid rgba(126,196,240,0.1);border-bottom:1px solid rgba(126,196,240,0.1);">
     <div data-reveal style="max-width:1240px;margin:0 auto;padding:120px 40px;">
       <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 16px;">How it works</p>
-      <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.01em;margin:0 0 60px;">From first call to a real edge in the AI race.</h2>
+      <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.035em;margin:0 0 60px;">From first call to a real edge in the AI race.</h2>
       <div class="cal-tl">
         <div class="cal-line"></div>
         <div class="cal-progress"></div>
@@ -315,7 +323,7 @@
         <div class="cal-heart-wrap"><div class="cal-heart"></div></div>
       </div>
       <div style="margin-top:44px;">
-        <a href="#final-cta" style="background:#7EC4F0;color:#06101F;font-size:16px;font-weight:600;padding:15px 28px;border-radius:9px;text-decoration:none;display:inline-block;">Start with the 15-minute call</a>
+        <a href="#final-cta" style="background:#7EC4F0;color:#06101F;font-size:16px;font-weight:600;padding:15px 28px;border-radius:999px;text-decoration:none;display:inline-block;">Start with the 15-minute call</a>
       </div>
     </div>
   </section>
@@ -324,19 +332,19 @@
   <section style="max-width:1240px;margin:0 auto;padding:120px 40px;">
     <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:48px 40px;">
       <div>
-        <div class="cal-stat" data-target="26400" data-suffix="+" style="font-family:'Sora',sans-serif;font-weight:200;font-size:clamp(42px,4.6vw,64px);line-height:1;color:#7EC4F0;letter-spacing:-0.02em;white-space:nowrap;">0</div>
+        <div class="cal-stat" data-target="26400" data-suffix="+" style="font-family:'Inter Tight',sans-serif;font-weight:200;font-size:clamp(42px,4.6vw,64px);line-height:1;color:#7EC4F0;letter-spacing:-0.02em;white-space:nowrap;">0</div>
         <p style="font-size:17px;color:rgba(226,236,247,0.7);margin:16px 0 0;line-height:1.5;">hours given back to founders.</p>
       </div>
       <div>
-        <div class="cal-stat" data-target="1367" style="font-family:'Sora',sans-serif;font-weight:200;font-size:clamp(42px,4.6vw,64px);line-height:1;color:#7EC4F0;letter-spacing:-0.02em;white-space:nowrap;">0</div>
+        <div class="cal-stat" data-target="1367" style="font-family:'Inter Tight',sans-serif;font-weight:200;font-size:clamp(42px,4.6vw,64px);line-height:1;color:#7EC4F0;letter-spacing:-0.02em;white-space:nowrap;">0</div>
         <p style="font-size:17px;color:rgba(226,236,247,0.7);margin:16px 0 0;line-height:1.5;">workflows built.</p>
       </div>
       <div>
-        <div class="cal-stat" data-target="173" style="font-family:'Sora',sans-serif;font-weight:200;font-size:clamp(42px,4.6vw,64px);line-height:1;color:#7EC4F0;letter-spacing:-0.02em;white-space:nowrap;">0</div>
+        <div class="cal-stat" data-target="173" style="font-family:'Inter Tight',sans-serif;font-weight:200;font-size:clamp(42px,4.6vw,64px);line-height:1;color:#7EC4F0;letter-spacing:-0.02em;white-space:nowrap;">0</div>
         <p style="font-size:17px;color:rgba(226,236,247,0.7);margin:16px 0 0;line-height:1.5;">founder-led businesses worked with.</p>
       </div>
       <div>
-        <div class="cal-stat" data-target="7" style="font-family:'Sora',sans-serif;font-weight:200;font-size:clamp(42px,4.6vw,64px);line-height:1;color:#7EC4F0;letter-spacing:-0.02em;white-space:nowrap;">0</div>
+        <div class="cal-stat" data-target="7" style="font-family:'Inter Tight',sans-serif;font-weight:200;font-size:clamp(42px,4.6vw,64px);line-height:1;color:#7EC4F0;letter-spacing:-0.02em;white-space:nowrap;">0</div>
         <p style="font-size:17px;color:rgba(226,236,247,0.7);margin:16px 0 0;line-height:1.5;">sectors served.</p>
       </div>
     </div>
@@ -346,30 +354,30 @@
   <section id="who-we-help" style="background:rgba(12,24,48,0.55);border-top:1px solid rgba(126,196,240,0.1);border-bottom:1px solid rgba(126,196,240,0.1);">
     <div data-reveal style="max-width:1240px;margin:0 auto;padding:120px 40px;">
       <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 16px;">Who we help</p>
-      <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.01em;margin:0 0 56px;">Built for businesses with moving parts.</h2>
+      <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.035em;margin:0 0 56px;">Built for businesses with moving parts.</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
         <a href="Heating-Plumbing.dc.html" style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:36px;background:#0A1428;text-decoration:none;color:inherit;transition:border-color .25s,transform .25s;display:block;" style-hover="border-color:#7EC4F0;transform:translateY(-3px);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;">Heating and Plumbing</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;">Heating and Plumbing</h3>
           <p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0 0 18px;">For founders managing engineers, quotes, service reminders, repeat customers, job updates, invoicing and margin pressure.</p>
           <span style="color:#7EC4F0;font-size:14.5px;font-weight:600;">Explore &rarr;</span>
         </a>
         <a href="Facilities-Management.dc.html" style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:36px;background:#0A1428;text-decoration:none;color:inherit;transition:border-color .25s,transform .25s;display:block;" style-hover="border-color:#7EC4F0;transform:translateY(-3px);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;">Facilities Management</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;">Facilities Management</h3>
           <p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0 0 18px;">For FM and maintenance founders running jobs, sites, teams, subcontractors, evidence, client updates and contract visibility.</p>
           <span style="color:#7EC4F0;font-size:14.5px;font-weight:600;">Explore &rarr;</span>
         </a>
         <a href="Solar-Renewables.dc.html" style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:36px;background:#0A1428;text-decoration:none;color:inherit;transition:border-color .25s,transform .25s;display:block;" style-hover="border-color:#7EC4F0;transform:translateY(-3px);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;">Solar and Renewables</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;">Solar and Renewables</h3>
           <p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0 0 18px;">For solar and renewable founders handling enquiries, surveys, quotes, installs, customer updates, documents, handovers and project visibility.</p>
           <span style="color:#7EC4F0;font-size:14.5px;font-weight:600;">Explore &rarr;</span>
         </a>
         <a href="Construction.dc.html" style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:36px;background:#0A1428;text-decoration:none;color:inherit;transition:border-color .25s,transform .25s;display:block;" style-hover="border-color:#7EC4F0;transform:translateY(-3px);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;">Construction and Contractors</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;">Construction and Contractors</h3>
           <p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0 0 18px;">For contractor founders who need better visibility across jobs, costs, documents, variations, invoicing and margin.</p>
           <span style="color:#7EC4F0;font-size:14.5px;font-weight:600;">Explore &rarr;</span>
         </a>
         <a href="Contact.dc.html" style="border:1px solid rgba(126,196,240,0.4);border-radius:16px;padding:36px;background:rgba(126,196,240,0.06);text-decoration:none;display:flex;flex-direction:column;justify-content:center;transition:border-color .25s,transform .25s,background .25s;" style-hover="border-color:#7EC4F0;background:rgba(126,196,240,0.1);transform:translateY(-3px);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;color:#fff;">Not on this list?</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:22px;margin:0 0 14px;color:#fff;">Not on this list?</h3>
           <p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.7);margin:0 0 18px;">That does not mean we cannot help. If your business has moving parts, the same thinking applies. Tell us what you run.</p>
           <span style="color:#7EC4F0;font-size:15px;font-weight:600;">Speak to us now &rarr;</span>
         </a>
@@ -382,58 +390,58 @@
     <div data-reveal style="max-width:1240px;margin:0 auto;padding:0 40px 50px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;">
       <div>
         <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 16px;">Case studies</p>
-        <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.01em;margin:0;">Real businesses. Real change.</h2>
+        <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.035em;margin:0;">Real businesses. Real change.</h2>
       </div>
-      <a href="Proof.dc.html" style="flex:none;color:#7EC4F0;font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(126,196,240,0.35);border-radius:9px;padding:12px 22px;">View all case studies &rarr;</a>
+      <a href="Proof.dc.html" style="flex:none;color:#7EC4F0;font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(126,196,240,0.35);border-radius:999px;padding:12px 22px;">View all case studies &rarr;</a>
     </div>
     <div style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);">
       <div style="display:flex;gap:24px;width:max-content;padding:0 12px;animation:calon-marquee 64s linear infinite;" style-hover="animation-play-state:paused;">
         <!-- set A -->
         <article style="flex:none;width:430px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">HeatGlow</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">HeatGlow</h3>
           <p style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Cardiff · Heating and plumbing</p>
           <p style="font-size:15.5px;line-height:1.62;color:rgba(226,236,247,0.74);margin:0 0 22px;">Gareth was running a busy heating business with ServiceM8 and Xero, but the two were not talking. He could not see where margin was going job by job. We joined them up on one screen, with customer recovery built in. Now he can see what each job is making, and customer revenue stops slipping out the back door.</p>
           <a href="#proof" style="color:#7EC4F0;font-size:14.5px;font-weight:500;text-decoration:none;">Read the full story</a>
         </article>
         <article style="flex:none;width:430px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Volt Secure</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Volt Secure</h3>
           <p style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Fire and security</p>
           <p style="font-size:15.5px;line-height:1.62;color:rgba(226,236,247,0.74);margin:0 0 22px;">Cai's sales team were quoting inconsistently, the advisory queue was backing up, and he was paying for ChatGPT to plug the gaps. We built him Quote Studio. A pricing engine that locks margin in at the source, wired straight into his existing queue. Quoting time cut, pricing consistent across the team, and he cancelled the ChatGPT subscription. Which was the brief he set us.</p>
           <a href="#proof" style="color:#7EC4F0;font-size:14.5px;font-weight:500;text-decoration:none;">Read the full story</a>
         </article>
         <article style="flex:none;width:430px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Walkers &amp; Talkers</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Walkers &amp; Talkers</h3>
           <p style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Bristol · Walking community</p>
           <p style="font-size:15.5px;line-height:1.62;color:rgba(226,236,247,0.74);margin:0 0 22px;">Andy and Emma were running a 271-member walking community manually across cards, spreadsheets and email. We built them an NFC membership card system, consolidated all 271 records, and handed over a print-ready production batch. Now they run the whole thing themselves.</p>
           <a href="#proof" style="color:#7EC4F0;font-size:14.5px;font-weight:500;text-decoration:none;">Read the full story</a>
         </article>
         <article style="flex:none;width:430px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Lextan</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Lextan</h3>
           <p style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Multi-site hair and beauty</p>
           <p style="font-size:15.5px;line-height:1.62;color:rgba(226,236,247,0.74);margin:0 0 22px;">High no-show rates, repeat customer value sitting untouched, review generation patchy across sites. We set up AI-driven reactivation, no-show reduction, loyalty automation and review collection by site. The playbook is now the model for the rest of their group rollouts.</p>
           <a href="#proof" style="color:#7EC4F0;font-size:14.5px;font-weight:500;text-decoration:none;">Read the full story</a>
         </article>
         <!-- set B (duplicate for seamless loop) -->
         <article aria-hidden="true" style="flex:none;width:430px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">HeatGlow</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">HeatGlow</h3>
           <p style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Cardiff · Heating and plumbing</p>
           <p style="font-size:15.5px;line-height:1.62;color:rgba(226,236,247,0.74);margin:0 0 22px;">Gareth was running a busy heating business with ServiceM8 and Xero, but the two were not talking. He could not see where margin was going job by job. We joined them up on one screen, with customer recovery built in. Now he can see what each job is making, and customer revenue stops slipping out the back door.</p>
           <a href="#proof" style="color:#7EC4F0;font-size:14.5px;font-weight:500;text-decoration:none;">Read the full story</a>
         </article>
         <article aria-hidden="true" style="flex:none;width:430px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Volt Secure</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Volt Secure</h3>
           <p style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Fire and security</p>
           <p style="font-size:15.5px;line-height:1.62;color:rgba(226,236,247,0.74);margin:0 0 22px;">Cai's sales team were quoting inconsistently, the advisory queue was backing up, and he was paying for ChatGPT to plug the gaps. We built him Quote Studio. A pricing engine that locks margin in at the source, wired straight into his existing queue. Quoting time cut, pricing consistent across the team, and he cancelled the ChatGPT subscription. Which was the brief he set us.</p>
           <a href="#proof" style="color:#7EC4F0;font-size:14.5px;font-weight:500;text-decoration:none;">Read the full story</a>
         </article>
         <article aria-hidden="true" style="flex:none;width:430px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Walkers &amp; Talkers</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Walkers &amp; Talkers</h3>
           <p style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Bristol · Walking community</p>
           <p style="font-size:15.5px;line-height:1.62;color:rgba(226,236,247,0.74);margin:0 0 22px;">Andy and Emma were running a 271-member walking community manually across cards, spreadsheets and email. We built them an NFC membership card system, consolidated all 271 records, and handed over a print-ready production batch. Now they run the whole thing themselves.</p>
           <a href="#proof" style="color:#7EC4F0;font-size:14.5px;font-weight:500;text-decoration:none;">Read the full story</a>
         </article>
         <article aria-hidden="true" style="flex:none;width:430px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);">
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Lextan</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:20px;margin:0 0 4px;">Lextan</h3>
           <p style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:#7EC4F0;margin:0 0 18px;">Multi-site hair and beauty</p>
           <p style="font-size:15.5px;line-height:1.62;color:rgba(226,236,247,0.74);margin:0 0 22px;">High no-show rates, repeat customer value sitting untouched, review generation patchy across sites. We set up AI-driven reactivation, no-show reduction, loyalty automation and review collection by site. The playbook is now the model for the rest of their group rollouts.</p>
           <a href="#proof" style="color:#7EC4F0;font-size:14.5px;font-weight:500;text-decoration:none;">Read the full story</a>
@@ -445,8 +453,8 @@
   <!-- SECTION 8 — MID-PAGE CTA -->
   <section style="border-top:1px solid rgba(126,196,240,0.1);border-bottom:1px solid rgba(126,196,240,0.1);background:rgba(12,24,48,0.5);">
     <div data-reveal style="max-width:1240px;margin:0 auto;padding:80px 40px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;">
-      <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(26px,3.4vw,40px);line-height:1.15;margin:0;max-width:620px;">Want this kind of work done in your business?</h2>
-      <a href="#final-cta" style="flex:none;background:#7EC4F0;color:#06101F;font-size:16px;font-weight:600;padding:16px 30px;border-radius:9px;text-decoration:none;box-shadow:0 8px 30px rgba(126,196,240,0.22);">Start the conversation</a>
+      <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(26px,3.4vw,40px);line-height:1.15;margin:0;max-width:620px;">Want this kind of work done in your business?</h2>
+      <a href="#final-cta" style="flex:none;background:#7EC4F0;color:#06101F;font-size:16px;font-weight:600;padding:16px 30px;border-radius:999px;text-decoration:none;box-shadow:0 8px 30px rgba(126,196,240,0.22);">Start the conversation</a>
     </div>
   </section>
 
@@ -454,42 +462,42 @@
   <section style="padding:120px 0;">
     <div data-reveal style="max-width:1240px;margin:0 auto;padding:0 40px 50px;">
       <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 16px;">In their words</p>
-      <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.01em;margin:0;">What founders say.</h2>
+      <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.035em;margin:0;">What founders say.</h2>
     </div>
     <div style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);">
       <div style="display:flex;gap:24px;width:max-content;padding:0 12px;animation:calon-marquee 58s linear infinite;" style-hover="animation-play-state:paused;">
         <!-- set A -->
         <figure style="flex:none;width:400px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);margin:0;display:flex;flex-direction:column;gap:22px;">
-          <blockquote style="font-family:'Sora',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"Calon actually took the time to understand how my business runs before suggesting anything. They built it all around ServiceM8 and Xero, the tools I already had, and now I can see exactly what every job is making. I never had that before."</blockquote>
+          <blockquote style="font-family:'Inter Tight',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"Calon actually took the time to understand how my business runs before suggesting anything. They built it all around ServiceM8 and Xero, the tools I already had, and now I can see exactly what every job is making. I never had that before."</blockquote>
           <figcaption style="font-size:14.5px;color:rgba(226,236,247,0.62);">Gareth Jones, HeatGlow</figcaption>
         </figure>
         <figure style="flex:none;width:400px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);margin:0;display:flex;flex-direction:column;gap:22px;">
-          <blockquote style="font-family:'Sora',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"Quote Studio changed how my team prices work. What used to take ages now takes minutes, and it is consistent across everyone. It also meant I could cancel a software subscription I was only paying for to fill the gap."</blockquote>
+          <blockquote style="font-family:'Inter Tight',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"Quote Studio changed how my team prices work. What used to take ages now takes minutes, and it is consistent across everyone. It also meant I could cancel a software subscription I was only paying for to fill the gap."</blockquote>
           <figcaption style="font-size:14.5px;color:rgba(226,236,247,0.62);">Cai Llewellyn, Volt Secure</figcaption>
         </figure>
         <figure style="flex:none;width:400px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);margin:0;display:flex;flex-direction:column;gap:22px;">
-          <blockquote style="font-family:'Sora',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"They got our whole membership system running and then handed it straight over to us. We manage all of it ourselves now without touching a spreadsheet. Honestly it just works."</blockquote>
+          <blockquote style="font-family:'Inter Tight',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"They got our whole membership system running and then handed it straight over to us. We manage all of it ourselves now without touching a spreadsheet. Honestly it just works."</blockquote>
           <figcaption style="font-size:14.5px;color:rgba(226,236,247,0.62);">Andy Brassington, Walkers &amp; Talkers</figcaption>
         </figure>
         <figure style="flex:none;width:400px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);margin:0;display:flex;flex-direction:column;gap:22px;">
-          <blockquote style="font-family:'Sora',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"The playbook Calon built has become the model for our whole group. No-shows are down, repeat customers are coming back, and the reviews keep landing. It runs across every site without us chasing it."</blockquote>
+          <blockquote style="font-family:'Inter Tight',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"The playbook Calon built has become the model for our whole group. No-shows are down, repeat customers are coming back, and the reviews keep landing. It runs across every site without us chasing it."</blockquote>
           <figcaption style="font-size:14.5px;color:rgba(226,236,247,0.62);">Sara Hughes, Lextan</figcaption>
         </figure>
         <!-- set B -->
         <figure aria-hidden="true" style="flex:none;width:400px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);margin:0;display:flex;flex-direction:column;gap:22px;">
-          <blockquote style="font-family:'Sora',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"Calon actually took the time to understand how my business runs before suggesting anything. They built it all around ServiceM8 and Xero, the tools I already had, and now I can see exactly what every job is making. I never had that before."</blockquote>
+          <blockquote style="font-family:'Inter Tight',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"Calon actually took the time to understand how my business runs before suggesting anything. They built it all around ServiceM8 and Xero, the tools I already had, and now I can see exactly what every job is making. I never had that before."</blockquote>
           <figcaption style="font-size:14.5px;color:rgba(226,236,247,0.62);">Gareth Jones, HeatGlow</figcaption>
         </figure>
         <figure aria-hidden="true" style="flex:none;width:400px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);margin:0;display:flex;flex-direction:column;gap:22px;">
-          <blockquote style="font-family:'Sora',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"Quote Studio changed how my team prices work. What used to take ages now takes minutes, and it is consistent across everyone. It also meant I could cancel a software subscription I was only paying for to fill the gap."</blockquote>
+          <blockquote style="font-family:'Inter Tight',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"Quote Studio changed how my team prices work. What used to take ages now takes minutes, and it is consistent across everyone. It also meant I could cancel a software subscription I was only paying for to fill the gap."</blockquote>
           <figcaption style="font-size:14.5px;color:rgba(226,236,247,0.62);">Cai Llewellyn, Volt Secure</figcaption>
         </figure>
         <figure aria-hidden="true" style="flex:none;width:400px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);margin:0;display:flex;flex-direction:column;gap:22px;">
-          <blockquote style="font-family:'Sora',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"They got our whole membership system running and then handed it straight over to us. We manage all of it ourselves now without touching a spreadsheet. Honestly it just works."</blockquote>
+          <blockquote style="font-family:'Inter Tight',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"They got our whole membership system running and then handed it straight over to us. We manage all of it ourselves now without touching a spreadsheet. Honestly it just works."</blockquote>
           <figcaption style="font-size:14.5px;color:rgba(226,236,247,0.62);">Andy Brassington, Walkers &amp; Talkers</figcaption>
         </figure>
         <figure aria-hidden="true" style="flex:none;width:400px;border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:34px;background:rgba(12,24,48,0.5);margin:0;display:flex;flex-direction:column;gap:22px;">
-          <blockquote style="font-family:'Sora',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"The playbook Calon built has become the model for our whole group. No-shows are down, repeat customers are coming back, and the reviews keep landing. It runs across every site without us chasing it."</blockquote>
+          <blockquote style="font-family:'Inter Tight',sans-serif;font-weight:300;font-size:18.5px;line-height:1.55;margin:0;">"The playbook Calon built has become the model for our whole group. No-shows are down, repeat customers are coming back, and the reviews keep landing. It runs across every site without us chasing it."</blockquote>
           <figcaption style="font-size:14.5px;color:rgba(226,236,247,0.62);">Sara Hughes, Lextan</figcaption>
         </figure>
       </div>
@@ -500,27 +508,27 @@
   <section id="about" style="background:rgba(12,24,48,0.55);border-top:1px solid rgba(126,196,240,0.1);border-bottom:1px solid rgba(126,196,240,0.1);">
     <div data-reveal style="max-width:1240px;margin:0 auto;padding:120px 40px;">
       <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 16px;">Why Calon</p>
-      <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.01em;margin:0 0 56px;">Five reasons founders pick us.</h2>
+      <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.035em;margin:0 0 56px;">Five reasons founders pick us.</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px 48px;">
         <div style="display:flex;gap:20px;">
-          <span style="font-family:'Sora',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">1</span>
-          <div><h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">We look at the operation properly.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">We take time to understand where the business is actually being held back, before recommending anything.</p></div>
+          <span style="font-family:'Inter Tight',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">1</span>
+          <div><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">We look at the operation properly.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">We take time to understand where the business is actually being held back, before recommending anything.</p></div>
         </div>
         <div style="display:flex;gap:20px;">
-          <span style="font-family:'Sora',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">2</span>
-          <div><h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">We focus on commercial impact.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">The first fix has to make a clear difference to time, margin, visibility, capacity or revenue. If it does not, we do not ship it.</p></div>
+          <span style="font-family:'Inter Tight',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">2</span>
+          <div><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">We focus on commercial impact.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">The first fix has to make a clear difference to time, margin, visibility, capacity or revenue. If it does not, we do not ship it.</p></div>
         </div>
         <div style="display:flex;gap:20px;">
-          <span style="font-family:'Sora',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">3</span>
-          <div><h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">We work around what you already use.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Most businesses already have the right tools. We look at what is missing around them, not what you should rip out.</p></div>
+          <span style="font-family:'Inter Tight',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">3</span>
+          <div><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">We work around what you already use.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Most businesses already have the right tools. We look at what is missing around them, not what you should rip out.</p></div>
         </div>
         <div style="display:flex;gap:20px;">
-          <span style="font-family:'Sora',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">4</span>
-          <div><h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">We only use AI where it makes sense.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">AI is useful when it creates value. It is not the starting point.</p></div>
+          <span style="font-family:'Inter Tight',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">4</span>
+          <div><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">We only use AI where it makes sense.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">AI is useful when it creates value. It is not the starting point.</p></div>
         </div>
         <div style="display:flex;gap:20px;">
-          <span style="font-family:'Sora',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">5</span>
-          <div><h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">You work directly with the people doing the work.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Calon is founder-led. You are not passed around a big agency team.</p></div>
+          <span style="font-family:'Inter Tight',sans-serif;font-weight:200;font-size:30px;color:#7EC4F0;line-height:1;flex:none;">5</span>
+          <div><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:19px;margin:0 0 10px;">You work directly with the people doing the work.</h3><p style="font-size:15.5px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Calon is founder-led. You are not passed around a big agency team.</p></div>
         </div>
       </div>
     </div>
@@ -529,7 +537,7 @@
   <!-- SECTION 11 — THE FILTER -->
   <section style="max-width:1240px;margin:0 auto;padding:120px 40px;">
     <div data-reveal style="">
-      <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.01em;margin:0 0 48px;">This isn't for everyone.</h2>
+      <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.035em;margin:0 0 48px;">This isn't for everyone.</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;">
 
         <!-- ALIVE -->
@@ -553,7 +561,7 @@
               </g>
             </svg>
           </div>
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.01em;color:#7EC4F0;margin:0 0 14px;">It is for you if</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.01em;color:#7EC4F0;margin:0 0 14px;">It is for you if</h3>
           <p style="font-size:16px;line-height:1.65;color:#A8B8CC;margin:0;">you have got the tools but are not getting full value from them, you would rather get more from what you already have before chasing new work, and you want a partner who works directly with you, not a big agency team.</p>
         </div>
 
@@ -568,7 +576,7 @@
               <line x1="0" y1="40" x2="800" y2="40" fill="none" stroke="#5A6B82" stroke-width="1.8" stroke-linecap="round" opacity="0.55"></line>
             </svg>
           </div>
-          <h3 style="font-family:'Sora',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.01em;color:#A8B8CC;margin:0 0 14px;">Not for you if</h3>
+          <h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.01em;color:#A8B8CC;margin:0 0 14px;">Not for you if</h3>
           <p style="font-size:16px;line-height:1.65;color:#5A6B82;margin:0;">you want marketing, a chatbot off the shelf, or a buzzword deck. No hard feelings.</p>
         </div>
 
@@ -579,9 +587,9 @@
   <!-- SECTION 12 — FINAL CTA -->
   <section id="final-cta" style="border-top:1px solid rgba(126,196,240,0.1);background:rgba(12,24,48,0.6);">
     <div data-reveal style="max-width:880px;margin:0 auto;padding:130px 40px;text-align:center;">
-      <h2 style="font-family:'Sora',sans-serif;font-weight:300;font-size:clamp(34px,5vw,62px);line-height:1.08;letter-spacing:-0.02em;margin:0;">Find out what is hiding<br>in your business.</h2>
+      <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(34px,5vw,62px);line-height:1.08;letter-spacing:-0.035em;margin:0;">Find out what is hiding<br>in your business.</h2>
       <p style="font-size:18.5px;line-height:1.55;color:rgba(226,236,247,0.7);margin:26px auto 40px;max-width:540px;">Fifteen minutes on the phone. No deck. No pitch. No demo. Just an honest chat.</p>
-      <a href="#final-cta" style="display:inline-block;background:#7EC4F0;color:#06101F;font-size:17px;font-weight:600;padding:18px 38px;border-radius:10px;text-decoration:none;box-shadow:0 10px 40px rgba(126,196,240,0.28);">Start the conversation</a>
+      <a href="#final-cta" style="display:inline-block;background:#7EC4F0;color:#06101F;font-size:17px;font-weight:600;padding:18px 38px;border-radius:999px;text-decoration:none;box-shadow:0 10px 40px rgba(126,196,240,0.28);">Start the conversation</a>
     </div>
   </section>
 

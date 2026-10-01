@@ -3,3 +3,5 @@ Allow: /
 Disallow: /case-studies/volt-secure
 Disallow: /case-studies/bb-fire-security
 Disallow: /case-studies/fire-rite
+
+Sitemap: https://calonaisolutions.com/sitemap.xml
