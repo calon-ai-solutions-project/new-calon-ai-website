@@ -351,6 +351,30 @@
   }
   @media(prefers-reduced-motion:reduce){.bm-lens,.bm-ring{animation:none !important;}}
 
+  /* TRUST BAR — transparent white logos; key clients highlighted every few logos */
+  .tb{padding:48px 0 56px;}
+  .tb-eye{font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(226,236,247,0.5);margin:0 0 34px;text-align:center;padding:0 20px;}
+  .tb-mask{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);}
+  .tb-track{display:flex;align-items:center;gap:56px;width:max-content;animation:calon-marquee 90s linear infinite;}
+  .tb-mask:hover .tb-track{animation-play-state:paused;}
+  .tb-logo{flex:none;height:96px;display:flex;align-items:center;}
+  .tb-logo img{display:block;max-height:54px;max-width:160px;width:auto;height:auto;object-fit:contain;opacity:0.62;transition:opacity .25s;}
+  .tb-logo:hover img{opacity:1;}
+  .tb-feat{flex:none;height:96px;display:flex;align-items:center;justify-content:center;padding:0 30px;border-radius:999px;background:radial-gradient(120% 140% at 50% 0%,rgba(126,196,240,0.16),rgba(126,196,240,0.03) 70%);border:1px solid rgba(126,196,240,0.32);box-shadow:0 0 0 5px rgba(126,196,240,0.04),0 12px 40px rgba(126,196,240,0.16);}
+  .tb-feat img{display:block;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 0 10px rgba(126,196,240,0.25));}
+  .tb-wide img{max-height:52px;max-width:210px;}
+  .tb-round{padding:0 18px;}
+  .tb-round img{max-height:84px;max-width:84px;}
+  @media(max-width:640px){
+    .tb-track{gap:36px;animation-duration:70s;}
+    .tb-logo{height:76px;}
+    .tb-logo img{max-height:36px;max-width:118px;}
+    .tb-feat{height:78px;padding:0 22px;}
+    .tb-wide img{max-height:40px;max-width:160px;}
+    .tb-round img{max-height:66px;max-width:66px;}
+  }
+  @media(prefers-reduced-motion:reduce){.tb-track{animation:none;}.tb-mask{overflow-x:auto;}}
+
   /* IN THE ROOM — founder-led story + staggered photo strip */
   .room{position:relative;background:#060E1E;border-top:1px solid rgba(126,196,240,0.08);border-bottom:1px solid rgba(126,196,240,0.08);overflow:clip;}
   .room-top{max-width:1240px;margin:0 auto;padding:120px 40px 80px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
@@ -463,48 +487,59 @@
   </section>
 
   <!-- SECTION 2 — TRUST BAR (logo marquee) -->
-  <section style="padding:48px 0;">
-    <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(226,236,247,0.5);margin:0 0 34px;text-align:center;">Trusted by founder-led service businesses, institutions and partners across the UK</p>
-    <div style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);">
-      <div style="display:flex;gap:26px;width:max-content;align-items:center;animation:calon-marquee 70s linear infinite;" onmouseenter="this.style.animationPlayState='paused'" onmouseleave="this.style.animationPlayState='running'">
-        <!-- set A -->
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#0c1830;border:1px solid rgba(126,196,240,0.22);border-radius:14px;padding:16px 24px;"><img src="assets/Asset-18.png" alt="HeatGlow" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#0c1830;border:1px solid rgba(126,196,240,0.22);border-radius:14px;padding:16px 24px;"><img src="assets/logo-horizontal.png" alt="Volt Secure" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/csw.png" alt="Construction Skills Wales" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/cardiff-uni.png" alt="Cardiff University" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/usw.png" alt="University of South Wales" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/stiwdio-usw.png" alt="Stiwdio USW" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/fintech-wales.png" alt="FinTech Wales" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/ice.png" alt="ICE" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/bni.png" alt="BNI" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/caerphilly-bc.png" alt="Caerphilly Business Club" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/caerphilly-council.png" alt="Caerphilly County Borough Council" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/rct.png" alt="Rhondda Cynon Taf" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/nyca.png" alt="NYCA" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/apify.png" alt="Apify" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/skool.png" alt="Skool" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/redmore.png" alt="Redmore Recruitment" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/mh-wellbeing.png" alt="The Mental Health & Wellbeing Network" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/sporting-club.png" alt="The Sporting Club" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <!-- set B (duplicate for seamless loop) -->
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#0c1830;border:1px solid rgba(126,196,240,0.22);border-radius:14px;padding:16px 24px;"><img src="assets/Asset-18.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#0c1830;border:1px solid rgba(126,196,240,0.22);border-radius:14px;padding:16px 24px;"><img src="assets/logo-horizontal.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/csw.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/cardiff-uni.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/usw.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/stiwdio-usw.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/fintech-wales.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/ice.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/bni.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/caerphilly-bc.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/caerphilly-council.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/rct.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/nyca.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/apify.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/skool.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/redmore.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/mh-wellbeing.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
-        <div aria-hidden="true" style="flex:none;height:92px;width:178px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:14px;padding:16px 24px;"><img src="assets/sporting-club.png" loading="lazy" style="max-height:54px;max-width:132px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+  <section class="tb">
+    <p class="tb-eye">Trusted by founder-led service businesses, institutions and partners across the UK</p>
+    <div class="tb-mask">
+      <div class="tb-track">
+        <div class="tb-feat tb-wide"><img src="assets/logos/lextan.png" alt="Lextan" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/Asset-18.png" alt="HeatGlow" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/logo-horizontal.png" alt="Volt Secure" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/csw.png" alt="Construction Skills Wales" loading="lazy"></div>
+        <div class="tb-feat tb-round"><img src="assets/logos/a-head-of-the-game.png" alt="A-Head of the Game Nutrition" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/cardiff-uni.png" alt="Cardiff University" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/usw.png" alt="University of South Wales" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/stiwdio-usw.png" alt="Stiwdio USW" loading="lazy"></div>
+        <div class="tb-feat tb-wide"><img src="assets/logos/lextan.png" alt="Lextan" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/fintech-wales.png" alt="FinTech Wales" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/ice.png" alt="ICE" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/bni.png" alt="BNI" loading="lazy"></div>
+        <div class="tb-feat tb-round"><img src="assets/logos/a-head-of-the-game.png" alt="A-Head of the Game Nutrition" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/caerphilly-bc.png" alt="Caerphilly Business Club" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/caerphilly-council.png" alt="Caerphilly County Borough Council" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/rct.png" alt="Rhondda Cynon Taf" loading="lazy"></div>
+        <div class="tb-feat tb-wide"><img src="assets/logos/lextan.png" alt="Lextan" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/nyca.png" alt="NYCA" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/apify.png" alt="Apify" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/skool.png" alt="Skool" loading="lazy"></div>
+        <div class="tb-feat tb-round"><img src="assets/logos/a-head-of-the-game.png" alt="A-Head of the Game Nutrition" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/redmore.png" alt="Redmore Recruitment" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/mh-wellbeing.png" alt="The Mental Health &amp; Wellbeing Network" loading="lazy"></div>
+        <div class="tb-logo"><img src="assets/logos/sporting-club.png" alt="The Sporting Club" loading="lazy"></div>
+        <!-- duplicate set for a seamless loop -->
+        <div aria-hidden="true" class="tb-feat tb-wide"><img src="assets/logos/lextan.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/Asset-18.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/logo-horizontal.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/csw.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-feat tb-round"><img src="assets/logos/a-head-of-the-game.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/cardiff-uni.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/usw.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/stiwdio-usw.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-feat tb-wide"><img src="assets/logos/lextan.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/fintech-wales.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/ice.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/bni.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-feat tb-round"><img src="assets/logos/a-head-of-the-game.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/caerphilly-bc.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/caerphilly-council.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/rct.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-feat tb-wide"><img src="assets/logos/lextan.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/nyca.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/apify.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/skool.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-feat tb-round"><img src="assets/logos/a-head-of-the-game.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/redmore.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/mh-wellbeing.png" alt="" loading="lazy"></div>
+        <div aria-hidden="true" class="tb-logo"><img src="assets/logos/sporting-club.png" alt="" loading="lazy"></div>
       </div>
     </div>
   </section>
