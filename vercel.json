@@ -39,6 +39,16 @@
   ],
   "redirects": [
     {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/wp-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
       "source": "/About.dc",
       "destination": "/about",
       "permanent": true
