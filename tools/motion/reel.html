@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Calon AI — motion reel</title>
+<style>
+@font-face{font-family:'Inter Tight';font-weight:300;src:url(inter-tight-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter Tight';font-weight:400;src:url(inter-tight-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter Tight';font-weight:500;src:url(inter-tight-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter Tight';font-weight:600;src:url(inter-tight-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter Tight';font-weight:700;src:url(inter-tight-latin-700-normal.woff2) format('woff2')}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0A1428}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:#0A1428;font-family:'Inter Tight',system-ui,sans-serif;color:#fff;letter-spacing:-0.015em}
+.abs{position:absolute;left:0;top:0;will-change:transform,opacity}
+#bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 50% 52%,rgba(40,80,140,.30),transparent 70%),radial-gradient(ellipse 40% 40% at 85% 10%,rgba(126,196,240,.10),transparent 70%),#0A1428}
+#grid{position:absolute;inset:-60px;background-image:radial-gradient(rgba(126,196,240,.16) 1.2px,transparent 1.6px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 50%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 60% 60% at 50% 50%,#000 20%,transparent 75%)}
+.beam{position:absolute;top:-30%;height:160%;transform-origin:50% 50%;background:linear-gradient(90deg,transparent,rgba(126,196,240,.05) 45%,rgba(126,196,240,.09) 50%,transparent)}
+#vignette{position:absolute;inset:0;background:radial-gradient(ellipse 75% 75% at 50% 50%,transparent 55%,rgba(5,10,22,.85) 100%);pointer-events:none}
+svg{overflow:visible}
+.chip{position:absolute;left:0;top:0;width:118px;height:118px;margin:-59px 0 0 -59px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 25%,rgba(70,110,170,.55),rgba(18,30,56,.95) 70%);border:1.5px solid rgba(160,215,245,.28);box-shadow:inset 0 2px 0 rgba(255,255,255,.12),0 18px 40px rgba(0,0,0,.45);color:rgba(226,236,247,.85)}
+.chip svg{width:48px;height:48px}
+.chip .lbl{position:absolute;top:132px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:20px;font-weight:500;color:rgba(226,236,247,.75)}
+.chip .dot{position:absolute;right:6px;top:8px;width:16px;height:16px;border-radius:50%;background:#33415a;border:2px solid #0A1428}
+#mark{position:absolute;left:960px;top:540px;width:0;height:0}
+#markDisc{position:absolute;left:-110px;top:-110px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#22446f,#0B1830 72%);border:2px solid rgba(126,196,240,.55)}
+#markImg{position:absolute;left:-72px;top:-72px;width:144px;height:144px}
+.ring{position:absolute;left:0;top:0;border-radius:50%;border:2px solid #7EC4F0}
+#markGlow{position:absolute;left:-260px;top:-260px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(126,196,240,.45),rgba(126,196,240,.08) 45%,transparent 70%)}
+.cap{position:absolute;left:0;right:0;text-align:center;font-weight:500;font-size:56px;letter-spacing:-0.035em}
+.cap span{display:inline-block;will-change:transform,opacity,filter;margin:0 .13em}
+#card{position:absolute;left:960px;top:560px;width:1180px;height:660px;margin:-330px 0 0 -590px;border-radius:44px;background:linear-gradient(165deg,rgba(52,84,132,.62),rgba(16,28,52,.92) 42%,rgba(10,18,36,.96));border:1.5px solid rgba(160,215,245,.30);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 60px 140px rgba(0,0,0,.6),0 0 120px rgba(126,196,240,.12);overflow:hidden;transform-style:preserve-3d}
+#card .sheen{position:absolute;top:-50%;width:30%;height:200%;transform:rotate(18deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent)}
+#card .hd{position:absolute;left:48px;top:40px;right:48px;display:flex;align-items:center;gap:16px;font-size:26px;font-weight:600}
+#card .hd img{width:44px;height:44px;border-radius:50%;background:#0B1830;border:1.5px solid rgba(126,196,240,.5);padding:6px}
+#card .hd small{font-weight:400;color:rgba(226,236,247,.55);font-size:22px}
+#card .live{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:18px;letter-spacing:.14em;color:#7EC4F0;font-weight:600}
+#card .live i{width:12px;height:12px;border-radius:50%;background:#7EC4F0;box-shadow:0 0 14px #7EC4F0}
+.kpi{position:absolute;top:120px;width:336px;height:170px;border-radius:26px;padding:26px 28px;background:rgba(126,196,240,.07);border:1px solid rgba(126,196,240,.22)}
+.kpi b{display:block;font-size:64px;font-weight:700;letter-spacing:-0.045em;line-height:1}
+.kpi span{display:block;margin-top:14px;font-size:20px;color:rgba(226,236,247,.65)}
+.kpi.on{background:#7EC4F0;border-color:#9AD3F5}.kpi.on b{color:#06101F}.kpi.on span{color:rgba(6,16,31,.72)}
+#chartBox{position:absolute;left:48px;top:320px;width:700px;height:300px;border-radius:26px;background:rgba(8,16,32,.55);border:1px solid rgba(126,196,240,.16)}
+#chartBox .t{position:absolute;left:26px;top:20px;font-size:20px;color:rgba(226,236,247,.7)}
+#chartBox .pill{position:absolute;right:22px;top:16px;font-size:20px;font-weight:700;color:#06101F;background:#7EC4F0;border-radius:999px;padding:6px 14px}
+#beatBox{position:absolute;left:772px;top:320px;width:360px;height:300px;border-radius:26px;background:rgba(8,16,32,.55);border:1px solid rgba(126,196,240,.16)}
+#beatBox .t{position:absolute;left:24px;top:20px;font-size:20px;color:rgba(226,236,247,.7)}
+#beatBox .v{position:absolute;left:24px;bottom:22px;font-size:20px;color:#7EC4F0;font-weight:600}
+#tag1,#tag2{position:absolute;left:0;right:0;text-align:center;font-size:96px;font-weight:500;letter-spacing:-0.045em;line-height:1}
+#tag2{color:#7EC4F0}
+#tag1 span,#tag2 span{display:inline-block;margin:0 .12em;will-change:transform,opacity,filter}
+#word{position:absolute;left:0;right:0;text-align:center;font-size:30px;font-weight:600;letter-spacing:.5em;color:rgba(226,236,247,.9)}
+#word em{font-style:normal;color:#7EC4F0}
+#sweep{position:absolute;top:-20%;height:140%;width:420px;background:linear-gradient(90deg,transparent,rgba(126,196,240,.22),rgba(255,255,255,.35),rgba(126,196,240,.22),transparent);filter:blur(8px);transform:skewX(-18deg)}
+#fade{position:absolute;inset:0;background:#0A1428;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg"></div>
+  <div id="grid"></div>
+  <div class="beam" style="left:12%;width:20%"></div><div class="beam" style="left:46%;width:12%"></div><div class="beam" style="left:70%;width:24%"></div>
+
+  <!-- connection lines + orbit -->
+  <svg id="net" class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <defs>
+      <linearGradient id="lg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1920" y2="0"><stop offset="0" stop-color="#4A9BD4"/><stop offset=".5" stop-color="#B8E2FA"/><stop offset="1" stop-color="#4A9BD4"/></linearGradient>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <ellipse id="orbit" cx="960" cy="520" rx="430" ry="270" fill="none" stroke="rgba(126,196,240,.28)" stroke-width="2"/>
+    <g id="lines" fill="none" stroke="url(#lg)" stroke-width="3" stroke-linecap="round" filter="url(#glow)"></g>
+    <g id="pulses" fill="#DFF3FF" filter="url(#glow)"></g>
+  </svg>
+
+  <!-- heartbeat line (intro) -->
+  <svg id="ecg" class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <path id="ecgPath" d="M -20 540 L 700 540 L 760 540 L 790 520 L 820 540 L 870 540 L 900 560 L 940 330 L 985 760 L 1020 540 L 1080 540 L 1110 515 L 1150 540 L 1940 540" fill="none" stroke="#7EC4F0" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow)"/>
+    <circle id="ecgHead" r="9" fill="#fff" filter="url(#glow)"/>
+  </svg>
+
+  <div id="chips"></div>
+
+  <div id="mark">
+    <div id="markGlow"></div>
+    <div class="ring" id="r1"></div><div class="ring" id="r2"></div><div class="ring" id="r3"></div>
+    <div id="markDisc"></div>
+    <img id="markImg" src="calon-mark.png" alt="">
+  </div>
+
+  <div id="card">
+    <div class="sheen"></div>
+    <div class="hd"><img src="calon-mark.png" alt="">Calon AI <small>· Live operations</small><div class="live"><i></i>LIVE</div></div>
+    <div class="kpi" id="k1" style="left:48px"><b id="k1v">0 hrs</b><span>director time back / week</span></div>
+    <div class="kpi" id="k2" style="left:422px"><b id="k2v">0x</b><span>booked quote visits</span></div>
+    <div class="kpi" id="k3" style="left:796px"><b id="k3v">0%</b><span>fewer payroll disputes</span></div>
+    <div id="chartBox"><div class="t">Margin recovered</div><div class="pill" id="pill">+23%</div>
+      <svg width="700" height="300" viewBox="0 0 700 300" style="position:absolute;left:0;top:0">
+        <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(126,196,240,.45)"/><stop offset="1" stop-color="rgba(126,196,240,0)"/></linearGradient>
+        <clipPath id="clipC"><rect id="clipR" x="0" y="0" width="0" height="300"/></clipPath></defs>
+        <g stroke="rgba(126,196,240,.10)"><line x1="26" y1="110" x2="674" y2="110"/><line x1="26" y1="170" x2="674" y2="170"/><line x1="26" y1="230" x2="674" y2="230"/></g>
+        <g clip-path="url(#clipC)">
+          <path d="M26 250 L110 236 L190 242 L270 214 L350 220 L430 186 L510 170 L590 128 L674 92 L674 280 L26 280 Z" fill="url(#area)"/>
+          <path d="M26 250 L110 236 L190 242 L270 214 L350 220 L430 186 L510 170 L590 128 L674 92" fill="none" stroke="#7EC4F0" stroke-width="4" stroke-linejoin="round" filter="url(#glow)"/>
+        </g>
+        <circle id="chartDot" r="9" fill="#fff" filter="url(#glow)"/>
+      </svg>
+    </div>
+    <div id="beatBox"><div class="t">System heartbeat</div><div class="v">All tools connected</div>
+      <svg width="360" height="300" viewBox="0 0 360 300" style="position:absolute;left:0;top:0">
+        <path id="beatPath" fill="none" stroke="#7EC4F0" stroke-width="4" stroke-linejoin="round" filter="url(#glow)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div id="cap1" class="cap" style="top:955px"></div>
+  <div id="cap2" class="cap" style="top:955px"></div>
+  <div id="tag1" style="top:640px"></div>
+  <div id="tag2" style="top:760px"></div>
+  <div id="word" style="top:900px">CALON <em>AI</em></div>
+  <div id="sweep"></div>
+  <div id="vignette"></div>
+  <div id="fade"></div>
+</div>
+<script>
+const Q = new URLSearchParams(location.search); const MOBILE = Q.has('mobile'); const SITE = Q.has('site') || MOBILE;
+const $ = (id) => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const P = (t, a, b) => clamp((t - a) / (b - a));
+const lerp = (a, b, k) => a + (b - a) * k;
+const eOut = (k) => 1 - Math.pow(1 - k, 3);
+const eIn = (k) => k * k * k;
+const eIO = (k) => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+const eExp = (k) => k >= 1 ? 1 : 1 - Math.pow(2, -10 * k);
+const eBack = (k) => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(k - 1, 3) + c1 * Math.pow(k - 1, 2); };
+const set = (el, s) => { for (const k in s) el.style[k] = s[k]; };
+
+// ---------- build chips ----------
+const ICONS = {
+  Email: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/>',
+  Calendar: '<rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M8 2.5v4M16 2.5v4M3 10h18M8 14h3"/>',
+  Spreadsheets: '<rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M3 15h18M9 3v18"/>',
+  Invoices: '<path d="M6 2.5h9l4 4V21a.5.5 0 0 1-.8.4L16 20l-2 1.5-2-1.5-2 1.5L8 20l-2.2 1.4A.5.5 0 0 1 5 21V3.5a1 1 0 0 1 1-1z"/><path d="M9 9h6M9 13h6M9 17h3"/>',
+  Phone: '<path d="M21 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 4.2 2 2 0 0 1 3.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+  Customers: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+  'Job sheets': '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9zM9 11h6M9 15h4"/>',
+  Accounts: '<path d="M17 5.5A5 5 0 0 0 8.5 9v3.5M6 12.5h8M6 19h12M8.5 12.5c0 3-1 5-2.5 6.5"/>',
+};
+const NAMES = Object.keys(ICONS);
+const SCATTER = MOBILE
+  ? [[560, 250], [1360, 230], [520, 560], [1400, 560], [640, 820], [1290, 820], [800, 140], [1130, 130]]
+  : [[360, 250], [1560, 230], [250, 610], [1690, 610], [560, 780], [1370, 780], [770, 160], [1150, 150]];
+const chips = NAMES.map((n, i) => {
+  const d = document.createElement('div'); d.className = 'chip';
+  d.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[n]}</svg><div class="dot"></div><div class="lbl">${n}</div>`;
+  $('chips').appendChild(d); return d;
+});
+const NS = 'http://www.w3.org/2000/svg';
+const lines = NAMES.map(() => { const p = document.createElementNS(NS, 'path'); $('lines').appendChild(p); return p; });
+const pulses = NAMES.map(() => [0, 1].map(() => { const c = document.createElementNS(NS, 'circle'); c.setAttribute('r', '7'); $('pulses').appendChild(c); return c; }));
+
+// ---------- text helpers ----------
+function words(el, text, cls = '') { el.innerHTML = text.split(' ').map(w => `<span>${w}</span>`).join(''); return [...el.children]; }
+const cap1 = words($('cap1'), "Your business runs on tools that don't talk.");
+const cap2 = words($('cap2'), 'Calon connects them. Then it watches every job.');
+const tag1 = words($('tag1'), 'You built this business.');
+const tag2 = words($('tag2'), "Let's get more from it.");
+function wordAnim(ws, t, start, step, dur, out0, out1) {
+  ws.forEach((w, i) => {
+    const k = eOut(P(t, start + i * step, start + i * step + dur));
+    const o = out0 != null ? 1 - P(t, out0 + i * 0.02, out1 + i * 0.02) : 1;
+    set(w, { opacity: k * o, transform: `translateY(${(1 - k) * 40 - (1 - o) * 20}px)`, filter: `blur(${(1 - k) * 10 + (1 - o) * 8}px)` });
+  });
+}
+
+const ecgPath = $('ecgPath'), ecgLen = ecgPath.getTotalLength();
+ecgPath.style.strokeDasharray = ecgLen;
+
+// beat path for dashboard (loops)
+function beatD(phase) {
+  let d = ''; const W = 360, base = 190;
+  for (let x = 0; x <= W; x += 3) {
+    const u = ((x / W) * 2 + phase) % 1; let y = base;
+    if (u > .40 && u < .44) y = base - 18 * Math.sin((u - .40) / .04 * Math.PI);
+    if (u > .48 && u < .51) y = base + (u - .48) / .03 * 26;
+    if (u >= .51 && u < .55) y = base + 26 - (u - .51) / .04 * 120;
+    if (u >= .55 && u < .59) y = base - 94 + (u - .55) / .04 * 110;
+    if (u >= .59 && u < .62) y = base + 16 - (u - .59) / .03 * 16;
+    if (u > .7 && u < .78) y = base - 14 * Math.sin((u - .7) / .08 * Math.PI);
+    d += (x ? ' L' : 'M') + x + ' ' + y.toFixed(1);
+  }
+  return d;
+}
+
+function orbitPos(i, t) {
+  const a = (i / NAMES.length) * Math.PI * 2 - Math.PI / 2 + t * 0.35;
+  return [960 + Math.cos(a) * (MOBILE ? 380 : 430), 520 + Math.sin(a) * (MOBILE ? 300 : 270), Math.sin(a)];
+}
+
+// ---------- main render ----------
+window.render = function (t) {
+  // background life
+  document.querySelectorAll('.beam').forEach((b, i) => set(b, { transform: `rotate(24deg) translateX(${Math.sin(t * 0.4 + i * 2) * 60}px)` }));
+  set($('grid'), { transform: `translate(${-t * 6}px, ${-t * 3}px) scale(${1 + 0.02 * Math.sin(t * 0.5)})`, opacity: 0.6 + 0.4 * P(t, 2, 5) - 0.5 * P(t, 14, 15) });
+
+  // ---- scene 1: heartbeat draws, collapses into mark ----
+  const draw = eIO(P(t, 0.15, 1.7));
+  ecgPath.style.strokeDashoffset = ecgLen * (1 - draw);
+  const head = ecgPath.getPointAtLength(ecgLen * draw);
+  $('ecgHead').setAttribute('cx', head.x); $('ecgHead').setAttribute('cy', head.y);
+  const ecgFade = 1 - P(t, 1.75, 2.2);
+  set($('ecg'), { opacity: (P(t, 0.05, 0.25)) * ecgFade, transform: `scale(${1 - 0.25 * eIn(P(t, 1.7, 2.2))}, ${1 - 0.6 * eIn(P(t, 1.7, 2.2))})`, transformOrigin: '960px 540px' });
+  $('ecgHead').style.opacity = 1 - P(t, 1.6, 1.8);
+
+  // ---- mark ----
+  const mIn = eBack(P(t, 1.75, 2.35));
+  let mScale = mIn * 1.0, mY = 0, mO = P(t, 1.75, 1.95);
+  mScale *= lerp(1, 0.62, eIO(P(t, 2.6, 3.4)));                 // shrink for scattered scene
+  mScale *= lerp(1, 1.25, eOut(P(t, 5.2, 6.0)));                // grows as hub
+  const beat = 1 + 0.06 * Math.max(0, Math.sin(t * 7.5)) ** 8;   // heartbeat throb
+  // into card (scene 4) and back (scene 5)
+  const toCard = eIO(P(t, 7.9, 8.6));
+  mO *= 1 - toCard;
+  const back = eBack(P(t, 11.75, 12.45));
+  if (t > 11.6) { mO = P(t, 11.7, 11.95); mScale = back * 0.9; mY = SITE ? 0 : -190; }
+  const endFade = 1 - P(t, 14.25, 14.95);
+  set($('mark'), { opacity: mO * endFade, transform: `translate(0px, ${mY}px) scale(${mScale * beat})` });
+  set($('markGlow'), { opacity: 0.5 + 0.5 * P(t, 5.2, 7.5) });
+  // ripple rings on arrival / bursts
+  [[1.9, 'r1'], [2.05, 'r2'], [7.75, 'r3']].forEach(([t0, id]) => {
+    const k = P(t, t0, t0 + 1.1); const s = 110 + eOut(k) * 520;
+    set($(id), { width: s * 2 + 'px', height: s * 2 + 'px', left: -s + 'px', top: -s + 'px', opacity: k > 0 && k < 1 ? (1 - k) * 0.9 : 0 });
+  });
+
+  // ---- scene 2/3: chips scatter, then connect into orbit ----
+  const connectK = eIO(P(t, 5.3, 6.6));
+  const collapse = eIn(P(t, 7.55, 8.15));
+  chips.forEach((c, i) => {
+    const [sx, sy] = SCATTER[i];
+    const inK = eExp(P(t, 2.3 + i * 0.09, 3.2 + i * 0.09));
+    const fromX = 960 + (sx - 960) * 2.2, fromY = 540 + (sy - 540) * 2.2;
+    let x = lerp(fromX, sx, inK) + Math.sin(t * 1.3 + i) * 10 * (1 - connectK);
+    let y = lerp(fromY, sy, inK) + Math.cos(t * 1.1 + i * 2) * 10 * (1 - connectK);
+    const [ox, oy, oz] = orbitPos(i, t);
+    x = lerp(x, ox, connectK); y = lerp(y, oy, connectK);
+    x = lerp(x, 960, collapse); y = lerp(y, 540, collapse);
+    const rot = (1 - inK) * (i % 2 ? 40 : -40) + Math.sin(t + i) * 4 * (1 - connectK);
+    const depth = lerp(1, 0.86 + 0.14 * (oz + 1) / 2, connectK);
+    const lit = P(t, 5.6 + i * 0.14, 5.85 + i * 0.14);
+    const sc = (0.85 + 0.15 * inK) * depth * (1 - collapse) * (1 + 0.12 * lit * Math.max(0, 1 - P(t, 6.2 + i * 0.14, 6.8 + i * 0.14)));
+    set(c, {
+      transform: `translate(${x}px, ${y}px) rotate(${rot}deg) scale(${sc})`,
+      opacity: P(t, 2.3 + i * 0.09, 2.6 + i * 0.09) * (0.55 + 0.45 * lit + 0.45 * (1 - connectK) * 0) * (1 - collapse),
+      zIndex: connectK > 0.5 ? Math.round(10 + oz * 5) : 10,
+      background: lit > 0 ? `radial-gradient(circle at 35% 25%, rgba(${lerp(70, 169, lit)},${lerp(110, 219, lit)},${lerp(170, 247, lit)},.95), rgba(${lerp(18, 74, lit)},${lerp(30, 155, lit)},${lerp(56, 212, lit)},.95) 72%)` : '',
+      color: lit > 0.5 ? '#06101F' : 'rgba(226,236,247,.85)',
+      boxShadow: lit > 0 ? `inset 0 2px 0 rgba(255,255,255,.4), 0 0 ${40 * lit}px rgba(126,196,240,${0.55 * lit}), 0 18px 40px rgba(0,0,0,.45)` : '',
+    });
+    c.querySelector('.dot').style.background = lit > 0.5 ? '#7EC4F0' : (Math.sin(t * 9 + i * 3) > 0.6 && t > 2.8 ? '#5b6b85' : '#33415a');
+    c.querySelector('.lbl').style.opacity = 1 - connectK * 0.35;
+
+    // connection line chip -> hub
+    const L = lines[i];
+    const cx = 960, cy = 540;
+    const mx = (x + cx) / 2 + (y - cy) * 0.25, my = (y + cy) / 2 - (x - cx) * 0.25;
+    L.setAttribute('d', `M ${x} ${y} Q ${mx} ${my} ${cx} ${cy}`);
+    const len = L.getTotalLength();
+    const dk = eOut(P(t, 5.0 + i * 0.1, 5.7 + i * 0.1));
+    L.style.strokeDasharray = len; L.style.strokeDashoffset = len * (1 - dk);
+    L.style.opacity = (1 - collapse) * 0.9;
+    pulses[i].forEach((p, j) => {
+      const ph = ((t * 0.9 + i * 0.13 + j * 0.5) % 1);
+      const pt = L.getPointAtLength(len * ph);
+      p.setAttribute('cx', pt.x); p.setAttribute('cy', pt.y);
+      p.style.opacity = P(t, 5.9 + i * 0.1, 6.2 + i * 0.1) * (1 - collapse) * Math.sin(ph * Math.PI);
+    });
+  });
+  set($('orbit'), { opacity: eOut(P(t, 5.4, 6.4)) * (1 - collapse) });
+
+  // ---- captions ----
+  if (!SITE) {
+    wordAnim(cap1, t, 2.75, 0.07, 0.5, 4.75, 5.05);
+    wordAnim(cap2, t, 5.75, 0.08, 0.5, 7.45, 7.75);
+  } else { [...cap1, ...cap2].forEach(w => w.style.opacity = 0); }
+
+  // ---- scene 4: dashboard card ----
+  const cIn = eOut(P(t, 7.95, 9.0));
+  const cOut = eIn(P(t, 11.15, 11.75));
+  const tilt = 1 - cIn;
+  set($('card'), {
+    opacity: P(t, 7.95, 8.25) * (1 - cOut),
+    transform: `perspective(1600px) translateY(${tilt * 60 - cOut * 40}px) rotateX(${tilt * 38 + Math.sin(t * 0.8) * 1.5}deg) rotateY(${-tilt * 16 + cOut * 75 + Math.sin(t * 0.6) * 2}deg) scale(${lerp(0.2, 1, cIn) * (1 - cOut * 0.4) * (MOBILE ? 0.84 : 1)})`,
+  });
+  set($('card').querySelector('.sheen'), { left: `${lerp(-40, 140, P(t, 8.6, 9.6))}%` });
+  const n1 = Math.round(8 * eOut(P(t, 9.0, 10.2)));
+  $('k1v').textContent = n1 + ' hrs';
+  $('k2v').textContent = (2.5 * eOut(P(t, 9.2, 10.4))).toFixed(1) + 'x';
+  $('k3v').textContent = Math.round(90 * eOut(P(t, 9.4, 10.6))) + '%';
+  [['k1', 9.0], ['k2', 9.2], ['k3', 9.4]].forEach(([id, t0]) => {
+    const k = eOut(P(t, t0 - 0.15, t0 + 0.35));
+    set($(id), { opacity: k, transform: `translateY(${(1 - k) * 30}px)` });
+    $(id).classList.toggle('on', t > 10.4 && t < 11.2 && id === ['k1', 'k2', 'k3'][Math.floor((t - 10.4) / 0.27) % 3]);
+  });
+  const ch = eIO(P(t, 9.3, 10.8));
+  $('clipR').setAttribute('width', 26 + 648 * ch);
+  const cpts = [[26, 250], [110, 236], [190, 242], [270, 214], [350, 220], [430, 186], [510, 170], [590, 128], [674, 92]];
+  const cxp = 26 + 648 * ch; let cy2 = 250;
+  for (let j = 1; j < cpts.length; j++) if (cxp <= cpts[j][0]) { const a = cpts[j - 1], b = cpts[j]; cy2 = lerp(a[1], b[1], (cxp - a[0]) / (b[0] - a[0])); break; } else cy2 = cpts[j][1];
+  $('chartDot').setAttribute('cx', cxp); $('chartDot').setAttribute('cy', cy2); $('chartDot').style.opacity = P(t, 9.3, 9.5);
+  set($('pill'), { opacity: eOut(P(t, 10.6, 10.9)), transform: `scale(${eBack(P(t, 10.6, 11.0))})` });
+  $('beatPath').setAttribute('d', beatD(t * 0.55));
+  $('beatPath').style.opacity = P(t, 9.4, 9.8);
+
+  // ---- scene 5: tagline + wordmark ----
+  if (!SITE) {
+    wordAnim(tag1, t, 12.0, 0.1, 0.6, 14.2, 14.7);
+    wordAnim(tag2, t, 12.55, 0.1, 0.6, 14.25, 14.75);
+  } else { [...tag1, ...tag2].forEach(w => w.style.opacity = 0); }
+  const wk = eOut(P(t, SITE ? 12.3 : 13.2, SITE ? 13.0 : 13.8));
+  set($('word'), { opacity: wk * endFade, letterSpacing: `${lerp(1.1, 0.5, wk)}em`, top: SITE ? '760px' : '900px' });
+
+  // ---- transitions ----
+  const sw = P(t, 7.7, 8.35), sw2 = P(t, 11.25, 11.9);
+  const swk = sw > 0 && sw < 1 ? sw : (sw2 > 0 && sw2 < 1 ? sw2 : -1);
+  set($('sweep'), { opacity: swk < 0 ? 0 : Math.sin(swk * Math.PI), left: `${lerp(-30, 120, swk)}%` });
+
+  // loop: begin and end on the same dark frame
+  set($('fade'), { opacity: Math.max(1 - P(t, 0, 0.35), P(t, 14.55, 15)) * 0.999 });
+};
+if (MOBILE) { document.getElementById('orbit').setAttribute('rx', '380'); document.getElementById('orbit').setAttribute('ry', '300'); }
+window.render(0);
+</script>
+</body>
+</html>
