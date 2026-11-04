@@ -366,35 +366,41 @@
   }
   @media(prefers-reduced-motion:reduce){.bm-lens,.bm-ring{animation:none !important;}}
 
-  /* TRUST ARC — logos ride a slowly turning wheel; only the top arc shows */
-  .arc{position:relative;height:620px;overflow:hidden;--arc-d:1500px;}
-  .arc-stage{position:absolute;inset:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent),linear-gradient(180deg,#000 50%,transparent 88%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent),linear-gradient(180deg,#000 50%,transparent 88%);mask-composite:intersect;}
-  .arc-wheel{position:absolute;left:50%;top:90px;width:var(--arc-d);height:var(--arc-d);margin-left:calc(var(--arc-d) / -2);border-radius:50%;animation:arc-spin 140s linear infinite;}
-  .arc:hover .arc-wheel{animation-play-state:paused;}
-  @keyframes arc-spin{to{transform:rotate(-360deg);}}
-  .arc-item{position:absolute;left:50%;top:50%;width:0;height:0;transform:rotate(var(--a)) translateY(calc(var(--arc-d) / -2));}
-  .arc-item img{position:absolute;left:0;top:0;transform:translate(-50%,-50%);display:block;max-height:50px;max-width:156px;width:auto;height:auto;object-fit:contain;opacity:0.92;transition:opacity .25s;}
-  .arc-item:hover img{opacity:1;}
-  .arc-item.feat img{opacity:1;padding:14px 26px;border-radius:999px;background:radial-gradient(120% 140% at 50% 0%,rgba(126,196,240,0.2),rgba(10,20,40,0.9) 70%);border:1px solid rgba(126,196,240,0.4);box-shadow:0 0 0 5px rgba(126,196,240,0.05),0 12px 40px rgba(126,196,240,0.25);box-sizing:content-box;}
-  .arc-item.feat.wide img{max-height:44px;max-width:180px;}
-  .arc-item.feat.round img{max-height:80px;max-width:80px;padding:8px;border-radius:50%;}
-  .arc-copy{position:absolute;left:0;right:0;top:330px;text-align:center;padding:0 20px;pointer-events:none;}
+  /* CLIENTS CAROUSEL — big, clear logos with a one-line role, sliding on its own */
+  .pc{max-width:1240px;margin:0 auto;padding:110px 40px 40px;}
+  .pc-head{text-align:center;margin:0 0 44px;}
   .arc-eye{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:rgba(226,236,247,0.75);margin:0 0 14px;}
   .arc-eye span{width:7px;height:7px;border-radius:50%;background:#7EC4F0;box-shadow:0 0 10px #7EC4F0;}
   .arc-h{font-size:clamp(36px,5vw,64px);font-weight:500;line-height:1.05;letter-spacing:-0.04em;color:#fff;margin:0;}
   .arc-sub{font-size:17px;line-height:1.5;color:rgba(226,236,247,0.6);margin:14px auto 0;max-width:520px;}
+  .pc-band{position:relative;border-radius:32px;padding:64px 12px 36px;background:radial-gradient(90% 120% at 50% 0%,rgba(126,196,240,0.16),transparent 60%),linear-gradient(180deg,#132648,#0D1A34);border:1px solid rgba(126,196,240,0.24);box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 30px 80px rgba(0,0,0,0.35);}
+  .pc-view{overflow:hidden;}
+  .pc-track{display:flex;list-style:none;margin:0;padding:0;will-change:transform;}
+  .pc-slide{flex:0 0 25%;box-sizing:border-box;padding:0 18px;text-align:center;}
+  .pc-logo{height:112px;display:flex;align-items:center;justify-content:center;}
+  .pc-logo img{display:block;max-height:64px;max-width:210px;width:auto;height:auto;object-fit:contain;}
+  .pc-slide.wide .pc-logo img{max-height:56px;max-width:230px;}
+  .pc-slide.round .pc-logo img{max-height:104px;max-width:104px;}
+  .pc-slide.sq .pc-logo img{max-height:80px;max-width:80px;}
+  .pc-slide.tall .pc-logo img{max-height:104px;max-width:220px;}
+  .pc-cap{margin:30px 0 0;font-size:16px;font-weight:300;line-height:1.35;color:rgba(226,236,247,0.78);}
+  .pc-cap b{display:block;font-weight:600;font-size:17px;color:#fff;}
+  .pc-dots{display:flex;justify-content:center;gap:14px;margin-top:40px;}
+  .pc-dots button{width:10px;height:10px;padding:0;border:0;border-radius:50%;background:rgba(226,236,247,0.28);cursor:pointer;transition:background .3s,transform .3s;}
+  .pc-dots button.on{background:#7EC4F0;transform:scale(1.25);box-shadow:0 0 10px rgba(126,196,240,0.7);}
+  @media(max-width:900px){.pc-slide{flex-basis:33.333%;}}
   @media(max-width:700px){
-    .arc{height:440px;--arc-d:560px;}
-    .arc-wheel{top:56px;}
-    .arc-item:nth-child(even){display:none;}
-    .arc-item img{max-height:28px;max-width:84px;}
-    .arc-item.feat img{padding:8px 12px;}
-    .arc-item.feat.wide img{max-height:22px;max-width:80px;}
-    .arc-item.feat.round img{max-height:44px;max-width:44px;padding:5px;}
-    .arc-copy{top:250px;}
-    .arc-stage{-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent),linear-gradient(180deg,#000 45%,transparent 80%);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent),linear-gradient(180deg,#000 45%,transparent 80%);}
+    .pc{padding:80px 18px 24px;}
+    .pc-band{border-radius:24px;padding:40px 4px 26px;}
+    .pc-slide{flex-basis:50%;padding:0 10px;}
+    .pc-logo{height:88px;}
+    .pc-logo img{max-height:44px;max-width:140px;}
+    .pc-slide.wide .pc-logo img{max-height:38px;max-width:150px;}
+    .pc-slide.round .pc-logo img,.pc-slide.sq .pc-logo img,.pc-slide.tall .pc-logo img{max-height:80px;max-width:140px;}
+    .pc-cap{font-size:13.5px;margin-top:18px;}
+    .pc-cap b{font-size:14.5px;}
+    .pc-dots{margin-top:28px;gap:12px;}
   }
-  @media(prefers-reduced-motion:reduce){.arc-wheel{animation:none;}}
 
   /* IN THE ROOM — founder-led story + staggered photo strip */
   .room{position:relative;background:#060E1E;border-top:1px solid rgba(126,196,240,0.08);border-bottom:1px solid rgba(126,196,240,0.08);overflow:clip;}
@@ -498,39 +504,59 @@
   </section>
 
   <!-- SECTION 2 — TRUST ARC (logos turning on a half-circle) -->
-  <section class="arc" aria-label="Trusted by">
-    <div class="arc-stage">
-      <div class="arc-wheel">
-        <div class="arc-item feat wide" style="--a:0.00deg;"><img src="assets/logos/lextan.png" alt="Lextan" loading="lazy"></div>
-        <div class="arc-item" style="--a:15.00deg;"><img src="assets/logos/Asset-18.png" alt="HeatGlow" loading="lazy"></div>
-        <div class="arc-item" style="--a:30.00deg;"><img src="assets/logos/logo-horizontal.png" alt="Volt Secure" loading="lazy"></div>
-        <div class="arc-item" style="--a:45.00deg;"><img src="assets/logos/csw.png" alt="Construction Skills Wales" loading="lazy"></div>
-        <div class="arc-item feat round" style="--a:60.00deg;"><img src="assets/logos/a-head-of-the-game.png" alt="A-Head of the Game Nutrition" loading="lazy"></div>
-        <div class="arc-item" style="--a:75.00deg;"><img src="assets/logos/cardiff-uni.png" alt="Cardiff University" loading="lazy"></div>
-        <div class="arc-item" style="--a:90.00deg;"><img src="assets/logos/usw.png" alt="University of South Wales" loading="lazy"></div>
-        <div class="arc-item" style="--a:105.00deg;"><img src="assets/logos/stiwdio-usw.png" alt="Stiwdio USW" loading="lazy"></div>
-        <div class="arc-item feat wide" style="--a:120.00deg;"><img src="assets/logos/lextan.png" alt="Lextan" loading="lazy"></div>
-        <div class="arc-item" style="--a:135.00deg;"><img src="assets/logos/fintech-wales.png" alt="FinTech Wales" loading="lazy"></div>
-        <div class="arc-item" style="--a:150.00deg;"><img src="assets/logos/ice.png" alt="ICE" loading="lazy"></div>
-        <div class="arc-item" style="--a:165.00deg;"><img src="assets/logos/bni.png" alt="BNI" loading="lazy"></div>
-        <div class="arc-item feat round" style="--a:180.00deg;"><img src="assets/logos/a-head-of-the-game.png" alt="A-Head of the Game Nutrition" loading="lazy"></div>
-        <div class="arc-item" style="--a:195.00deg;"><img src="assets/logos/caerphilly-bc.png" alt="Caerphilly Business Club" loading="lazy"></div>
-        <div class="arc-item" style="--a:210.00deg;"><img src="assets/logos/caerphilly-council.png" alt="Caerphilly County Borough Council" loading="lazy"></div>
-        <div class="arc-item" style="--a:225.00deg;"><img src="assets/logos/rct.png" alt="Rhondda Cynon Taf" loading="lazy"></div>
-        <div class="arc-item feat wide" style="--a:240.00deg;"><img src="assets/logos/lextan.png" alt="Lextan" loading="lazy"></div>
-        <div class="arc-item" style="--a:255.00deg;"><img src="assets/logos/nyca.png" alt="NYCA" loading="lazy"></div>
-        <div class="arc-item" style="--a:270.00deg;"><img src="assets/logos/apify.png" alt="Apify" loading="lazy"></div>
-        <div class="arc-item" style="--a:285.00deg;"><img src="assets/logos/skool.png" alt="Skool" loading="lazy"></div>
-        <div class="arc-item feat round" style="--a:300.00deg;"><img src="assets/logos/a-head-of-the-game.png" alt="A-Head of the Game Nutrition" loading="lazy"></div>
-        <div class="arc-item" style="--a:315.00deg;"><img src="assets/logos/redmore.png" alt="Redmore Recruitment" loading="lazy"></div>
-        <div class="arc-item" style="--a:330.00deg;"><img src="assets/logos/mh-wellbeing.png" alt="The Mental Health &amp; Wellbeing Network" loading="lazy"></div>
-        <div class="arc-item" style="--a:345.00deg;"><img src="assets/logos/sporting-club.png" alt="The Sporting Club" loading="lazy"></div>
-      </div>
-    </div>
-    <div class="arc-copy">
+  <section class="pc" aria-label="Clients and partners">
+    <div class="pc-head" data-reveal>
       <p class="arc-eye"><span></span>Clients &amp; partners</p>
       <h2 class="arc-h">Trusted across the UK.</h2>
       <p class="arc-sub">By founder-led service businesses, institutions and partners.</p>
+    </div>
+    <div class="pc-band" data-pc>
+      <div class="pc-view">
+      <ul class="pc-track">
+        <li class="pc-slide wide"><div class="pc-logo"><img src="assets/logos/lextan.png" alt="Lextan"></div><p class="pc-cap">Automation partner for a<b>Multi-site hair &amp; beauty group</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/Asset-18.png" alt="HeatGlow"></div><p class="pc-cap">AI partner for a<b>Heating &amp; plumbing firm</b></p></li>
+        <li class="pc-slide round"><div class="pc-logo"><img src="assets/logos/a-head-of-the-game.png" alt="A-Head of the Game Nutrition"></div><p class="pc-cap">Technology partner for a<b>Nutrition brand</b></p></li>
+        <li class="pc-slide sq"><div class="pc-logo"><img src="assets/logos/usw.png" alt="University of South Wales"></div><p class="pc-cap">Based at the<b>University of South Wales</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/cardiff-uni.png" alt="Cardiff University"></div><p class="pc-cap">Working with<b>Cardiff University</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/csw.png" alt="Construction Skills Wales"></div><p class="pc-cap">Industry body<b>Construction Skills Wales</b></p></li>
+        <li class="pc-slide wide"><div class="pc-logo"><img src="assets/logos/logo-horizontal.png" alt="Volt Secure" loading="lazy"></div><p class="pc-cap">Operations partner for a<b>Fire &amp; security company</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/caerphilly-council.png" alt="Caerphilly County Borough Council" loading="lazy"></div><p class="pc-cap">Local authority<b>Caerphilly Council</b></p></li>
+        <li class="pc-slide tall"><div class="pc-logo"><img src="assets/logos/walkers-talkers.png" alt="Walkers &amp; Talkers" loading="lazy"></div><p class="pc-cap">Membership tech for a<b>Walking community</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/fintech-wales.png" alt="FinTech Wales" loading="lazy"></div><p class="pc-cap">Industry network<b>FinTech Wales</b></p></li>
+        <li class="pc-slide wide"><div class="pc-logo"><img src="assets/logos/lextan.png" alt="Lextan" loading="lazy"></div><p class="pc-cap">Automation partner for a<b>Multi-site hair &amp; beauty group</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/bni.png" alt="BNI" loading="lazy"></div><p class="pc-cap">Business network<b>BNI</b></p></li>
+        <li class="pc-slide round"><div class="pc-logo"><img src="assets/logos/a-head-of-the-game.png" alt="A-Head of the Game Nutrition" loading="lazy"></div><p class="pc-cap">Technology partner for a<b>Nutrition brand</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/stiwdio-usw.png" alt="Stiwdio USW" loading="lazy"></div><p class="pc-cap">Startup programme<b>Stiwdio USW</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/cardiff-uni.png" alt="Cardiff University" loading="lazy"></div><p class="pc-cap">Working with<b>Cardiff University</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/rct.png" alt="Rhondda Cynon Taf" loading="lazy"></div><p class="pc-cap">Local authority<b>Rhondda Cynon Taf</b></p></li>
+        <li class="pc-slide wide"><div class="pc-logo"><img src="assets/logos/logo-horizontal.png" alt="Volt Secure" loading="lazy"></div><p class="pc-cap">Operations partner for a<b>Fire &amp; security company</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/apify.png" alt="Apify" loading="lazy"></div><p class="pc-cap">Technology platform<b>Apify</b></p></li>
+        <li class="pc-slide tall"><div class="pc-logo"><img src="assets/logos/walkers-talkers.png" alt="Walkers &amp; Talkers" loading="lazy"></div><p class="pc-cap">Membership tech for a<b>Walking community</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/caerphilly-bc.png" alt="Caerphilly Business Club" loading="lazy"></div><p class="pc-cap">Business network<b>Caerphilly Business Club</b></p></li>
+        <li class="pc-slide wide"><div class="pc-logo"><img src="assets/logos/lextan.png" alt="Lextan" loading="lazy"></div><p class="pc-cap">Automation partner for a<b>Multi-site hair &amp; beauty group</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/ice.png" alt="ICE" loading="lazy"></div><p class="pc-cap">Business community<b>ICE</b></p></li>
+        <li class="pc-slide round"><div class="pc-logo"><img src="assets/logos/a-head-of-the-game.png" alt="A-Head of the Game Nutrition" loading="lazy"></div><p class="pc-cap">Technology partner for a<b>Nutrition brand</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/skool.png" alt="Skool" loading="lazy"></div><p class="pc-cap">Technology platform<b>Skool</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/cardiff-uni.png" alt="Cardiff University" loading="lazy"></div><p class="pc-cap">Working with<b>Cardiff University</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/redmore.png" alt="Redmore Recruitment" loading="lazy"></div><p class="pc-cap">Recruitment<b>Redmore Recruitment</b></p></li>
+        <li class="pc-slide wide"><div class="pc-logo"><img src="assets/logos/logo-horizontal.png" alt="Volt Secure" loading="lazy"></div><p class="pc-cap">Operations partner for a<b>Fire &amp; security company</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/nyca.png" alt="NYCA" loading="lazy"></div><p class="pc-cap">Community partner<b>NYCA</b></p></li>
+        <li class="pc-slide tall"><div class="pc-logo"><img src="assets/logos/walkers-talkers.png" alt="Walkers &amp; Talkers" loading="lazy"></div><p class="pc-cap">Membership tech for a<b>Walking community</b></p></li>
+        <li class="pc-slide round"><div class="pc-logo"><img src="assets/logos/mh-wellbeing.png" alt="The Mental Health &amp; Wellbeing Network" loading="lazy"></div><p class="pc-cap">Wellbeing network<b>Mental Health &amp; Wellbeing Network</b></p></li>
+        <li class="pc-slide wide"><div class="pc-logo"><img src="assets/logos/lextan.png" alt="Lextan" loading="lazy"></div><p class="pc-cap">Automation partner for a<b>Multi-site hair &amp; beauty group</b></p></li>
+        <li class="pc-slide"><div class="pc-logo"><img src="assets/logos/sporting-club.png" alt="The Sporting Club" loading="lazy"></div><p class="pc-cap">Community partner<b>The Sporting Club</b></p></li>
+      </ul>
+      </div>
+      <div class="pc-dots">
+        <button type="button" aria-label="Show logo group 1"></button>
+        <button type="button" aria-label="Show logo group 2"></button>
+        <button type="button" aria-label="Show logo group 3"></button>
+        <button type="button" aria-label="Show logo group 4"></button>
+        <button type="button" aria-label="Show logo group 5"></button>
+        <button type="button" aria-label="Show logo group 6"></button>
+        <button type="button" aria-label="Show logo group 7"></button>
+        <button type="button" aria-label="Show logo group 8"></button>
+      </div>
     </div>
   </section>
 
@@ -1114,6 +1140,37 @@ class Component extends DCLogic {
         setTimeout(fallback, 2500);
       }
     }
+    // Clients carousel: slides one logo at a time, loops forever, pauses on hover or when off screen.
+    const pc = document.querySelector('[data-pc]');
+    if (pc) {
+      const track = pc.querySelector('.pc-track');
+      const real = [...track.children];
+      const N = real.length;
+      real.slice(0, 4).forEach(s => { const c = s.cloneNode(true); c.setAttribute('aria-hidden', 'true'); track.appendChild(c); });
+      const dots = [...pc.querySelectorAll('.pc-dots button')];
+      const per = Math.ceil(N / dots.length);
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let i = 0, hover = false, seen = true;
+      const go = (n, anim) => {
+        i = n;
+        track.style.transition = anim && !reduce ? 'transform .9s cubic-bezier(.65,0,.35,1)' : 'none';
+        track.style.transform = `translateX(${-i * real[0].getBoundingClientRect().width}px)`;
+        const d = Math.floor((i % N) / per);
+        dots.forEach((b, k) => b.classList.toggle('on', k === d));
+      };
+      track.addEventListener('transitionend', () => { if (i >= N) go(i - N, false); });
+      dots.forEach((b, k) => b.addEventListener('click', () => go(k * per, true)));
+      pc.addEventListener('mouseenter', () => { hover = true; });
+      pc.addEventListener('mouseleave', () => { hover = false; });
+      if ('IntersectionObserver' in window) {
+        this._pcIO = new IntersectionObserver(es => { seen = es[0].isIntersecting; });
+        this._pcIO.observe(pc);
+      }
+      this._pcT = setInterval(() => { if (!hover && seen && !document.hidden) go(i + 1, true); }, 2600);
+      this._pcResize = () => go(i % N, false);
+      window.addEventListener('resize', this._pcResize);
+      go(0, false);
+    }
     // Highlight cards: one tile is filled cyan; hover, focus or tap moves it.
     // On phones the cards stack as you scroll, so the top-most stacked card lights up.
     const grids = [...document.querySelectorAll('[data-highlight]')];
@@ -1225,6 +1282,9 @@ class Component extends DCLogic {
     }
   }
   componentWillUnmount() {
+    if (this._pcT) clearInterval(this._pcT);
+    if (this._pcIO) this._pcIO.disconnect();
+    if (this._pcResize) window.removeEventListener('resize', this._pcResize);
     if (this._stackScroll) window.removeEventListener('scroll', this._stackScroll);
     if (this._typeT) clearTimeout(this._typeT);
     if (this._calIO) this._calIO.disconnect();
