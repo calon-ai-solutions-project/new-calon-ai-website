@@ -174,29 +174,39 @@
   @keyframes mkSnap{0%{opacity:0;transform:scale(.4);}60%{opacity:1;transform:scale(1.2);}100%{opacity:1;transform:scale(1);}}
   @keyframes mkStrike{from{transform:scaleX(0);}to{transform:scaleX(1);}}
   @keyframes mkDim{from{opacity:1;}to{opacity:.65;}}
-  /* staircase chart: white panel, blue bars that spring up, then breathe in a slow wave */
-  .mk-panel-light{background:#FFFFFF;border-color:#E3ECF6;box-shadow:0 30px 80px rgba(0,0,0,0.35);color:#0A1428;}
-  .mk-panel-light .mk-panel-hd h3{color:#0A1428;}
-  .mk-panel-light .mk-panel-hd span{color:#4A5568;}
+  /* What we believe: white section; only the staircase chart is a blue card */
+  .mk-light{background:#FFFFFF;color:#0A1428;}
+  .mk-light .mk-glow{display:none;}
+  .mk-light .mk-eye{color:#1F6FA8;font-weight:600;}
+  .mk-light .mk-h{color:#0A1428;}
+  .mk-light .mk-tool{background:#F4F8FC;border-color:#DCE7F3;color:#0A1428;box-shadow:0 8px 20px rgba(10,20,40,0.06);}
+  .mk-light .mk-tool svg{color:#1F6FA8 !important;}
+  .mk-light .mk-pill{color:#C2410C;background:#FFF1EC;border-color:#FDC9B5;}
+  .mk-light .mk-dash{border-top-color:rgba(234,88,12,0.6);}
+  .mk-light .mk-drip{color:#EA580C;}
+  .mk-light .mk-cap{color:#4A5568;}
+  .mk-panel-light{background:radial-gradient(120% 120% at 0% 0%,#2A63B0 0%,transparent 55%),linear-gradient(150deg,#1B4C8F,#0E2A57 70%,#0A1F44);border:0;box-shadow:0 30px 70px rgba(14,42,87,0.35);color:#FFFFFF;}
+  .mk-panel-light .mk-panel-hd h3{color:#FFFFFF;}
+  .mk-panel-light .mk-panel-hd span{color:rgba(226,236,247,0.82);}
   .mk-panel-light .mk-stairs{position:relative;padding-top:8px;}
   .mk-panel-light .mk-step{gap:12px;}
   .mk-bar-wrap{display:flex;flex-direction:column;gap:10px;}
-  .mk-panel-light .mk-bar-lab{color:#0A1428;}
-  .mk-tag-start{color:#1F6FA8;}
-  .mk-tag-ai{color:#4A5568;}
+  .mk-panel-light .mk-bar-lab{color:#FFFFFF;}
+  .mk-tag-start{color:#9AD3F5;}
+  .mk-tag-ai{color:rgba(226,236,247,0.78);}
   .mk-panel-light .mk-bar{border-radius:12px 12px 0 0;overflow:hidden;}
   .mk-bar-in{height:100%;border-radius:12px 12px 0 0;transform-origin:center bottom;animation:mkBreathe 3.6s ease-in-out infinite;animation-delay:calc(var(--b) * 0.22s + 1.4s);}
-  .mk-bar-in.start{background:linear-gradient(180deg,#9AD3F5,#3B9BE0);animation:mkBreathe 3.6s ease-in-out infinite calc(var(--b) * 0.22s + 1.4s),mkGlow 3.6s ease-in-out infinite 1.4s;}
-  .mk-bar-in.b2{background:linear-gradient(180deg,#E3EFFA,#C9DDF2);}
-  .mk-bar-in.b3{background:linear-gradient(180deg,#C2D9F1,#9DBFE5);}
-  .mk-bar-in.b4{background:linear-gradient(180deg,#8DB3E0,#5F8FCB);}
-  .mk-bar-in.b5{background:linear-gradient(180deg,#3D68A8,#1E3A6B);}
+  .mk-bar-in.start{background:linear-gradient(180deg,#E6F6FF,#7EC4F0);animation:mkBreathe 3.6s ease-in-out infinite calc(var(--b) * 0.22s + 1.4s),mkGlow 3.6s ease-in-out infinite 1.4s;}
+  .mk-bar-in.b2{background:linear-gradient(180deg,rgba(200,232,252,0.3),rgba(158,212,247,0.16));}
+  .mk-bar-in.b3{background:linear-gradient(180deg,rgba(200,232,252,0.42),rgba(158,212,247,0.24));}
+  .mk-bar-in.b4{background:linear-gradient(180deg,rgba(200,232,252,0.58),rgba(158,212,247,0.34));}
+  .mk-bar-in.b5{background:linear-gradient(180deg,rgba(200,232,252,0.8),rgba(158,212,247,0.5));}
   @keyframes mkBreathe{0%,100%{transform:scaleY(1);}50%{transform:scaleY(.9);}}
-  @keyframes mkGlow{0%,100%{box-shadow:0 0 0 0 rgba(59,155,224,0);}50%{box-shadow:0 0 26px 4px rgba(59,155,224,.45);}}
+  @keyframes mkGlow{0%,100%{box-shadow:0 0 0 0 rgba(126,196,240,0);}50%{box-shadow:0 0 28px 6px rgba(126,196,240,.6);}}
   .mk.pre .spring{animation-name:mkSpring;animation-duration:1.05s;animation-timing-function:ease-out;transform-origin:center bottom;}
   @keyframes mkSpring{0%{transform:scaleY(0);}50%{transform:scaleY(1.16);}68%{transform:scaleY(.93);}84%{transform:scaleY(1.04);}100%{transform:scaleY(1);}}
   .mk-panel-light .mk-bar{transform-origin:center bottom;}
-  @media(max-width:720px){.mk-panel-light .mk-stairs{gap:6px;}}
+  @media(max-width:720px){.mk-panel-light .mk-stairs{gap:6px;}.mk-light .mk-dash{border-left-color:rgba(234,88,12,0.6) !important;}}
   @media(prefers-reduced-motion:reduce){.mk-bar-in,.mk-bar-in.start{animation:none !important;}}
   @media(max-width:720px){
     .mk-sec{padding:90px 20px;}
@@ -770,7 +780,7 @@
   </section>
 
   <!-- SECTION 3A — WHAT WE BELIEVE -->
-  <section class="mk" id="what-we-believe" aria-labelledby="wwb-h">
+  <section class="mk mk-light" id="what-we-believe" aria-labelledby="wwb-h">
     <div class="mk-glow" aria-hidden="true"></div>
     <div class="mk-sec"><div class="mk-in">
       <div data-mk class="mk-grp">
