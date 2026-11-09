@@ -44,9 +44,16 @@
   .hdr-mi small{display:block;color:rgba(226,236,247,0.45);font-size:12.5px;margin-top:2px;font-family:'Inter',system-ui,sans-serif;}
 
   .hdr-cta{flex:none;display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#9AD3F5,#7EC4F0 45%,#5AAEE2);color:#06101F;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:17px 28px;border-radius:999px;text-decoration:none;box-shadow:0 8px 28px rgba(126,196,240,0.32),inset 0 1px 0 rgba(255,255,255,0.55);transition:transform .2s,box-shadow .2s;}
-  .hdr-cta:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(126,196,240,0.42),inset 0 1px 0 rgba(255,255,255,0.55);}
+  .hdr-cta{position:relative;overflow:hidden;animation:hdr-dance 5s ease-in-out infinite 2s;}
+  .hdr-cta::after{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,0.55),transparent);transform:skewX(-18deg);animation:hdr-shine 5s ease-in-out infinite 2s;pointer-events:none;}
+  .hdr-cta svg{animation:hdr-arrow 5s ease-in-out infinite 2s;}
+  @keyframes hdr-dance{0%,70%,100%{transform:translateY(0) rotate(0) scale(1);}74%{transform:translateY(-4px) rotate(-2.5deg) scale(1.04);}78%{transform:translateY(0) rotate(2deg) scale(1.02);}82%{transform:translateY(-2px) rotate(-1.2deg) scale(1.03);}86%{transform:translateY(0) rotate(0) scale(1);}}
+  @keyframes hdr-shine{0%,72%{left:-60%;}88%,100%{left:130%;}}
+  @keyframes hdr-arrow{0%,74%,100%{transform:translateX(0);}78%{transform:translateX(5px);}82%{transform:translateX(0);}86%{transform:translateX(3px);}}
+  .hdr-cta:hover{animation:none;transform:translateY(-1px);box-shadow:0 12px 34px rgba(126,196,240,0.42),inset 0 1px 0 rgba(255,255,255,0.55);}
   .hdr-cta svg{transition:transform .2s;}
-  .hdr-cta:hover svg{transform:translateX(3px);}
+  .hdr-cta:hover svg{animation:none;transform:translateX(3px);}
+  @media(prefers-reduced-motion:reduce){.hdr-cta,.hdr-cta::after,.hdr-cta svg{animation:none !important;}}
 
   /* Mobile */
   .nav-toggle{position:absolute;opacity:0;pointer-events:none;}
