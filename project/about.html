@@ -117,6 +117,45 @@
     </div>
   </section>
 
+  <!-- THE TEAM -->
+  <section class="tm" aria-labelledby="tm-h">
+    <style>
+      .tm-wrap{max-width:1240px;margin:0 auto;padding:40px 40px 110px;}
+      .tm-eye{font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 16px;}
+      .tm-h{font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(28px,3.6vw,44px);line-height:1.12;letter-spacing:-0.035em;margin:0 0 34px;max-width:24ch;}
+      .tm-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;}
+      .tm-card{border:1px solid rgba(126,196,240,0.16);border-radius:18px;padding:28px 24px 30px;background:rgba(12,24,48,0.4);text-align:center;transition:transform .3s ease,border-color .3s ease;}
+      .tm-card:hover{transform:translateY(-4px);border-color:rgba(126,196,240,0.4);}
+      .tm-ph{display:block;width:140px;height:140px;margin:0 auto 20px;border-radius:50%;object-fit:cover;border:2px solid rgba(126,196,240,0.45);box-shadow:0 8px 24px rgba(0,0,0,0.35),0 0 0 6px rgba(126,196,240,0.06);}
+      .tm-name{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:22px;line-height:1.25;margin:0;color:#fff;}
+      .tm-role{font-size:14px;color:#7EC4F0;margin:6px 0 0;letter-spacing:0.02em;}
+      .tm-bench{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:22px 36px;border:1px solid rgba(126,196,240,0.28);border-radius:20px;padding:34px 40px;background:radial-gradient(120% 140% at 0% 0%,rgba(126,196,240,0.18),transparent 55%),linear-gradient(135deg,#132648,#0A1428);}
+      .tm-num{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(56px,7vw,92px);line-height:.9;letter-spacing:-0.05em;color:#7EC4F0;}
+      .tm-bench h3{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(20px,2vw,26px);line-height:1.3;margin:0 0 6px;color:#fff;}
+      .tm-bench p{margin:0;font-size:16px;line-height:1.6;color:rgba(226,236,247,0.72);max-width:640px;}
+      @media(max-width:1024px){.tm-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+      @media(max-width:520px){.tm-wrap{padding:20px 20px 80px;}.tm-grid{gap:14px;}.tm-card{padding:22px 14px 24px;}.tm-ph{width:104px;height:104px;margin-bottom:14px;}.tm-name{font-size:18px;}.tm-role{font-size:13px;}.tm-bench{padding:28px 24px;}}
+    </style>
+    <div class="tm-wrap">
+      <p class="tm-eye">The team</p>
+      <h2 class="tm-h" id="tm-h">The people building your systems.</h2>
+      <div class="tm-grid">
+        <div class="tm-card"><img class="tm-ph" src="assets/team-lennex.jpg" alt="Lennex, Senior AI Software Engineer" width="400" height="400" loading="lazy" decoding="async"><h3 class="tm-name">Lennex</h3><p class="tm-role">Senior AI Software Engineer</p></div>
+        <div class="tm-card"><img class="tm-ph" src="assets/team-max.jpg" alt="Max, Senior AI &amp; ML Engineer" width="400" height="400" loading="lazy" decoding="async"><h3 class="tm-name">Max</h3><p class="tm-role">Senior AI &amp; ML Engineer</p></div>
+        <div class="tm-card"><img class="tm-ph" src="assets/team-support.jpg" alt="Customer &amp; IT Support Manager" width="400" height="400" loading="lazy" decoding="async"><h3 class="tm-name">Customer &amp; IT Support Manager</h3></div>
+        <div class="tm-card"><img class="tm-ph" src="assets/team-saratin.jpg" alt="Saratin, Account Manager" width="400" height="400" loading="lazy" decoding="async"><h3 class="tm-name">Saratin</h3><p class="tm-role">Account Manager</p></div>
+      </div>
+      <div class="tm-bench">
+        <span class="tm-num">7+</span>
+        <div>
+          <h3>Senior engineers behind every project.</h3>
+          <p>Behind the team above sits a bench of seven-plus engineers, all at senior level and deep in technology and AI automation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- HOW WE WORK -->
   <section style="background:linear-gradient(180deg,transparent,rgba(12,24,48,0.55) 14%,rgba(12,24,48,0.55) 86%,transparent);">
     <div style="max-width:1240px;margin:0 auto;padding:100px 40px;">

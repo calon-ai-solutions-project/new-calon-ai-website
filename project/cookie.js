@@ -1,4 +1,4 @@
-/* Cookie notice: small pill at the bottom of the screen, shown until the visitor accepts. */
+/* Cookie notice: small pill at the bottom of the screen, shown until the visitor clicks "I understand". */
 (function () {
   var KEY = 'calon-cookie-consent';
   try { if (localStorage.getItem(KEY)) return; } catch (e) { /* storage blocked: still show the notice */ }
@@ -16,9 +16,13 @@
       '#calon-cookie p{margin:0;line-height:1.35;}' +
       '#calon-cookie p b{font-weight:600;}' +
       '#calon-cookie a{color:#0A1428;text-decoration:underline;text-underline-offset:2px;}' +
-      '#calon-cookie button{flex:none;border:0;cursor:pointer;background:#0A1428;color:#fff;font:inherit;font-weight:600;' +
-      'padding:12px 24px;border-radius:999px;transition:background .2s;}' +
-      '#calon-cookie button:hover{background:#1d3a63;}' +
+      '#calon-cookie button{flex:none;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;' +
+      'background:linear-gradient(180deg,#9AD3F5,#7EC4F0 45%,#5AAEE2);color:#06101F;font:inherit;font-weight:600;' +
+      'padding:12px 22px 12px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(74,155,212,0.35),inset 0 1px 0 rgba(255,255,255,0.6);' +
+      'transition:transform .2s,box-shadow .2s;}' +
+      '#calon-cookie button:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(74,155,212,0.45),inset 0 1px 0 rgba(255,255,255,0.6);}' +
+      '#calon-cookie button:focus-visible{outline:2px solid #0A1428;outline-offset:3px;}' +
+      '#calon-cookie button svg{width:18px;height:18px;flex:none;}' +
       '@media(max-width:520px){#calon-cookie{font-size:14.5px;gap:14px;padding:8px 8px 8px 18px;bottom:14px;width:calc(100% - 28px);justify-content:space-between;}}' +
       '@media(prefers-reduced-motion:reduce){#calon-cookie{transition:none;}}';
     document.head.appendChild(css);
@@ -28,7 +32,7 @@
     bar.setAttribute('role', 'region');
     bar.setAttribute('aria-label', 'Cookie notice');
     bar.innerHTML = '<p>This website uses <b>cookies</b>. <a href="' + legalHref() + '">Privacy Policy</a></p>' +
-      '<button type="button">Accept</button>';
+      '<button type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>I understand</button>';
     bar.querySelector('button').addEventListener('click', function () {
       try { localStorage.setItem(KEY, 'accepted:' + new Date().toISOString()); } catch (e) {}
       bar.classList.remove('is-in');
