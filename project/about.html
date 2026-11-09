@@ -42,6 +42,23 @@
   body{margin:0;background:#0A1428;}
 
   /* Trust credentials */
+  /* About: white sections (How we work, Built in Wales) */
+  .ab-white{color:#0A1428;}
+  .ab-white h2{color:#0A1428 !important;font-weight:600 !important;}
+  .ab-white > div > p:first-child{color:#1F6FA8 !important;font-weight:600;}
+  .ab-white > div > p:not(:first-child){color:#4A5568 !important;}
+  .hw-grid{counter-reset:hw;}
+  .hw-card{position:relative;counter-increment:hw;border:1px solid #DCE7F3;border-radius:18px;padding:30px 30px 30px;background:#F4F8FC;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
+  .hw-card::before{content:counter(hw,decimal-leading-zero);display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;margin-bottom:18px;border-radius:12px;font-size:14px;font-weight:700;color:#06101F;background:linear-gradient(160deg,#A9DBF7,#7EC4F0 55%,#5AAEE2);box-shadow:0 8px 18px rgba(74,155,212,0.3);}
+  .hw-card:hover{transform:translateY(-4px);border-color:#9ACBEB;box-shadow:0 18px 40px rgba(10,20,40,0.08);}
+  .hw-card h3{color:#0A1428 !important;font-weight:600 !important;font-size:19px !important;}
+  .hw-card p{color:#4A5568 !important;}
+  .ab-trust .trust-card{background:#FFFFFF;border:1px solid #DCE7F3;box-shadow:0 14px 34px rgba(10,20,40,0.07);}
+  .ab-trust .trust-card::after{background:radial-gradient(circle,rgba(126,196,240,0.28),transparent 70%);}
+  .ab-trust .trust-card:hover{border-color:#9ACBEB;box-shadow:0 24px 50px rgba(31,111,168,0.16);}
+  .ab-trust .trust-big{font-weight:800;background:linear-gradient(180deg,#0A1428 30%,#1F6FA8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .ab-trust .trust-label{color:#1F6FA8;}
+  .ab-trust .trust-sub{color:#4A5568;}
   .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
   .trust-card{position:relative;display:flex;flex-direction:column;padding:30px 28px 28px;border-radius:24px;background:linear-gradient(165deg,rgba(126,196,240,0.12),rgba(17,28,51,0.9) 55%);border:1px solid rgba(126,196,240,0.22);box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 18px 44px rgba(0,0,0,0.32);overflow:hidden;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;}
   .trust-card::after{content:'';position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(126,196,240,0.22),transparent 70%);pointer-events:none;}
@@ -157,17 +174,17 @@
 
 
   <!-- HOW WE WORK -->
-  <section style="background:linear-gradient(180deg,transparent,rgba(12,24,48,0.55) 14%,rgba(12,24,48,0.55) 86%,transparent);">
+  <section class="ab-white" style="background:#FFFFFF;">
     <div style="max-width:1240px;margin:0 auto;padding:100px 40px;">
       <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 16px;">How we work</p>
       <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(28px,3.6vw,44px);line-height:1.12;letter-spacing:-0.035em;margin:0 0 14px;max-width:24ch;">Six principles. We hold to them.</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:34px;">
-          <div style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:30px;background:#0A1428;"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">We build around your real workflow.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">No rip-and-replace. No &quot;throw out ServiceM8 and use ours.&quot; We connect to what already works and fix what doesn&#x27;t.</p></div>
-          <div style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:30px;background:#0A1428;"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">Phase 1 in six to eight weeks.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Not six months. You see real systems running inside two months of starting, not a Powerpoint of what could be.</p></div>
-          <div style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:30px;background:#0A1428;"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">One UK lead per engagement.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">You always have one person accountable. Not an account manager. The actual lead.</p></div>
-          <div style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:30px;background:#0A1428;"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">We stay after the build.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Ongoing retainer to keep systems working as the business grows. Not &quot;delivered, here&#x27;s the invoice, good luck.&quot;</p></div>
-          <div style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:30px;background:#0A1428;"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">AI agents only where they create value.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Not because it&#x27;s fashionable. If the right answer is a workflow with no AI, that&#x27;s what we ship.</p></div>
-          <div style="border:1px solid rgba(126,196,240,0.16);border-radius:16px;padding:30px;background:#0A1428;"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">We turn down work we can&#x27;t do well.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">If you&#x27;re not founder-led, or there&#x27;s no operational friction to fix, or the business isn&#x27;t ready, we say so. Saves everyone time.</p></div>
+      <div class="hw-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:34px;">
+          <div class="hw-card"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">We build around your real workflow.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">No rip-and-replace. No &quot;throw out ServiceM8 and use ours.&quot; We connect to what already works and fix what doesn&#x27;t.</p></div>
+          <div class="hw-card"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">Phase 1 in six to eight weeks.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Not six months. You see real systems running inside two months of starting, not a Powerpoint of what could be.</p></div>
+          <div class="hw-card"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">One UK lead per engagement.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">You always have one person accountable. Not an account manager. The actual lead.</p></div>
+          <div class="hw-card"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">We stay after the build.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Ongoing retainer to keep systems working as the business grows. Not &quot;delivered, here&#x27;s the invoice, good luck.&quot;</p></div>
+          <div class="hw-card"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">AI agents only where they create value.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">Not because it&#x27;s fashionable. If the right answer is a workflow with no AI, that&#x27;s what we ship.</p></div>
+          <div class="hw-card"><h3 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;margin:0 0 10px;color:#fff;">We turn down work we can&#x27;t do well.</h3><p style="font-size:15px;line-height:1.6;color:rgba(226,236,247,0.62);margin:0;">If you&#x27;re not founder-led, or there&#x27;s no operational friction to fix, or the business isn&#x27;t ready, we say so. Saves everyone time.</p></div>
       </div>
     </div>
   </section>
@@ -190,7 +207,7 @@
   </section>
 
   <!-- WHERE WE ARE -->
-  <section style="background:linear-gradient(180deg,transparent,rgba(12,24,48,0.55) 14%,rgba(12,24,48,0.55) 86%,transparent);">
+  <section class="ab-white ab-trust" style="background:#FFFFFF;">
     <div style="max-width:1240px;margin:0 auto;padding:100px 40px;">
       <p style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#7EC4F0;margin:0 0 16px;">Registered in Wales</p>
       <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(28px,3.6vw,44px);line-height:1.12;letter-spacing:-0.035em;margin:0 0 14px;max-width:24ch;max-width:24ch;">Built in Wales. Delivering across the UK.</h2>
@@ -206,7 +223,7 @@
       <h2 style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(30px,4.4vw,54px);line-height:1.08;letter-spacing:-0.035em;margin:0;">Want to see if Calon is the right fit?</h2>
       <p style="font-size:18px;line-height:1.55;color:rgba(226,236,247,0.7);margin:24px auto 36px;max-width:580px;">Fifteen minutes on the phone. No deck. No demo. Just a practical look at where visibility, follow-up or admin is being lost, and whether what we do would actually help.</p>
       <a href="/contact" style="display:inline-block;background:#7EC4F0;color:#06101F;font-size:17px;font-weight:600;padding:18px 38px;border-radius:999px;text-decoration:none;box-shadow:0 10px 40px rgba(126,196,240,0.28);">Book a 15-minute operational review</a>
-      <p style="font-size:15px;color:rgba(226,236,247,0.55);margin:28px 0 0;">Or email <a href="mailto:contact@calonaisolutions.com" style="color:#7EC4F0;text-decoration:none;">contact@calonaisolutions.com</a> if a phone call isn't your thing.</p>
+      <p style="font-size:15px;color:rgba(226,236,247,0.55);margin:28px 0 0;">Or email <!--email_off--><a href="mailto:contact@calonaisolutions.com" style="color:#7EC4F0;text-decoration:none;">contact@calonaisolutions.com</a><!--/email_off--> if a phone call isn't your thing.</p>
     </div>
   </section>
 
