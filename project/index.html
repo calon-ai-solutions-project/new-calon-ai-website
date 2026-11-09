@@ -455,6 +455,33 @@
     .hero-ctas{display:grid;grid-template-columns:1fr;gap:10px;width:100%;max-width:380px;margin-left:auto;margin-right:auto;}
     .btn-pill{padding:16px 14px;font-size:15.5px;}
   }
+  /* HERO SPLIT — text left, motion right (square cut), "Discover more" under it; stacks on phones */
+  .hero-inner{max-width:1240px;padding:30px 40px 90px;text-align:left;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;gap:20px 40px;}
+  .hero-text{min-width:0;}
+  .hero-text > div:first-child{justify-content:flex-start !important;}
+  .hero h1{font-weight:600;font-size:clamp(44px,5.6vw,84px);line-height:1.0;}
+  .hero-sub,.hero-sub2{margin-left:0;margin-right:0;max-width:560px;}
+  .hero-ctas{justify-content:flex-start;}
+  .hero-visual{position:relative;min-width:0;display:flex;flex-direction:column;align-items:center;}
+  .hero-visual .hero-video{width:min(620px,100%);aspect-ratio:1/1;margin:0 -40px 0 0;-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent 100%);mask-image:radial-gradient(closest-side,#000 70%,transparent 100%);-webkit-mask-composite:source-over;mask-composite:add;}
+  .hero-more{display:inline-flex;flex-direction:column;align-items:center;gap:12px;margin-top:-14px;color:rgba(226,236,247,0.85);text-decoration:none;font-size:17px;font-weight:500;}
+  .hero-more i{width:52px;height:52px;border-radius:50%;border:1.5px solid #7EC4F0;display:flex;align-items:center;justify-content:center;color:#7EC4F0;box-shadow:0 0 0 0 rgba(126,196,240,0.4);animation:hero-bob 2.4s ease-in-out infinite;transition:background .25s,color .25s;}
+  .hero-more i svg{width:22px;height:22px;}
+  .hero-more:hover i{background:#7EC4F0;color:#06101F;}
+  @keyframes hero-bob{0%,100%{transform:translateY(0);box-shadow:0 0 0 0 rgba(126,196,240,0.35);}50%{transform:translateY(6px);box-shadow:0 0 0 10px rgba(126,196,240,0);}}
+  @media(max-width:960px){
+    .hero-inner{grid-template-columns:1fr;padding:26px 24px 70px;}
+    .hero-visual .hero-video{margin:0 auto;width:min(560px,100%);}
+  }
+  @media(max-width:640px){
+    .hero-inner{padding:20px 20px 60px;gap:8px;}
+    .hero .hero-text h1{font-size:clamp(42px,12.4vw,58px) !important;line-height:1.02;}
+    .hero-ctas{display:grid;grid-template-columns:1fr;gap:12px;width:100%;max-width:none;margin-top:34px;}
+    .hero-ctas .btn-pill{padding:18px 20px;font-size:16px;}
+    .hero-visual .hero-video{width:calc(100% + 40px);margin:18px -20px 0;}
+    .hero-more{display:none;}
+  }
+  @media(prefers-reduced-motion:reduce){.hero-more i{animation:none;}}
   @media(prefers-reduced-motion:reduce){
     .hv-chip,.hv-label,.hero-beams i,.hv-card::before{animation-play-state:paused !important;}
   }
@@ -680,16 +707,7 @@
   <section class="hero">
     <div class="hero-beams" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="hero-inner">
-      <div class="hero-video" aria-hidden="true">
-        <video class="hero-vid" autoplay muted loop playsinline preload="auto" poster="assets/video/calon-hero-poster.jpg" disablepictureinpicture disableremoteplayback>
-          <source media="(max-width: 700px)" src="assets/video/calon-hero-mobile.mp4" type="video/mp4">
-          <source media="(max-width: 700px)" src="assets/video/calon-hero-mobile.webm" type="video/webm">
-          <source src="assets/video/calon-hero.mp4" type="video/mp4">
-          <source src="assets/video/calon-hero.webm" type="video/webm">
-        </video>
-        <img class="hero-vid hero-fallback" alt="" decoding="async" style="display:none;">
-      </div>
-      <div data-reveal>
+      <div class="hero-text" data-reveal>
         <div style="height:20px;margin-bottom:22px;display:flex;align-items:center;justify-content:center;">
           <span class="cal-type" style="font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:#7EC4F0;white-space:nowrap;"></span>
           <span class="cal-caret" style="display:inline-block;width:2px;height:14px;margin-left:4px;background:#7EC4F0;animation:cal-blink 1s steps(1) infinite;"></span>
@@ -702,11 +720,21 @@
           <a href="#proof" class="btn-pill btn-ghost">See the work <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
+      <div class="hero-visual">
+        <div class="hero-video" aria-hidden="true">
+          <video class="hero-vid" autoplay muted loop playsinline preload="auto" poster="assets/video/calon-hero-mobile-poster.jpg" disablepictureinpicture disableremoteplayback>
+            <source src="assets/video/calon-hero-mobile.mp4" type="video/mp4">
+            <source src="assets/video/calon-hero-mobile.webm" type="video/webm">
+          </video>
+          <img class="hero-vid hero-fallback" alt="" decoding="async" style="display:none;">
+        </div>
+        <a class="hero-more" href="#clients"><span>Discover more</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9.5l6 6 6-6"/></svg></i></a>
+      </div>
     </div>
   </section>
 
   <!-- SECTION 2 — TRUST ARC (logos turning on a half-circle) -->
-  <section class="pc" aria-label="Clients and partners">
+  <section class="pc" id="clients" aria-label="Clients and partners">
     <div class="pc-head" data-reveal>
       <p class="arc-eye"><span></span>Clients &amp; partners</p>
       <h2 class="arc-h">Trusted across the UK.</h2>
@@ -1499,7 +1527,7 @@ class Component extends DCLogic {
         if (!vid.paused) return; // playing (or starting): keep the smoother video
         swapped = true;
         img.onload = () => { img.style.display = 'block'; vid.style.display = 'none'; vid.pause(); };
-        img.src = small ? 'assets/video/calon-hero-mobile.webp' : 'assets/video/calon-hero.webp';
+        img.src = 'assets/video/calon-hero-mobile.webp';
       };
       if (reduce) { vid.removeAttribute('autoplay'); vid.pause(); }
       else {
