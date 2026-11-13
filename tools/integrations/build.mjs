@@ -32,33 +32,34 @@ const CATS = [
     ['Joblogic', 'file', 'brand-joblogic.png'], ['ServiceM8', 'file', 'brand-servicem8.png'],
     ['Simpro', 'file', 'brand-simpro.png'], ['BigChange', 'file', 'brand-bigchange.png'], ['Tradify', 'file', 'brand-tradify.png'],
     ['Commusoft', 'file', 'brand-commusoft.png'], ['Fergus', 'file', 'brand-fergus.png'],
-    ['FieldAware', 'file', 'brand-fieldaware.png'], ['Klipboard', 'file', 'brand-klipboard.png'], ['Procore', 'file', 'brand-procore.png'], ['Buildertrend']]],
+    ['FieldAware', 'file', 'brand-fieldaware.png'], ['Klipboard', 'file', 'brand-klipboard.png'], ['Procore', 'file', 'brand-procore.png'], ['Buildertrend', 'file', 'brand-buildertrend.png']]],
   ['Accounting &amp; finance', [
     ['Xero', 'logos', 'xero'], ['QuickBooks', 'si', 'quickbooks'], ['Sage 50', 'si', 'sage', '50'],
-    ['Sage 200', 'si', 'sage', '200'], ['FreeAgent']]],
+    ['Sage 200', 'si', 'sage', '200'], ['FreeAgent', 'file', 'brand-freeagent.png']]],
   ['CRM &amp; sales', [
     ['HubSpot', 'si', 'hubspot'], ['Pipedrive', 'logos', 'pipedrive'], ['Salesforce', 'logos', 'salesforce'],
     ['Monday', 'logos', 'monday-icon'], ['Zoho CRM', 'logos', 'zoho', 'CRM']]],
   ['Learning &amp; training', [
-    ['Moodle', 'si', 'moodle'], ['TalentLMS'], ['Tutor LMS'], ['Thinkific']]],
+    ['Moodle', 'si', 'moodle'], ['TalentLMS', 'file', 'brand-talentlms.png'], ['Tutor LMS', 'file', 'brand-tutorlms.png'], ['Thinkific', 'file', 'brand-thinkific.png']]],
   ['Marketing &amp; lead', [
-    ['Mailchimp', 'logos', 'mailchimp-freddie'], ['ActiveCampaign'], ['HubSpot Marketing', 'si', 'hubspot', 'Marketing'],
+    ['Mailchimp', 'logos', 'mailchimp-freddie'], ['ActiveCampaign', 'file', 'brand-activecampaign.png'], ['HubSpot Marketing', 'si', 'hubspot', 'Marketing'],
     ['Google Ads', 'logos', 'google-ads']]],
   ['Forms &amp; onboarding', [
-    ['Typeform', 'si', 'typeform'], ['Jotform'], ['Microsoft Forms']]],
+    ['Typeform', 'si', 'typeform'], ['Jotform', 'file', 'brand-jotform.png'], ['Microsoft Forms', 'file', 'brand-microsoft-forms.png', 'Forms']]],
   ['Documents &amp; comms', [
-    ['SharePoint'], ['Microsoft 365'], ['Google Workspace', 'logos', 'google-workspace'], ['Dropbox', 'logos', 'dropbox'],
+    ['SharePoint', 'file', 'brand-sharepoint.png'], ['Microsoft 365', 'file', 'brand-microsoft-365.png'], ['Google Workspace', 'logos', 'google-workspace'], ['Dropbox', 'logos', 'dropbox'],
     ['Microsoft Teams', 'logos', 'microsoft-teams'], ['WhatsApp Business', 'logos', 'whatsapp-icon', 'Business'],
     ['Slack', 'logos', 'slack-icon', null, true], ['Gmail', 'logos', 'google-gmail', null, true],
     ['Google Drive', 'logos', 'google-drive', null, true], ['Notion', 'logos', 'notion-icon', null, true],
     ['Twilio', 'logos', 'twilio-icon', null, true]]],
   ['Reporting &amp; BI', [
-    ['Power BI', 'logos', 'microsoft-power-bi'], ['Tableau', 'logos', 'tableau-icon'], ['Looker Studio'],
+    ['Power BI', 'logos', 'microsoft-power-bi'], ['Tableau', 'logos', 'tableau-icon'], ['Looker Studio', 'file', 'brand-looker.png', 'Studio'],
     ['Google Sheets', 'si', 'googlesheets', null, true], ['Airtable', 'logos', 'airtable', null, true],
     ['Google Analytics', 'logos', 'google-analytics', null, true]]],
   ['Automation &amp; AI', [
     ['Zapier', 'logos', 'zapier-icon', null, true], ['Make', 'si', 'make', null, true], ['n8n', 'si', 'n8n', null, true],
-    ['OpenAI', 'logos', 'openai-icon', null, true], ['Claude', 'logos', 'claude-icon', null, true]]],
+    ['OpenAI', 'logos', 'openai-icon', null, true], ['Claude', 'logos', 'claude-icon', null, true],
+    ['Gemini', 'file', 'brand-gemini.png', null, true]]],
   ['Payments &amp; scheduling', [
     ['Stripe', 'logos', 'stripe', null, true], ['Calendly', 'si', 'calendly', null, true],
     ['Google Calendar', 'logos', 'google-calendar', null, true]]],
