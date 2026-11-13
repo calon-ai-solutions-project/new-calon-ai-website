@@ -29,7 +29,9 @@ function fromLogos(key) {
 // [name, source, key, suffix]  — source: 'si' | 'logos' | null (no verified logo: keep the name)
 const CATS = [
   ['Field &amp; job management', [
-    ['Joblogic'], ['ServiceM8'], ['Simpro'], ['BigChange'], ['Tradify'], ['Commusoft'], ['Fergus'],
+    ['Joblogic', 'file', 'brand-joblogic.png'], ['ServiceM8', 'file', 'brand-servicem8.png'],
+    ['Simpro', 'file', 'brand-simpro.png'], ['BigChange'], ['Tradify', 'file', 'brand-tradify.png'],
+    ['Commusoft', 'file', 'brand-commusoft.png'], ['Fergus'],
     ['FieldAware'], ['Klipboard'], ['Procore'], ['Buildertrend']]],
   ['Accounting &amp; finance', [
     ['Xero', 'logos', 'xero'], ['QuickBooks', 'si', 'quickbooks'], ['Sage 50', 'si', 'sage', '50'],
@@ -75,9 +77,18 @@ for (const [cat, items] of CATS) {
       html += `<span class="ig ig-text" tabindex="0" data-name="${label}"><span>${label}</span></span>`;
       continue;
     }
-    const { svg, w, h } = src === 'si' ? fromSI(key) : fromLogos(key);
-    const file = `${src === 'si' ? 'si' : 'lg'}-${key}.svg`;
-    if (!written.has(file)) { fs.writeFileSync(path.join(OUT, file), svg + '\n'); written.add(file); }
+    let file, w, h;
+    if (src === 'file') {
+      // official logo supplied by Calon (already trimmed PNG in the output folder)
+      file = key;
+      const buf = fs.readFileSync(path.join(OUT, file));
+      w = buf.readUInt32BE(16); h = buf.readUInt32BE(20);
+      written.add(file);
+    } else {
+      let svg; ({ svg, w, h } = src === 'si' ? fromSI(key) : fromLogos(key));
+      file = `${src === 'si' ? 'si' : 'lg'}-${key}.svg`;
+      if (!written.has(file)) { fs.writeFileSync(path.join(OUT, file), svg + '\n'); written.add(file); }
+    }
     const wide = w / h > 1.6 ? ' ig-wide' : '';
     count.logo++;
     html += `<span class="ig${wide}${suffix ? ' ig-suf' : ''}" tabindex="0" data-name="${label}"><img src="assets/integrations/${file}" alt="${label}" width="${Math.round(w)}" height="${Math.round(h)}" loading="lazy" decoding="async">${suffix ? `<b>${suffix}</b>` : ''}</span>`;

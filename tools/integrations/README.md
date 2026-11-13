@@ -11,6 +11,7 @@ node build.mjs ../../project/assets/integrations grid.html   # then paste grid.h
 
 Sources (both CC0): [Simple Icons](https://simpleicons.org/) and
 [SVG Logos](https://github.com/gilbarbara/logos) by Gil Barbara (via `@iconify-json/logos`).
-Tools listed without a source keep their name in a matching tile, because neither library has a
+Entries with source `'file'` use official logo files supplied by Calon (trimmed PNGs named
+`brand-*.png`, kept in `project/assets/integrations/`). Tools listed without a source keep their name in a matching tile, because neither library has a
 verified logo for them. To add one, drop its official SVG in `project/assets/integrations/` and
 point its entry at it.
