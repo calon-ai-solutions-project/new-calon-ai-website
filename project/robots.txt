@@ -39,4 +39,5 @@ Disallow: /case-studies/bb-fire-security
 Disallow: /case-studies/fire-rite
 
 Sitemap: https://calonaisolutions.com/sitemap.xml
+Sitemap: https://calonaisolutions.com/sitemap-resources.xml
 # AI summary of the business: https://calonaisolutions.com/llms.txt
