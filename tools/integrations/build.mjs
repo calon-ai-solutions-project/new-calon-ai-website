@@ -43,7 +43,9 @@ const CATS = [
     ['Moodle', 'si', 'moodle'], ['TalentLMS', 'file', 'brand-talentlms.png'], ['Tutor LMS', 'file', 'brand-tutorlms.png'], ['Thinkific', 'file', 'brand-thinkific.png']]],
   ['Marketing &amp; lead', [
     ['Mailchimp', 'logos', 'mailchimp-freddie'], ['ActiveCampaign', 'file', 'brand-activecampaign.png'], ['HubSpot Marketing', 'si', 'hubspot', 'Marketing'],
-    ['Google Ads', 'logos', 'google-ads']]],
+    ['Google Ads', 'logos', 'google-ads'], ['Meta', 'logos', 'meta-icon', null, true], ['Facebook', 'logos', 'facebook', null, true],
+    ['Instagram', 'logos', 'instagram-icon', null, true], ['LinkedIn', 'logos', 'linkedin-icon', null, true],
+    ['YouTube', 'logos', 'youtube-icon', null, true]]],
   ['Forms &amp; onboarding', [
     ['Typeform', 'si', 'typeform'], ['Jotform', 'file', 'brand-jotform.png'], ['Microsoft Forms', 'file', 'brand-microsoft-forms.png', 'Forms']]],
   ['Documents &amp; comms', [
@@ -55,7 +57,7 @@ const CATS = [
   ['Reporting &amp; BI', [
     ['Power BI', 'logos', 'microsoft-power-bi'], ['Tableau', 'logos', 'tableau-icon'], ['Looker Studio', 'file', 'brand-looker.png', 'Studio'],
     ['Google Sheets', 'si', 'googlesheets', null, true], ['Airtable', 'logos', 'airtable', null, true],
-    ['Google Analytics', 'logos', 'google-analytics', null, true]]],
+    ['Google Analytics', 'logos', 'google-analytics', null, true], ['Google Tag Manager', 'logos', 'google-tag-manager', null, true]]],
   ['Automation &amp; AI', [
     ['Zapier', 'logos', 'zapier-icon', null, true], ['Make', 'si', 'make', null, true], ['n8n', 'si', 'n8n', null, true],
     ['OpenAI', 'logos', 'openai-icon', null, true], ['Claude', 'logos', 'claude-icon', null, true],
