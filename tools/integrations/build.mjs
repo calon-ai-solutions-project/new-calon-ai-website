@@ -30,9 +30,9 @@ function fromLogos(key) {
 const CATS = [
   ['Field &amp; job management', [
     ['Joblogic', 'file', 'brand-joblogic.png'], ['ServiceM8', 'file', 'brand-servicem8.png'],
-    ['Simpro', 'file', 'brand-simpro.png'], ['BigChange'], ['Tradify', 'file', 'brand-tradify.png'],
-    ['Commusoft', 'file', 'brand-commusoft.png'], ['Fergus'],
-    ['FieldAware'], ['Klipboard'], ['Procore'], ['Buildertrend']]],
+    ['Simpro', 'file', 'brand-simpro.png'], ['BigChange', 'file', 'brand-bigchange.png'], ['Tradify', 'file', 'brand-tradify.png'],
+    ['Commusoft', 'file', 'brand-commusoft.png'], ['Fergus', 'file', 'brand-fergus.png'],
+    ['FieldAware', 'file', 'brand-fieldaware.png'], ['Klipboard', 'file', 'brand-klipboard.png'], ['Procore', 'file', 'brand-procore.png'], ['Buildertrend']]],
   ['Accounting &amp; finance', [
     ['Xero', 'logos', 'xero'], ['QuickBooks', 'si', 'quickbooks'], ['Sage 50', 'si', 'sage', '50'],
     ['Sage 200', 'si', 'sage', '200'], ['FreeAgent']]],
