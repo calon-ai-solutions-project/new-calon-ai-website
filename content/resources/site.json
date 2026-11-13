@@ -1,0 +1,15 @@
+{
+  "hub": {
+    "title": "AI Guides, Tutorials and News for Business | Calon AI Resources",
+    "description": "Practical guides to ChatGPT, Claude, AI tools and business automation. Step-by-step tutorials, fixes for common errors, honest comparisons and verified AI news."
+  },
+  "editorialNote": "We check facts against official documentation and primary sources at the time of writing and update articles when products change. AI tools change quickly, so confirm prices and plan limits on the provider's own site before you buy.",
+  "newsletter": {
+    "web3formsKey": "3a407688-c751-4928-a470-c8c2495202e6"
+  },
+  "analytics": {
+    "gtmId": "",
+    "ga4Id": "",
+    "googleSiteVerification": ""
+  }
+}

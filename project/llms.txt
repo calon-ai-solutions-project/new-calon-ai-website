@@ -16,6 +16,7 @@ Contact: contact@calonaisolutions.com · 03301 332 508 · https://calonaisolutio
 - [About Calon AI](https://calonaisolutions.com/about): founders, credentials (ICO registered, BNI member, £1M professional indemnity, public and cyber liability cover)
 - [The AI Brain](https://calonaisolutions.com/ai-brain): one chat across CRM, Xero, ServiceM8, Google Ads, inbox and website
 - [Contact](https://calonaisolutions.com/contact): book a 15-minute operational review
+- [Resources](https://calonaisolutions.com/resources): practical guides to ChatGPT, Claude, AI tools and business automation
 
 ## Case studies
 - [Volt Secure: Operational Platform & CRM Replacement](https://calonaisolutions.com/work/volt-secure-operational-platform): A Welsh fire and security installer was running quotes, jobs and customers across five disconnected tools. We replaced the lot with one purpose-built operational platform.
@@ -38,3 +39,21 @@ Contact: contact@calonaisolutions.com · 03301 332 508 · https://calonaisolutio
 - [Privacy Policy](https://calonaisolutions.com/privacy)
 - [Terms of Service](https://calonaisolutions.com/terms)
 - [Acceptable Use Policy](https://calonaisolutions.com/acceptable-use)
+
+<!-- resources:start -->
+## Resources (guides, fixes, comparisons and AI news)
+- [Calon AI Resources hub](https://calonaisolutions.com/resources): practical AI guides for business owners and teams
+- [ChatGPT Not Working? How to Fix the Most Common Errors](https://calonaisolutions.com/resources/chatgpt-not-working): Fix "Something went wrong", network errors, login loops and slow or missing replies in ChatGPT. Step-by-step checks in the order most likely to work.
+- [Claude Fable 5.2 and Mythos 5.2: What Anthropic Announced and What It Means](https://calonaisolutions.com/resources/claude-fable-5-2-mythos-5-2): Anthropic released Claude Fable 5.2 and Mythos 5.2 on 9 November 2026. What changed, who can use each model, API pricing and what it means for businesses.
+- [Claude Not Working? Every Claude Error Message Explained and Fixed](https://calonaisolutions.com/resources/claude-errors-fixes): What Claude's usage limit, length limit, capacity and login errors mean, and exactly how to fix each one. Based on Anthropic's official troubleshooting guidance.
+- [Claude vs ChatGPT for Business: Which Should Your Team Use?](https://calonaisolutions.com/resources/claude-vs-chatgpt): An honest comparison of Claude and ChatGPT for business use: strengths, plans, data controls and integrations, plus a simple way to decide for your own team.
+- [Getting Started with Claude Code: Install, First Task and Best Practices](https://calonaisolutions.com/resources/claude-code-getting-started): Install Claude Code on Mac, Windows or Linux, run your first task, set up CLAUDE.md and work safely with an AI coding agent. Commands from the official docs.
+- [How to Automate Customer Support with AI (Without Annoying Your Customers)](https://calonaisolutions.com/resources/ai-customer-support-small-business): A practical guide to AI customer support for small businesses: instant replies, triage, draft responses and chatbots, with what to automate and what to keep human.
+- [How to Automate Repetitive Business Tasks with AI: A Practical Framework](https://calonaisolutions.com/resources/automate-repetitive-business-tasks): Find the tasks worth automating, choose between simple automation and AI, and build your first workflow. A practical framework with real examples from UK businesses.
+- [How to Connect Two Business Apps: Native Integrations, No-Code Tools and APIs](https://calonaisolutions.com/resources/connect-business-apps): Four ways to make your business apps talk to each other: native integrations, Zapier or Make, webhooks and APIs. How to pick the right one, step by step.
+- [How to Use ChatGPT: A Practical Beginner's Guide for Work](https://calonaisolutions.com/resources/how-to-use-chatgpt): Learn how to use ChatGPT step by step: signing up, writing good requests, uploading files, Projects, memory and custom instructions, with real work examples.
+- [How to Use Claude AI: Projects, Artifacts and Everyday Workflows](https://calonaisolutions.com/resources/how-to-use-claude): A step-by-step guide to Claude by Anthropic. Sign up, write good requests, use Projects for ongoing work, create Artifacts and pick the right plan for you.
+- [How to Write Better AI Prompts: A Practical Guide with Templates](https://calonaisolutions.com/resources/prompt-engineering-guide): A practical prompt guide for ChatGPT, Claude and Gemini: a simple five-part structure, before-and-after examples and copy-ready business templates.
+- [Is It Safe to Use ChatGPT and Claude with Company Data? A UK Business Guide](https://calonaisolutions.com/resources/ai-data-privacy-uk-business): What UK businesses need to know before staff use AI tools with customer or company data: UK GDPR basics, business vs personal accounts and a simple AI policy.
+- [Zapier vs Make vs n8n: Which Automation Tool Should You Choose?](https://calonaisolutions.com/resources/zapier-vs-make-vs-n8n): Zapier, Make and n8n compared for small businesses: how each bills, ease of use, AI features, hosting and data control, with clear advice on which to pick.
+<!-- resources:end -->

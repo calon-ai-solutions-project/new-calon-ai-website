@@ -132,7 +132,7 @@ const FOOT = `</main>
       <p><a href="tel:+443301332508" style="display:inline">03301 332 508</a> &middot; <a href="mailto:contact@calonaisolutions.com" style="display:inline">contact@calonaisolutions.com</a></p>
     </div>
     <div><h3>Who we help</h3>${SECTORS.map(([h, l]) => `<a href="${h}">${l}</a>`).join('')}</div>
-    <div><h3>Company</h3><a href="/about">About us</a><a href="/proof">Case studies</a><a href="/ai-brain">The AI Brain</a><a href="/contact">Contact</a></div>
+    <div><h3>Company</h3><a href="/about">About us</a><a href="/proof">Case studies</a><a href="/ai-brain">The AI Brain</a><a href="/resources">Resources</a><a href="/contact">Contact</a></div>
   </div>
   <div class="legal wrap">&copy; ${new Date().getFullYear()} Calon AI. Calon AI is the trading name of CALON AI SOLUTIONS LIMITED, registered in Wales, Company No. 15984397.
     <br><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/acceptable-use">Acceptable Use</a></div>
@@ -281,6 +281,7 @@ ${SECTORS.map(([h, l]) => `- [${l.replace('&amp;', '&')}](${SITE}${h})`).join('\
 - [About Calon AI](${SITE}/about): founders, credentials (ICO registered, BNI member, £1M professional indemnity, public and cyber liability cover)
 - [The AI Brain](${SITE}/ai-brain): one chat across CRM, Xero, ServiceM8, Google Ads, inbox and website
 - [Contact](${SITE}/contact): book a 15-minute operational review
+- [Resources](${SITE}/resources): practical guides to ChatGPT, Claude, AI tools and business automation
 
 ## Case studies
 ${STUDIES.map(s => `- [${plain(s.name)}](${SITE}/work/${s.slug}): ${s.subtitle}`).join('\n')}
