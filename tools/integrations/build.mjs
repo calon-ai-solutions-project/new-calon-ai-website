@@ -65,6 +65,15 @@ const CATS = [
   ['Payments &amp; scheduling', [
     ['Stripe', 'logos', 'stripe', null, true], ['Calendly', 'si', 'calendly', null, true],
     ['Google Calendar', 'logos', 'google-calendar', null, true]]],
+  ['Project &amp; task management', [
+    ['ClickUp', 'logos', 'clickup-icon', null, true], ['Asana', 'logos', 'asana-icon', null, true],
+    ['Trello', 'logos', 'trello', null, true], ['Jira', 'logos', 'jira', null, true]]],
+  ['Customer support &amp; communication', [
+    ['Zendesk', 'logos', 'zendesk-icon', null, true], ['Intercom', 'logos', 'intercom-icon', null, true],
+    ['Freshdesk', null, null, null, true], ['Zoom', 'logos', 'zoom', null, true]]],
+  ['E-commerce &amp; website', [
+    ['Shopify', 'logos', 'shopify', null, true], ['WooCommerce', 'logos', 'woocommerce-icon', null, true],
+    ['WordPress', 'logos', 'wordpress-icon', null, true], ['Webflow', 'si', 'webflow', null, true]]],
 ];
 
 const slugify = s => s.toLowerCase().replace(/&amp;/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
