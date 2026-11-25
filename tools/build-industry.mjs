@@ -85,6 +85,7 @@ function build(page) {
   const results = `<section class="sec" aria-labelledby="s2"><div class="wrap">
   <h2 id="s2" class="fu">${esc(H.results)}</h2>
   <div class="tiles t${page.results.filter((r) => ok(r.title) || ok(r.text)).length}">${page.results.filter((r) => ok(r.title) || ok(r.text)).map((r) => `<div class="card tile fu"><p class="tile-h">${t(r.title, 'result')}</p>${r.text ? `<p>${t(r.text, 'result detail')}${note(r.note, 'result note')}</p>` : ''}</div>`).join('')}</div>
+  ${page.resultsNote && !PUBLISH ? `<p class="sec-note fu">${note(page.resultsNote, 'results note').trim()}</p>` : (page.resultsNote ? (note(page.resultsNote, 'results note'), '') : '')}
   ${ctaRow('after-results')}
 </div></section>`;
 
