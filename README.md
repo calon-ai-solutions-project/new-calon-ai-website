@@ -34,3 +34,7 @@ python3 tools/seo-pages.py    # re-applies page titles, descriptions, JSON-LD an
 ```
 
 Commit the generated files. Clean URLs (`/about`, `/fire-security`, `/work/<slug>`) are served by both Vercel (`vercel.json`) and Cloudflare Pages (`project/_redirects`, `project/_headers`).
+
+## WhatsApp button
+
+`project/whatsapp.js` (loaded next to `cookie.js` on every page) adds the floating WhatsApp button and records each click on any `wa.me` link as a `whatsapp_click` event in `dataLayer`, with `page_path` and `link_location`. The "WhatsApp us" buttons in heroes and booking sections are plain links in the page HTML; run `python3 tools/whatsapp-buttons.py` after adding a new hand-built page (it is idempotent). The generated pages get theirs from `tools/build-static.mjs` and `tools/build-resources.mjs`. The number and the per-industry messages are set at the top of `whatsapp.js` and `tools/whatsapp-buttons.py`.
