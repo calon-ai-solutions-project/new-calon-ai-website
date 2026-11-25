@@ -10,7 +10,7 @@ import glob, os, re, sys
 from urllib.parse import quote
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'project')
-NUMBER = '447404458109'
+NUMBER = '447359849180'
 INDUSTRY = {
     'fire-security': 'a fire and security business',
     'heating-plumbing': 'a heating and plumbing business',
@@ -76,7 +76,7 @@ def patch(path):
     if name == 'contact.html':
         s = re.sub(r'(<a href="tel:03301332508"[^>]*>03301 332 508</a>\s*</div>)',
                    lambda m: m.group(1) + '\n          <div style="display:flex;align-items:center;gap:14px;">\n            <span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:rgba(37,211,102,0.12);flex:none;">'
-                   + ICON + '</span>\n            <a href="' + wa_link(page) + '" target="_blank" rel="noopener" data-wa="contact" style="font-size:16px;color:rgba(226,236,247,0.85);text-decoration:none;">WhatsApp us: 07404 458109</a>\n          </div>', s, count=1)
+                   + ICON + '</span>\n            <a href="' + wa_link(page) + '" target="_blank" rel="noopener" data-wa="contact" style="font-size:16px;color:rgba(226,236,247,0.85);text-decoration:none;">WhatsApp us: 07359 849180</a>\n          </div>', s, count=1)
 
     if s != orig:
         open(path, 'w', encoding='utf-8').write(s)
