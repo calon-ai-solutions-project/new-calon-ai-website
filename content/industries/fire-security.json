@@ -1,0 +1,35 @@
+{
+  "slug": "fire-security",
+  "name": "Fire & Security",
+  "title": "[Title tag: copy to come]",
+  "description": "[Meta description: copy to come]",
+  "whatsappMessage": "Hi Calon AI, I run a fire and security business and I'd like a free review.",
+  "hero": {
+    "label": "Fire & Security",
+    "headline": "[Hero headline about the owner's problem: copy to come]",
+    "subhead": "[One-sentence subhead: copy to come]",
+    "photo": { "src": "[Real client photo: Alom to supply]", "alt": "" }
+  },
+  "results": [
+    { "title": "[Result 1 in money or time]", "text": "[Plain-words detail]" },
+    { "title": "[Result 2 in money or time]", "text": "[Plain-words detail]" },
+    { "title": "[Result 3 in money or time]", "text": "[Plain-words detail]" },
+    { "title": "[Result 4 in money or time]", "text": "[Plain-words detail]" }
+  ],
+  "caseStudy": null,
+  "problems": [
+    { "figure": "[Figure]", "text": "[Problem owners are desperate to fix]", "source": { "label": "Source", "url": "[Source link]" } },
+    { "figure": "[Figure]", "text": "[Problem owners are desperate to fix]", "source": { "label": "Source", "url": "[Source link]" } },
+    { "figure": "[Figure]", "text": "[Problem owners are desperate to fix]", "source": { "label": "Source", "url": "[Source link]" } },
+    { "figure": "[Figure]", "text": "[Problem from Calon's own work with clients: no source link]", "source": null }
+  ],
+  "usualFix": ["[Why the standard system or tool leaves the problem open, and what Calon does differently: copy to come]"],
+  "faqs": [
+    { "q": "[Question 1]", "a": "[Short answer]" },
+    { "q": "[Question 2]", "a": "[Short answer]" },
+    { "q": "[Question 3]", "a": "[Short answer]" },
+    { "q": "[Question 4]", "a": "[Short answer]" },
+    { "q": "[Question 5]", "a": "[Short answer]" }
+  ],
+  "book": { "headline": "[Booking section headline: copy to come]" }
+}
