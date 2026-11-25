@@ -7,11 +7,10 @@
   var DEFAULT_MSG = "Hi Calon AI, I'd like a free review for my business.";
   var INDUSTRY = {
     '/fire-security': 'a fire and security business',
-    '/heating-plumbing': 'a heating and plumbing business',
-    '/facilities-management': 'a facilities management business',
-    '/solar-renewables': 'a solar and renewables business',
-    '/construction': 'a construction business',
-    '/training-compliance': 'a training and compliance business'
+    '/heating-plumbing': 'a heating, plumbing or renewables business',
+    '/construction-training': 'a construction business or training provider',
+    '/hospitality-food': 'a hospitality or food business',
+    '/salons-gyms-membership': 'a salon, gym or membership business'
   };
   function pagePath() { return (location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/').replace(/(.)\/$/, '$1')) || '/'; }
   function message() {

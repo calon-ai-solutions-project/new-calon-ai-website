@@ -15,6 +15,7 @@
 import fs from 'fs';
 import path from 'path';
 import url from 'url';
+import { INDUSTRIES, NAV_HTML, NAV_CSS } from './site-nav.mjs';
 
 const REPO = path.resolve(path.dirname(url.fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(REPO, 'content', 'resources');
@@ -217,12 +218,7 @@ for (const a of published) {
 const activeCats = CATS.filter((c) => published.some((a) => a.category === c.slug));
 
 // ---------------------------------------------------------------- shared layout
-const NAV = [['/#who-we-help', 'Who We Help'], ['/proof', 'Proof'], ['/about', 'About Us'], ['/contact', 'Contact']];
-const SECTORS = [
-  ['/fire-security', 'Fire &amp; Security'], ['/heating-plumbing', 'Heating &amp; Plumbing'],
-  ['/facilities-management', 'Facilities Management'], ['/solar-renewables', 'Solar &amp; Renewables'],
-  ['/construction', 'Construction'], ['/training-compliance', 'Training &amp; Compliance'],
-];
+const SECTORS = INDUSTRIES;
 const ORG = {
   '@type': ['Organization', 'ProfessionalService'], '@id': SITE + '/#org', name: 'Calon AI', legalName: 'CALON AI SOLUTIONS LIMITED',
   url: SITE + '/', logo: { '@type': 'ImageObject', url: SITE + '/assets/logo-square.png', width: 512, height: 512 },
@@ -296,7 +292,8 @@ function page({ title, description, canonical, ogImage, ogType = 'website', json
 ${preload ? `<link rel="preload" as="image" href="${preload}" fetchpriority="high">\n` : ''}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>${CSS}</style>
+<style>${CSS}
+${NAV_CSS}</style>
 ${analyticsHead()}${extraHead}${ld({ '@context': 'https://schema.org', '@graph': jsonld })}
 <script src="/cookie.js" defer></script>
 <script src="/whatsapp.js" defer></script>
@@ -305,7 +302,7 @@ ${analyticsHead()}${extraHead}${ld({ '@context': 'https://schema.org', '@graph':
 <a class="skip" href="#main">Skip to content</a>
 <header class="hdr"><nav class="pill" aria-label="Main">
   <a class="brand" href="/" aria-label="Calon AI, home"><span class="m"><img src="/assets/calon-mark.png" alt="" width="30" height="30"></span>Calon <b>AI</b></a>
-  <div class="nav">${NAV.map(([h, l]) => `<a href="${h}">${l}</a>`).join('')}</div>
+  ${NAV_HTML}
   <a class="cta" href="/contact" data-track="cta" data-cta="header">Start the conversation ${ICON.arrow}</a>
 </nav></header>
 <main id="main">

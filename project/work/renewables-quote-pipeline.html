@@ -34,6 +34,11 @@ a{color:#7EC4F0}
 .brand b{color:#7EC4F0;font-weight:500}
 .nav{display:flex;gap:28px}.nav a{color:rgba(240,246,252,.88);text-decoration:none;font-size:16px}.nav a:hover{color:#7EC4F0}
 .cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#9AD3F5,#7EC4F0 45%,#5AAEE2);color:#06101F;font-weight:600;padding:14px 24px;border-radius:999px;text-decoration:none}
+.dd{position:relative}.dd-chev{display:inline-block;margin-left:6px;border:solid currentColor;border-width:0 1.5px 1.5px 0;padding:2.5px;transform:rotate(45deg) translateY(-2px);opacity:.7}
+.dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:18px;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:60}
+.dd-menu::before{content:'';position:absolute;inset:18px 0 0;background:rgba(14,24,44,.97);border:1px solid rgba(126,196,240,.16);border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.45);z-index:-1}
+.dd-menu a{display:block;white-space:nowrap;padding:11px 18px;margin:0 6px;border-radius:12px;font-size:15px}.dd-menu a:first-child{margin-top:6px}.dd-menu a:last-child{margin-bottom:6px}.dd-menu a:hover{background:rgba(126,196,240,.1)}
+.dd:hover .dd-menu,.dd:focus-within .dd-menu{opacity:1;visibility:visible}
 @media(max-width:860px){.nav{display:none}.pill .cta{padding:12px 18px;font-size:14px}}
 .crumbs{font-size:14px;color:rgba(226,236,247,.55);margin:56px 0 18px}.crumbs a{color:rgba(226,236,247,.75);text-decoration:none}.crumbs a:hover{color:#7EC4F0}
 .eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#7EC4F0;margin:0 0 14px}
@@ -77,7 +82,7 @@ blockquote cite{display:block;margin-top:14px;font-style:normal;color:#7EC4F0;fo
 <body>
 <header class="hdr"><nav class="pill" aria-label="Main">
   <a class="brand" href="/" aria-label="Calon AI, home"><span class="m"><img src="/assets/calon-mark.png" alt="" width="30" height="30"></span>Calon <b>AI</b></a>
-  <div class="nav"><a href="/#who-we-help">Who We Help</a><a href="/proof">Proof</a><a href="/about">About Us</a><a href="/contact">Contact</a></div>
+  <div class="nav"><div class="dd"><a href="/#who-we-help" aria-haspopup="true">Industries <span class="dd-chev" aria-hidden="true"></span></a><div class="dd-menu"><a href="/fire-security">Fire &amp; Security</a><a href="/heating-plumbing">Heating, Plumbing &amp; Renewables</a><a href="/construction-training">Construction &amp; Training Providers</a><a href="/hospitality-food">Hospitality &amp; Food</a><a href="/salons-gyms-membership">Salons, Gyms &amp; Membership</a></div></div><a href="/proof">Proof</a><a href="/about">About Us</a><a href="/contact">Contact</a></div>
   <a class="cta" href="/contact">Start the conversation &rarr;</a>
 </nav></header>
 <main class="wrap">
@@ -86,7 +91,7 @@ blockquote cite{display:block;margin-top:14px;font-style:normal;color:#7EC4F0;fo
   <p class="eyebrow">Case study &middot; Renewables &amp; Solar</p>
   <h1>UK Solar Installer: AI Quote &amp; Sales Pipeline Workflow</h1>
   <p class="lede">A single estimator was bottlenecking the entire business. Quotes took five to seven days while competitors quoted same-day. We rebuilt the workflow around a configurable pricing engine.</p>
-  <div class="meta"><span>Sector: <a href="/solar-renewables" style="color:inherit">Renewables &amp; Solar</a></span><span>Service: Quote Generation Automation</span><span>Client: UK Solar Installer</span></div>
+  <div class="meta"><span>Sector: <a href="/heating-plumbing" style="color:inherit">Renewables &amp; Solar</a></span><span>Service: Quote Generation Automation</span><span>Client: UK Solar Installer</span></div>
   <div class="stats"><div class="stat"><strong>5–7 days → same day</strong><span>quote turnaround</span></div><div class="stat"><strong>6–8 pts</strong><span>uplift in close rate</span></div><div class="stat"><strong>5+ hrs/wk</strong><span>estimator overtime eliminated</span></div></div>
   <h2>Overview</h2>
   <p>A UK solar and battery installer with a strong reputation but a quoting bottleneck. The estimator was working evenings and weekends, and customers were drifting to faster competitors before the quote even arrived.</p>
@@ -117,7 +122,7 @@ blockquote cite{display:block;margin-top:14px;font-style:normal;color:#7EC4F0;fo
       <address>Ty Merlin, Caerphilly Business Park, Van Road, Caerphilly, Wales CF83 3GS<br>Lower Brecon Building, University of South Wales, Llantwit Road, Treforest, Pontypridd CF37 1DL</address>
       <p><a href="tel:+443301332508" style="display:inline">03301 332 508</a> &middot; <a href="mailto:contact@calonaisolutions.com" style="display:inline">contact@calonaisolutions.com</a></p>
     </div>
-    <div><h3>Who we help</h3><a href="/fire-security">Fire &amp; Security</a><a href="/heating-plumbing">Heating &amp; Plumbing</a><a href="/facilities-management">Facilities Management</a><a href="/solar-renewables">Solar &amp; Renewables</a><a href="/construction">Construction</a><a href="/training-compliance">Training &amp; Compliance</a></div>
+    <div><h3>Who we help</h3><a href="/fire-security">Fire &amp; Security</a><a href="/heating-plumbing">Heating, Plumbing &amp; Renewables</a><a href="/construction-training">Construction &amp; Training Providers</a><a href="/hospitality-food">Hospitality &amp; Food</a><a href="/salons-gyms-membership">Salons, Gyms &amp; Membership</a></div>
     <div><h3>Company</h3><a href="/about">About us</a><a href="/proof">Case studies</a><a href="/ai-brain">The AI Brain</a><a href="/resources">Resources</a><a href="/contact">Contact</a></div>
   </div>
   <div class="legal wrap">&copy; 2026 Calon AI. Calon AI is the trading name of CALON AI SOLUTIONS LIMITED, registered in Wales, Company No. 15984397.

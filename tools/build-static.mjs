@@ -7,6 +7,7 @@
 import fs from 'fs';
 import path from 'path';
 import url from 'url';
+import { INDUSTRIES, NAV_HTML, NAV_CSS } from './site-nav.mjs';
 
 const ROOT = path.resolve(path.dirname(url.fileURLToPath(import.meta.url)), '..', 'project');
 const SITE = 'https://calonaisolutions.com';
@@ -27,14 +28,7 @@ const ld = (obj) => `<script type="application/ld+json">${JSON.stringify(obj).re
 
 const ORG_REF = { '@id': SITE + '/#org' };
 
-const NAV = [
-  ['/#who-we-help', 'Who We Help'], ['/proof', 'Proof'], ['/about', 'About Us'], ['/contact', 'Contact'],
-];
-const SECTORS = [
-  ['/fire-security', 'Fire &amp; Security'], ['/heating-plumbing', 'Heating &amp; Plumbing'],
-  ['/facilities-management', 'Facilities Management'], ['/solar-renewables', 'Solar &amp; Renewables'],
-  ['/construction', 'Construction'], ['/training-compliance', 'Training &amp; Compliance'],
-];
+const SECTORS = INDUSTRIES;
 
 const CSS = `
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -48,6 +42,7 @@ a{color:#7EC4F0}
 .brand b{color:#7EC4F0;font-weight:500}
 .nav{display:flex;gap:28px}.nav a{color:rgba(240,246,252,.88);text-decoration:none;font-size:16px}.nav a:hover{color:#7EC4F0}
 .cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#9AD3F5,#7EC4F0 45%,#5AAEE2);color:#06101F;font-weight:600;padding:14px 24px;border-radius:999px;text-decoration:none}
+${NAV_CSS}
 @media(max-width:860px){.nav{display:none}.pill .cta{padding:12px 18px;font-size:14px}}
 .crumbs{font-size:14px;color:rgba(226,236,247,.55);margin:56px 0 18px}.crumbs a{color:rgba(226,236,247,.75);text-decoration:none}.crumbs a:hover{color:#7EC4F0}
 .eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#7EC4F0;margin:0 0 14px}
@@ -119,7 +114,7 @@ ${jsonld.map(ld).join('\n')}
 <body>
 <header class="hdr"><nav class="pill" aria-label="Main">
   <a class="brand" href="/" aria-label="Calon AI, home"><span class="m"><img src="/assets/calon-mark.png" alt="" width="30" height="30"></span>Calon <b>AI</b></a>
-  <div class="nav">${NAV.map(([h, l]) => `<a href="${h}">${l}</a>`).join('')}</div>
+  ${NAV_HTML}
   <a class="cta" href="/contact">Start the conversation &rarr;</a>
 </nav></header>
 <main class="wrap">`;
@@ -155,12 +150,9 @@ const crumbsHtml = (items) => `<nav class="crumbs" aria-label="Breadcrumb">${ite
 fs.mkdirSync(path.join(ROOT, 'work'), { recursive: true });
 const sectorPage = (industry) => {
   const s = industry.toLowerCase();
-  if (s.includes('training')) return '/training-compliance';
+  if (s.includes('training') || s.includes('construction')) return '/construction-training';
   if (s.includes('fire') || s.includes('security')) return '/fire-security';
-  if (s.includes('heating')) return '/heating-plumbing';
-  if (s.includes('renewable') || s.includes('solar')) return '/solar-renewables';
-  if (s.includes('construction')) return '/construction';
-  if (s.includes('facilit')) return '/facilities-management';
+  if (s.includes('heating') || s.includes('renewable') || s.includes('solar')) return '/heating-plumbing';
   return '/#who-we-help';
 };
 

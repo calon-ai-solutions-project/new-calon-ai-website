@@ -1,4 +1,9 @@
 # Cloudflare Pages redirects: old page names -> clean URLs
+# Industry pages merged or retired (November 2026)
+/solar-renewables /heating-plumbing 301
+/construction /construction-training 301
+/training-compliance /construction-training 301
+/facilities-management / 301
 /About.dc /about 301
 /About.dc.html /about 301
 /Contact.dc /contact 301
@@ -11,14 +16,14 @@
 /Fire-Security.dc.html /fire-security 301
 /Heating-Plumbing.dc /heating-plumbing 301
 /Heating-Plumbing.dc.html /heating-plumbing 301
-/Facilities-Management.dc /facilities-management 301
-/Facilities-Management.dc.html /facilities-management 301
-/Solar-Renewables.dc /solar-renewables 301
-/Solar-Renewables.dc.html /solar-renewables 301
-/Construction.dc /construction 301
-/Construction.dc.html /construction 301
-/Training-Compliance.dc /training-compliance 301
-/Training-Compliance.dc.html /training-compliance 301
+/Facilities-Management.dc / 301
+/Facilities-Management.dc.html / 301
+/Solar-Renewables.dc /heating-plumbing 301
+/Solar-Renewables.dc.html /heating-plumbing 301
+/Construction.dc /construction-training 301
+/Construction.dc.html /construction-training 301
+/Training-Compliance.dc /construction-training 301
+/Training-Compliance.dc.html /construction-training 301
 /Legal /privacy 301
 /Legal.html /privacy 301
 # Old WordPress sitemap addresses still known to Google -> current sitemap
