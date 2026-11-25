@@ -46,8 +46,9 @@ const CSS = fs.readFileSync(path.join(REPO, 'tools', 'industry.css'), 'utf8').re
 const JS = fs.readFileSync(path.join(REPO, 'tools', 'industry.js'), 'utf8');
 
 function bookBtn(where, variant = 'primary') {
-  return `<a class="btn btn-${variant}" href="#book" data-track="cta" data-cta="${where}">${esc(SHARED.bookButton)} ${ICON.arrow}</a>`;
+  return `<a class="btn btn-${variant}" href="${BOOK_HREF}" data-track="cta" data-cta="${where}">${esc(SHARED.bookButton)} ${ICON.arrow}</a>`;
 }
+const BOOK_HREF = SHARED.bookingCalendarUrl && SHARED.bookingCalendarUrl.startsWith('/') ? SHARED.bookingCalendarUrl : '#book';
 const ctaRow = (where) => `<div class="cta-row fu">${bookBtn(where)}</div>`;
 
 function build(page) {
@@ -150,8 +151,10 @@ function build(page) {
 
   // 8. Book a review
   const cal = SHARED.bookingCalendarUrl;
+  // A page on this site (e.g. /contact) is linked; a full calendar URL (e.g. Calendly) is embedded.
   const calHtml = cal && !isPh(cal)
-    ? `<div class="cal"><iframe src="${esc(cal)}" title="Book a free 15-minute review" loading="lazy"></iframe></div>`
+    ? (cal.startsWith('/') ? `<div class="cal cal-fallback"><a class="btn btn-primary" href="${esc(cal)}" data-track="cta" data-cta="booking">${ICON.cal}${esc(SHARED.bookButton)} ${ICON.arrow}</a></div>`
+      : `<div class="cal"><iframe src="${esc(cal)}" title="Book a free 15-minute review" loading="lazy"></iframe></div>`)
     : PUBLISH ? `<div class="cal cal-fallback"><a class="btn btn-primary" href="/contact">${ICON.cal}${esc(SHARED.bookButton)}</a></div>`
       : `<div class="cal ph-box"><mark class="ph">${esc(cal || '[Booking calendar]')}</mark></div>`;
   if (isPh(cal)) missing.push(`booking calendar: ${cal}`);
@@ -168,7 +171,7 @@ function build(page) {
   const mbar = `<nav class="mbar" aria-label="Contact Calon AI">
   <a href="tel:${SHARED.phone.tel}" data-track="cta" data-cta="mbar-call">${ICON.phone}Call</a>
   <a href="${wa}" target="_blank" rel="noopener" data-wa="mobile-bar">${ICON.wa}WhatsApp</a>
-  <a href="#book" class="mbar-book" data-track="cta" data-cta="mbar-book">${ICON.cal}Book</a>
+  <a href="${BOOK_HREF}" class="mbar-book" data-track="cta" data-cta="mbar-book">${ICON.cal}Book</a>
 </nav>`;
 
   const crumbs = [['Home', '/'], [page.name, href]];
@@ -216,7 +219,7 @@ ${ld({ '@context': 'https://schema.org', '@graph': jsonld })}
 <header class="hdr"><nav class="pill" aria-label="Main">
   <a class="brand" href="/" aria-label="Calon AI, home"><span class="m"><img src="/assets/calon-mark.png" alt="" width="30" height="30"></span>Calon <b>AI</b></a>
   ${NAV_HTML}
-  <a class="cta" href="#book" data-track="cta" data-cta="header">${esc(SHARED.bookButton)}</a>
+  <a class="cta" href="${BOOK_HREF}" data-track="cta" data-cta="header">${esc(SHARED.bookButton)}</a>
   ${MOBILE_NAV_HTML}
 </nav></header>
 <main id="main" data-industry="${page.slug}">

@@ -1,9 +1,9 @@
 /* WhatsApp: floating chat button on every page + click tracking for every wa.me link.
-   Number 07404 458109 (wa.me format 447404458109). Industry pages get an industry-specific message.
+   Number 07359 849180 (wa.me format 447359849180). Industry pages get an industry-specific message.
    Inline "WhatsApp us" buttons are plain links in the page HTML; this script only tracks their clicks. */
 (function () {
   'use strict';
-  var NUMBER = '447404458109';
+  var NUMBER = '447359849180';
   var DEFAULT_MSG = "Hi Calon AI, I'd like a free review for my business.";
   var INDUSTRY = {
     '/fire-security': 'a fire and security business',
