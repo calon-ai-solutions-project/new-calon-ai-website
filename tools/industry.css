@@ -66,7 +66,10 @@ p{font-size:18px;line-height:1.6;margin:0}
 .sec-grey{background:var(--grey)}
 @media(max-width:640px){.sec{padding:56px 0}h2{margin-bottom:28px}}
 .card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 24px rgba(10,20,40,.06)}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tiles.t4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.tiles,.tiles.t4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.tiles,.tiles.t4{grid-template-columns:1fr}}
 .tile,.prob{padding:28px}
 .tile-h{font-size:22px;font-weight:600;line-height:1.3;letter-spacing:-.02em;margin-bottom:10px}
 .tile p:not(.tile-h),.prob p{color:var(--ink2)}

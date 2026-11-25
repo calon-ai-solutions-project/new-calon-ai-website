@@ -31,6 +31,8 @@ function t(s, ctx) {
   return PUBLISH ? '' : esc(s).replace(/\[([^\]]+)\]/g, '<mark class="ph">[$1]</mark>');
 }
 const ok = (s) => s && (!PUBLISH || !isPh(s));
+// A bracketed note on otherwise final copy ("[Confirm this figure with Volt.]"): preview only, never published.
+const note = (n, ctx) => (n ? (missing.push(`${ctx}: ${n}`), PUBLISH ? '' : ` <mark class="ph">${esc(n)}</mark>`) : '');
 const waLink = (msg) => `https://wa.me/${SHARED.whatsappNumber}?text=` + encodeURIComponent(msg).replace(/'/g, '%27');
 
 const ICON = {
@@ -82,7 +84,7 @@ function build(page) {
   // 2. What you get
   const results = `<section class="sec" aria-labelledby="s2"><div class="wrap">
   <h2 id="s2" class="fu">${esc(H.results)}</h2>
-  <div class="tiles">${page.results.filter((r) => ok(r.title) || ok(r.text)).map((r) => `<div class="card tile fu"><p class="tile-h">${t(r.title, 'result')}</p>${r.text ? `<p>${t(r.text, 'result detail')}</p>` : ''}</div>`).join('')}</div>
+  <div class="tiles t${page.results.filter((r) => ok(r.title) || ok(r.text)).length}">${page.results.filter((r) => ok(r.title) || ok(r.text)).map((r) => `<div class="card tile fu"><p class="tile-h">${t(r.title, 'result')}</p>${r.text ? `<p>${t(r.text, 'result detail')}${note(r.note, 'result note')}</p>` : ''}</div>`).join('')}</div>
   ${ctaRow('after-results')}
 </div></section>`;
 
@@ -120,7 +122,7 @@ function build(page) {
   // 4. What owners are up against
   const problems = `<section class="sec" aria-labelledby="s4"><div class="wrap">
   <h2 id="s4" class="fu">${esc(H.problems)}</h2>
-  <div class="tiles">${page.problems.filter((p) => ok(p.text)).map((p) => `<div class="card prob fu">${ok(p.figure) ? `<p class="fig">${t(p.figure, 'problem figure')}</p>` : ''}<p>${t(p.text, 'problem')}</p>${p.source && ok(p.source.url) ? (isPh(p.source.url) ? `<p class="src"><mark class="ph">${esc(p.source.url)}</mark></p>` : `<p class="src"><a href="${esc(p.source.url)}" rel="noopener" target="_blank">${esc(p.source.label || 'Source')}</a></p>`) : ''}</div>`).join('')}</div>
+  <div class="tiles t${page.problems.filter((p) => ok(p.text)).length}">${page.problems.filter((p) => ok(p.text)).map((p) => `<div class="card prob fu">${ok(p.figure) ? `<p class="fig">${t(p.figure, 'problem figure')}</p>` : ''}${p.title ? `<p class="tile-h">${t(p.title, 'problem title')}</p>` : ''}<p>${t(p.text, 'problem')}</p>${p.source && ok(p.source.url) ? (isPh(p.source.url) ? `<p class="src"><mark class="ph">${esc(p.source.url)}</mark></p>` : `<p class="src"><a href="${esc(p.source.url)}" rel="noopener" target="_blank">${esc(p.source.label || 'Source')}</a></p>`) : ''}</div>`).join('')}</div>
   ${ctaRow('after-problems')}
 </div></section>`;
   page.problems.forEach((p) => p.source && isPh(p.source.url) && missing.push(`problem source: ${p.source.url}`));
@@ -142,7 +144,7 @@ function build(page) {
   const faqs = page.faqs.filter((f) => ok(f.q) && ok(f.a));
   const faqHtml = `<section class="sec sec-grey" aria-labelledby="s7"><div class="wrap narrow">
   <h2 id="s7" class="fu">${esc(H.faqs)}</h2>
-  <div class="faqs">${faqs.map((f) => `<details class="card faq fu"><summary>${t(f.q, 'faq question')}</summary><p>${t(f.a, 'faq answer')}</p></details>`).join('')}</div>
+  <div class="faqs">${faqs.map((f) => `<details class="card faq fu"><summary>${t(f.q, 'faq question')}</summary><p>${t(f.a, 'faq answer')}${note(f.note, 'faq note')}</p></details>`).join('')}</div>
 </div></section>`;
 
   // 8. Book a review
