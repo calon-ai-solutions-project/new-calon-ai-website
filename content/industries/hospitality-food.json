@@ -1,0 +1,43 @@
+{
+  "slug": "hospitality-food",
+  "name": "Hospitality & Food",
+  "title": "Restaurants & Cafés: Keep Your Orders and Your Customers | Calon AI",
+  "description": "Delivery apps take up to 30% of every order and keep your customers. We help restaurants and cafés take orders direct and bring regulars back.",
+  "whatsappMessage": "Hi Calon AI, I run a hospitality or food business and I'd like a free review.",
+  "sectionHeadings": {
+    "problems": "What restaurant and café owners are up against",
+    "usualFix": "Why the apps and a basic ordering page don't fix it"
+  },
+  "hero": {
+    "label": "HOSPITALITY & FOOD",
+    "headline": "They ate with you once. Do you know who they were?",
+    "subhead": "Most customers come once and never return. The delivery apps keep their details and up to 30% of the order. With no customer list of your own, you can't bring anyone back. We fix that, so sales stop swinging from good weeks to bad.",
+    "photo": { "src": "[Photo of a client café or restaurant]", "alt": "" }
+  },
+  "results": [
+    { "title": "A customer list that is yours.", "text": "Every order and booking adds to it." },
+    { "title": "Customers who come back.", "text": "The right people get a reason to return, at the right time." },
+    { "title": "Steady sales.", "text": "Fewer dead days, because you can fill them from your own list." },
+    { "title": "The commission stays in your till.", "text": "Regulars order from you direct, so the 14% to 30% is yours." },
+    { "title": "Social media that runs itself.", "text": "Posts go out and messages get answered without someone doing it by hand." },
+    { "title": "Orders straight from Google.", "text": "People can order from your Google listing without going through an app." }
+  ],
+  "resultsNote": "[Alom: add a client result to one or two of these tiles once the figures are available.]",
+  "caseStudy": null,
+  "problems": [
+    { "title": "They come once and never return.", "text": "There is nothing in place to bring a first-time customer back.", "source": null },
+    { "title": "No customer list.", "text": "The apps keep the customer's details, so the business has nobody to contact.", "source": { "label": "Source", "url": "https://whito.co.uk/takeaways/" } },
+    { "title": "Up to 30% gone on every order.", "text": "Delivery apps take 14% to 30%, which is £2.80 to £6.00 on a £20 order.", "source": { "label": "Source", "url": "https://whito.co.uk/restaurants/" } },
+    { "title": "No steady sales.", "text": "UKHospitality forecast 2,076 venue closures in 2026, about six a day, with independents hit hardest.", "source": { "label": "Source", "url": "https://uk.clover.com/insights/uk-hospitality-closure-map-2026/" } },
+    { "title": "Social media done by hand, or not at all.", "text": "Posting and replying take time nobody has during service.", "source": null }
+  ],
+  "usualFix": ["Delivery apps bring you orders, then take the margin and keep the customer. A basic ordering page takes orders but does nothing to bring anyone back. Bulk texts go to your whole list and most people ignore them. We join it up: orders come to you direct, every customer goes onto your own list, and the right people get a reason to come back."],
+  "faqs": [
+    { "q": "Do we have to leave Deliveroo, Uber Eats or Just Eat?", "a": "No. Keep them for reaching new customers. We move your regulars to ordering direct, where you keep the margin." },
+    { "q": "Does it work with the till and card machine we already have?", "a": "[Alom to answer: which payment and till systems Calon has connected, such as SumUp.]" },
+    { "q": "Can customers still get delivery?", "a": "[Alom to answer from what has been built.]" },
+    { "q": "How long does it take?", "a": "The first part is usually live in six to eight weeks." },
+    { "q": "What does it cost?", "a": "We agree one fixed price before any work starts.", "note": "[Alom: add a \"from\" price if wanted.]" }
+  ],
+  "book": { "headline": "Find out what the apps are costing you each month." }
+}

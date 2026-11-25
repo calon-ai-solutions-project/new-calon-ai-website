@@ -1,0 +1,42 @@
+{
+  "slug": "salons-gyms-membership",
+  "name": "Salons, Gyms & Membership",
+  "title": "Salons & Gyms: Win Back the Clients Who Stopped Coming | Calon AI",
+  "description": "Most salons are busy but barely profitable. We find the clients who have drifted and bring them back. At one salon group, more than one in four returned.",
+  "whatsappMessage": "Hi Calon AI, I run a salon, gym or membership business and I'd like a free review.",
+  "sectionHeadings": {
+    "problems": "What salon and gym owners are up against",
+    "usualFix": "Why a bulk text doesn't bring them back"
+  },
+  "hero": {
+    "label": "SALONS, GYMS & MEMBERSHIP",
+    "headline": "The clients who stopped coming are your fastest money.",
+    "subhead": "Most salons are busy but barely profitable. A new client is expensive to win. One who already knows you is not. We find who has drifted, reach each of them personally and get them back through the door.",
+    "photo": { "src": "[Photo of a Lextan salon]", "alt": "" }
+  },
+  "results": [
+    { "title": "Lapsed clients back through the door.", "text": "At one salon group, more than one in four of the clients we contacted came back in.", "note": "[Confirm: 327 confirmed visits from 1,181 clients.]" },
+    { "title": "A client list you can actually use.", "text": "Who came, what they had and when they were last in, all in one place." },
+    { "title": "Only the right people hear from you.", "text": "We pick out the clients worth winning back and give each one a reason to book this week." },
+    { "title": "Proof it worked.", "text": "You see who came back and when, confirmed in the salon, not a guess from clicks." },
+    { "title": "Members who stay.", "text": "People who are about to drift get a nudge before they go." },
+    { "title": "Social media that runs itself.", "text": "Posts go out and messages get answered without someone doing it by hand." }
+  ],
+  "caseStudy": null,
+  "problems": [
+    { "title": "Clients come once and don't return.", "text": "A healthy salon keeps 60% to 70% of its clients. Most UK salons fall below that.", "source": { "label": "Source", "url": "https://whito.co.uk/research/beauty-salon-industry-data-report/" } },
+    { "title": "No usable client data.", "text": "Details sit in a booking system or a notebook, and nobody can say who has stopped coming.", "source": null },
+    { "title": "Busy but not profitable.", "text": "One in five hair and beauty businesses is running at a loss, and nearly three quarters are on thin margins.", "source": { "label": "Source", "url": "https://hji.co.uk/nhbf-survey-reveals-the-biggest-costs-impacting-salons" } },
+    { "title": "Texts that get ignored.", "text": "81% of people ignore messages that aren't relevant to them.", "source": { "label": "Source", "url": "https://mobile-text-alerts.com/articles/sms-win-back-cold-leads" } },
+    { "title": "Social media done by hand, or not at all.", "text": "Posting and replying take time nobody has between clients.", "source": null }
+  ],
+  "usualFix": ["Bulk text services and Mailchimp send the same message to your whole list. Most people ignore it, some unsubscribe, and you have just offered a discount to clients who would have paid full price. We do it the other way round. We work out which clients have drifted and are worth winning back, send each one a message that fits them, give them a reason to book now, and show you who actually walked back in."],
+  "faqs": [
+    { "q": "We already send texts from our booking system. What's different?", "a": "Those go to everyone. Ours go only to the clients worth winning back, with an offer that suits each one, and you see who returned." },
+    { "q": "Do we have to change our booking system?", "a": "No. We work from the client list you already have." },
+    { "q": "Will it annoy our clients?", "a": "No. Fewer people are contacted, each message is personal, and every one has a way to opt out." },
+    { "q": "How soon will we see clients come back?", "a": "[Alom to answer from the Lextan campaign: how many days until the first returns.]" },
+    { "q": "What does it cost?", "a": "[Alom to set: the price for a win-back campaign.]" }
+  ],
+  "book": { "headline": "Find out how many lapsed clients you could win back." }
+}

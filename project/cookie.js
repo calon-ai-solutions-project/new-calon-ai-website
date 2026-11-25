@@ -39,6 +39,14 @@
       setTimeout(function () { bar.remove(); }, 500);
     });
     document.body.appendChild(bar);
+    // Pages with the mobile contact bar (Call / WhatsApp / Book): sit above it, never over it.
+    function clearMbar() {
+      var mb = document.querySelector('.mbar');
+      var shown = mb && getComputedStyle(mb).display !== 'none';
+      bar.style.bottom = shown ? (mb.offsetHeight + 12) + 'px' : '';
+    }
+    clearMbar();
+    window.addEventListener('resize', clearMbar);
     requestAnimationFrame(function () { requestAnimationFrame(function () { bar.classList.add('is-in'); }); });
   }
 

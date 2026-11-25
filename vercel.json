@@ -39,6 +39,26 @@
   ],
   "redirects": [
     {
+      "source": "/solar-renewables",
+      "destination": "/heating-plumbing",
+      "permanent": true
+    },
+    {
+      "source": "/construction",
+      "destination": "/construction-training",
+      "permanent": true
+    },
+    {
+      "source": "/training-compliance",
+      "destination": "/construction-training",
+      "permanent": true
+    },
+    {
+      "source": "/facilities-management",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/sitemap_index.xml",
       "destination": "/sitemap.xml",
       "permanent": true
@@ -110,42 +130,42 @@
     },
     {
       "source": "/Facilities-Management.dc",
-      "destination": "/facilities-management",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/Facilities-Management.dc.html",
-      "destination": "/facilities-management",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/Solar-Renewables.dc",
-      "destination": "/solar-renewables",
+      "destination": "/heating-plumbing",
       "permanent": true
     },
     {
       "source": "/Solar-Renewables.dc.html",
-      "destination": "/solar-renewables",
+      "destination": "/heating-plumbing",
       "permanent": true
     },
     {
       "source": "/Construction.dc",
-      "destination": "/construction",
+      "destination": "/construction-training",
       "permanent": true
     },
     {
       "source": "/Construction.dc.html",
-      "destination": "/construction",
+      "destination": "/construction-training",
       "permanent": true
     },
     {
       "source": "/Training-Compliance.dc",
-      "destination": "/training-compliance",
+      "destination": "/construction-training",
       "permanent": true
     },
     {
       "source": "/Training-Compliance.dc.html",
-      "destination": "/training-compliance",
+      "destination": "/construction-training",
       "permanent": true
     },
     {

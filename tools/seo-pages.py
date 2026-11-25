@@ -94,6 +94,10 @@ SECTORS = {
                ("the health and safety training sales and onboarding automation", "/work/health-safety-training-automation")]),
 }
 
+# The industry pages are now generated (titles, descriptions, FAQ schema) by the industry page build,
+# so this script no longer touches them.
+SECTORS = {}
+
 OTHER = {
     'index': dict(title="AI Automation Consultancy for Service Businesses | Calon AI",
         desc="Welsh AI and automation consultancy helping founder-led UK service businesses find hidden margin, recover lost revenue and connect their tools.",

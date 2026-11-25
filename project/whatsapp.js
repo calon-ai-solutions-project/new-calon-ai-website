@@ -1,17 +1,16 @@
 /* WhatsApp: floating chat button on every page + click tracking for every wa.me link.
-   Number 07404 458109 (wa.me format 447404458109). Industry pages get an industry-specific message.
+   Number 07359 849180 (wa.me format 447359849180). Industry pages get an industry-specific message.
    Inline "WhatsApp us" buttons are plain links in the page HTML; this script only tracks their clicks. */
 (function () {
   'use strict';
-  var NUMBER = '447404458109';
+  var NUMBER = '447359849180';
   var DEFAULT_MSG = "Hi Calon AI, I'd like a free review for my business.";
   var INDUSTRY = {
     '/fire-security': 'a fire and security business',
-    '/heating-plumbing': 'a heating and plumbing business',
-    '/facilities-management': 'a facilities management business',
-    '/solar-renewables': 'a solar and renewables business',
-    '/construction': 'a construction business',
-    '/training-compliance': 'a training and compliance business'
+    '/heating-plumbing': 'a heating, plumbing or renewables business',
+    '/construction-training': 'a construction business or training provider',
+    '/hospitality-food': 'a hospitality or food business',
+    '/salons-gyms-membership': 'a salon, gym or membership business'
   };
   function pagePath() { return (location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/').replace(/(.)\/$/, '$1')) || '/'; }
   function message() {

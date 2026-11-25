@@ -38,3 +38,15 @@ Commit the generated files. Clean URLs (`/about`, `/fire-security`, `/work/<slug
 ## WhatsApp button
 
 `project/whatsapp.js` (loaded next to `cookie.js` on every page) adds the floating WhatsApp button and records each click on any `wa.me` link as a `whatsapp_click` event in `dataLayer`, with `page_path` and `link_location`. The "WhatsApp us" buttons in heroes and booking sections are plain links in the page HTML; run `python3 tools/whatsapp-buttons.py` after adding a new hand-built page (it is idempotent). The generated pages get theirs from `tools/build-static.mjs` and `tools/build-resources.mjs`. The number and the per-industry messages are set at the top of `whatsapp.js` and `tools/whatsapp-buttons.py`.
+
+## Industry pages
+
+The five industry pages (`/fire-security`, `/heating-plumbing`, `/construction-training`, `/hospitality-food`, `/salons-gyms-membership`) are static pages built from `content/industries/<slug>.json` plus the shared copy in `content/industries/shared.json`:
+
+```
+node tools/build-industry.mjs            # preview: [bracketed] copy shows as yellow placeholders
+node tools/build-industry.mjs --publish  # final: bracketed copy is left out, never published
+node tools/build-industry.mjs --list     # also lists every placeholder still waiting on Alom
+```
+
+Run `--publish` before merging to main. Every page has the same eight sections; styles are in `tools/industry.css`, behaviour (fade-up, tracking) in `tools/industry.js`. The Industries menu list lives in `tools/site-nav.mjs` (and by hand in `CalonHeader.dc.html` / `CalonFooter.dc.html`). Redirects for the retired pages are in `vercel.json` and `project/_redirects`.

@@ -1,0 +1,43 @@
+{
+  "slug": "fire-security",
+  "name": "Fire & Security",
+  "title": "Fire & Security: Stop Losing Engineer Hours to Admin | Calon AI",
+  "description": "Good engineers are almost impossible to find. We stop yours losing hours to paperwork, payroll arguments and systems built for someone else's business.",
+  "whatsappMessage": "Hi Calon AI, I run a fire and security business and I'd like a free review.",
+  "sectionHeadings": {
+    "problems": "What fire & security owners are up against",
+    "usualFix": "Why another off-the-shelf system won't fix it"
+  },
+  "hero": {
+    "label": "FIRE & SECURITY",
+    "headline": "You're running the jobs. But can you see them?",
+    "subhead": "Most fire and security owners can't see where each project stands today, what each job is really making, or why two quotes for the same work come out different. And their engineers hate typing reports into an app. We fix all four.",
+    "photo": { "src": "/assets/industries/fire-security-volt-office.webp", "w": 1200, "h": 900, "alt": "The Calon AI team working with Volt Secure at Volt Secure's office, reviewing a live dashboard on a wall screen" }
+  },
+  "results": [
+    { "title": "Every project, live.", "text": "See where each job stands today without phoning round." },
+    { "title": "The profit on every job.", "text": "Know what a job made while you can still do something about it." },
+    { "title": "One price for the same job.", "text": "Standard pricing, so every quote is right and every quote matches." },
+    { "title": "Engineers talk, the paperwork is done.", "text": "They say what they did and the report is written for them. No typing." },
+    { "title": "Payroll without the arguments.", "text": "One client cut payroll disputes by more than 90%." },
+    { "title": "Your evenings back.", "text": "One client's directors got back six to eight hours a week.", "note": "[Confirm this figure with Volt.]" }
+  ],
+  "caseStudy": null,
+  "problems": [
+    { "title": "No live view of projects.", "text": "An install runs for days across several engineers. The only way to find out where it stands is to phone round.", "source": null },
+    { "title": "No idea which jobs make money.", "text": "Labour, parts and travel are never added up per job, so a loss shows up months later, if at all.", "source": null },
+    { "title": "No standard pricing.", "text": "Prices live in people's heads, so the same job is quoted differently every time.", "source": null },
+    { "title": "Engineers won't type.", "text": "Typing a report on a phone is slow, so it gets done late, badly or not at all. They would rather just say it.", "source": null },
+    { "title": "There aren't enough engineers.", "text": "The Fire Industry Association's survey found good engineers almost impossible to recruit, so every wasted hour hurts.", "source": { "label": "Source", "url": "https://www.ifsecglobal.com/good-engineers-are-almost-impossible-to-find-recruitment-crisis-highlighted-by-fia-survey/" } },
+    { "title": "The system you bought doesn't fit.", "text": "Owners describe the big systems as a rigid box the business has to squeeze into.", "source": { "label": "Source", "url": "https://jp.trustpilot.com/reviews/661559c09b8d3c8286c2c6c6" } }
+  ],
+  "usualFix": ["Simpro, Joblogic and Uptick are built for thousands of firms at once. They record jobs. They don't show you a project live, tell you what a job made, hold your prices, or let an engineer simply talk. So your office fills the gaps by hand, every week. We build those missing parts around your business, and keep whatever already works."],
+  "faqs": [
+    { "q": "Do we have to drop Simpro, Joblogic or Uptick?", "a": "No. If it does the standard work, keep it. We fix the part it can't do. We only replace it when your team is working around it every day." },
+    { "q": "Why not just switch to another system?", "a": "Because the next one was also built for thousands of firms. The gaps move, but they don't go away." },
+    { "q": "What does it cost?", "a": "We agree one fixed price before any work starts.", "note": "[Alom: add a \"from\" price if wanted, and confirm whether there are any ongoing fees.]" },
+    { "q": "How long does it take?", "a": "The first part is usually live in six to eight weeks." },
+    { "q": "Who owns it?", "a": "You do.", "note": "[Confirm against the contract.]" }
+  ],
+  "book": { "headline": "Find out what admin is costing your engineers." }
+}

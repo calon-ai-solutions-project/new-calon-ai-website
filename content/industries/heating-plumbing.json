@@ -1,0 +1,43 @@
+{
+  "slug": "heating-plumbing",
+  "name": "Heating, Plumbing & Renewables",
+  "title": "Heating & Plumbing Firms: Win More Work, Chase Less | Calon AI",
+  "description": "Heating firms lose a day a week to admin and send engineers to enquiries that go nowhere. We close the gaps. One client recovered £18k in 90 days.",
+  "whatsappMessage": "Hi Calon AI, I run a heating, plumbing or renewables business and I'd like a free review.",
+  "sectionHeadings": {
+    "problems": "What heating & plumbing owners are up against",
+    "usualFix": "Why your job software doesn't fix it"
+  },
+  "hero": {
+    "label": "HEATING, PLUMBING & RENEWABLES",
+    "headline": "Flat out all week. So where's the money going?",
+    "subhead": "The diary is a daily puzzle. Nobody knows the margin on a job, or what each engineer brings in. And last year's customers never hear from you about this year's service. We fix those, so the work you already do makes more.",
+    "photo": { "src": "[Photo of the HeatGlow team or van]", "alt": "" }
+  },
+  "results": [
+    { "title": "A diary that works itself out.", "text": "The right engineer on the right job, with less driving in between." },
+    { "title": "The margin on every job.", "text": "You see which work makes money and which doesn't." },
+    { "title": "What each engineer brings in.", "text": "Clear numbers for every engineer, every week." },
+    { "title": "Customers who come back every year.", "text": "Service reminders and plans turn one job into a customer for years. One client recovered £18k in 90 days from past customers." },
+    { "title": "Engineers only visit serious buyers.", "text": "One client now makes 2.5 times as many quote visits a week." },
+    { "title": "Your evenings back.", "text": "Less quoting and invoicing after a day on the tools." }
+  ],
+  "caseStudy": null,
+  "problems": [
+    { "title": "The diary is a daily puzzle.", "text": "Working out which engineer goes where is done by hand each morning, and it falls apart with the first emergency call.", "source": null },
+    { "title": "No margin per job.", "text": "The job gets done and invoiced, but nobody knows what it actually made.", "source": null },
+    { "title": "No idea what each engineer brings in.", "text": "Without that number, you can't tell who is making money and who is costing it.", "source": null },
+    { "title": "Customers are never sold to again.", "text": "No yearly service reminder, no maintenance plan, nothing that builds loyalty. Each customer is a one-off.", "source": null },
+    { "title": "A day a week lost to admin.", "text": "Heating business owners report about seven hours a week on paperwork, and those surveyed already use job software.", "source": { "label": "Source", "url": "https://gasengineersoftware.co.uk/?p=249835" } },
+    { "title": "Thousands owed.", "text": "Tradespeople are owed £5,901 on average in unpaid invoices.", "source": { "label": "Source", "url": "https://www.electricaltimes.co.uk/?p=36067" } }
+  ],
+  "usualFix": ["ServiceM8, Commusoft and the rest hold your diary, but they don't plan it. They record a job, but they don't tell you its margin. And they never go back to a customer a year later. Those gaps are where the money leaks. We close them on top of what you already use, so you don't have to change system."],
+  "faqs": [
+    { "q": "Do we have to stop using ServiceM8 or Commusoft?", "a": "No. We work on top of what you already use." },
+    { "q": "How do you bring past customers back?", "a": "We work out which of your past customers are worth contacting, and send each one a personal message with a reason to book. Every message has a way to opt out." },
+    { "q": "Will it reply to customers without us checking?", "a": "You choose. Most clients approve every reply at first, then let it run once they trust it." },
+    { "q": "How soon will we see money come back?", "a": "One client recovered £18k in its first 90 days." },
+    { "q": "What does it cost?", "a": "We agree one fixed price before any work starts.", "note": "[Alom: add a \"from\" price if wanted.]" }
+  ],
+  "book": { "headline": "See how much is sitting in your old quotes." }
+}

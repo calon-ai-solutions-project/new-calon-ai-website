@@ -1,0 +1,21 @@
+{
+  "phone": { "display": "03301 332 508", "tel": "+443301332508" },
+  "whatsappNumber": "447359849180",
+  "bookButton": "Book a free 15-minute review",
+  "bookingCalendarUrl": "/contact",
+  "sectionHeadings": {
+    "results": "What you get",
+    "caseStudy": "Case study",
+    "problems": "What owners are up against",
+    "usualFix": "Why the usual fix doesn't work",
+    "howItWorks": "How it works",
+    "faqs": "Questions"
+  },
+  "howItWorks": [
+    { "title": "Book a 15-minute call.", "text": "Tell us where the business is losing time or money." },
+    { "title": "Free review.", "text": "We come to you, follow the work from enquiry to payment, and put a figure on what the problem is costing." },
+    { "title": "Fixed proposal.", "text": "One scope and one price, agreed before anything starts. No long contract." },
+    { "title": "We build it and it's yours.", "text": "Built and tested by our own engineers, set up with your team, then handed over." }
+  ],
+  "bookSubtext": "Book a free 15-minute review. No slides and no sales pitch. If we can't help, we'll say so."
+}
