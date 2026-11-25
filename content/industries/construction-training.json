@@ -1,0 +1,43 @@
+{
+  "slug": "construction-training",
+  "name": "Construction & Training Providers",
+  "title": "Construction & Training: Get People Work-Ready Faster | Calon AI",
+  "description": "Construction is short of workers and clients want proof of competence. We cut the paperwork that gets people work-ready. One client went from 3 days to 30 minutes.",
+  "whatsappMessage": "Hi Calon AI, I run a construction business or training provider and I'd like a free review.",
+  "sectionHeadings": {
+    "problems": "What construction firms and training providers are up against",
+    "usualFix": "Why your current systems don't fix it"
+  },
+  "hero": {
+    "label": "CONSTRUCTION & TRAINING PROVIDERS",
+    "headline": "Nobody tells you when something has run out. Until it stops a job.",
+    "subhead": "Insurance, cards, method statements and certificates all expire on different dates. Most firms track them on a spreadsheet, so the first you hear of a lapse is when a job can't start or a client asks for proof. We make sure you know first, and take the chasing off your managers.",
+    "photo": { "src": "[Photo with Construction Skills Wales]", "alt": "" }
+  },
+  "results": [
+    { "title": "You're told before anything expires.", "text": "Insurance, cards and certificates are flagged in good time, not found out on the day." },
+    { "title": "Jobs that start on time.", "text": "Every subcontractor's documents are in, and in date, before day one." },
+    { "title": "Managers who manage.", "text": "The chasing is done for them, so they are on site, not in a spreadsheet." },
+    { "title": "Proof ready when the client asks.", "text": "Tender and audit evidence in one place, found in minutes." },
+    { "title": "People ready in 30 minutes, not three days.", "text": "One client cut onboarding from three days to half an hour, with 65% fewer incomplete files." },
+    { "title": "More enquiries turned into bookings.", "text": "One training provider converted 25% more." }
+  ],
+  "caseStudy": null,
+  "problems": [
+    { "title": "The spreadsheet doesn't warn you.", "text": "Managers describe spending whole days chasing subcontractors for renewed insurance, tracked on a spreadsheet nobody has time to open.", "source": { "label": "Source", "url": "https://imagetotable.ai/blog/certificate-of-insurance-data-extraction-excel" } },
+    { "title": "Jobs that can't start.", "text": "59% of large UK construction firms have had a start on site delayed by a day or more because documents were missing.", "source": { "label": "Source", "url": "https://stealthagents.com/research/construction-subcontractor-compliance-document-workload-statistics-2026" } },
+    { "title": "Lost tenders.", "text": "One in five large UK construction firms has lost a tender, or been marked down, because it couldn't produce compliance evidence fast enough.", "source": { "label": "Source", "url": "https://itbrief.co.uk/story/uk-builders-lose-tenders-over-compliance-delays" } },
+    { "title": "The big systems aren't made for smaller firms.", "text": "Small firms reviewing the best-known construction platform call it costly and not made for a company their size.", "source": { "label": "Source", "url": "https://www.capterra.co.uk/reviews/56250/procore" } },
+    { "title": "Not enough people.", "text": "UK construction needs about 206,000 more workers by 2030.", "source": { "label": "Source", "url": "https://www.construction.co.uk/construction-news/332678/why-the-uk-construction-skills-shortage-will-not-be-solved-by-another-job-advert" } },
+    { "title": "Too many systems.", "text": "Training providers commonly run across a learner system, an ePortfolio, a CRM, finance software and spreadsheets.", "source": { "label": "Source", "url": "https://bud.co.uk/articles/why-training-provider-systems-struggle-with-flexible-learning-delivery" } }
+  ],
+  "usualFix": ["The big construction platforms are built for large main contractors, and smaller firms find them too costly and too much. So the checking falls back on a spreadsheet, and a spreadsheet can't tell you when something is about to lapse. Learner systems have the same gap for training providers: they report to funders, but they don't chase a missing document. We build that missing part around how your organisation works."],
+  "faqs": [
+    { "q": "Do we have to replace the systems we already use?", "a": "No. We fix the part they don't cover and work alongside them." },
+    { "q": "Does it work for subcontractors as well as employees?", "a": "Yes. It is built around whoever you put on site." },
+    { "q": "Will it help when a client or auditor asks for evidence?", "a": "Yes. Everything is kept in one place, so it takes minutes to pull together." },
+    { "q": "How long does it take?", "a": "The first part is usually live in six to eight weeks." },
+    { "q": "What does it cost?", "a": "We agree one fixed price before any work starts.", "note": "[Alom: add a \"from\" price if wanted.]" }
+  ],
+  "book": { "headline": "Find out what the paperwork is costing you." }
+}
